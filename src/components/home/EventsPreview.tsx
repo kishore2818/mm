@@ -43,8 +43,8 @@ export default function EventsPreview() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section ref={ref} className="py-20 bg-[#fdf8f0]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section ref={ref} className="py-16 sm:py-20 bg-[#fdf8f0]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -73,7 +73,7 @@ export default function EventsPreview() {
         </motion.div>
 
         {/* Events Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           {events.map((event, i) => (
             <motion.div
               key={event.id}

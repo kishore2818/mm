@@ -4,10 +4,10 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "MM Matric Higher Secondary School, Pattanamangalam",
+  title: "MM Matric Higher Secondary School, Patemanagaram",
   description:
-    "Official website of MM Matric Higher Secondary School, Pattanamangalam. Empowering students to Learn, Lead and Serve since decades.",
-  keywords: "MM Matric, Higher Secondary School, Pattanamangalam, CBSE, Admissions",
+    "Official website of MM Matric Higher Secondary School, Patemanagaram. Empowering students to Learn, Lead and Serve since decades.",
+  keywords: "MM Matric, Higher Secondary School, Patemanagaram, CBSE, Admissions",
   openGraph: {
     title: "MM Matric Higher Secondary School",
     description: "Learn · Lead · Serve — Official School Website",

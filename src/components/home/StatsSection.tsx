@@ -52,9 +52,9 @@ export default function StatsSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-16 bg-gradient-to-r from-[#0d0d3b] via-[#1a1a5e] to-[#0d0d3b]">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+    <section ref={ref} className="py-8 sm:py-10 bg-gradient-to-r from-[#0d0d3b] via-[#1a1a5e] to-[#0d0d3b]">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}

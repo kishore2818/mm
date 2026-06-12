@@ -49,7 +49,7 @@ export default function Navbar() {
       {/* Top Info Bar */}
       <div className="hidden md:block bg-[#0d0d3b] border-b border-white/5 text-white/50 text-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-1.5">
-          <span>MM Matric Higher Secondary School, Pattanamangalam</span>
+          <span>MM Matric Higher Secondary School, Patemanagaram</span>
           <div className="flex items-center gap-4">
             <a href="tel:+91XXXXXXXXXX" className="flex items-center gap-1.5 hover:text-[#f0c040] transition-colors">
               <Phone size={11} /> +91 XXXXX XXXXX
@@ -84,7 +84,7 @@ export default function Navbar() {
                   MM Matric Higher Secondary School
                 </p>
                 <p className="text-[#c9a227]/60 text-[9px] lg:text-[10px] tracking-[0.2em] lg:tracking-[0.25em] uppercase mt-0.5 whitespace-nowrap">
-                  Pattanamangalam · Est. 1990
+                  Patemanagaram · Est. 1990
                 </p>
               </div>
             </Link>

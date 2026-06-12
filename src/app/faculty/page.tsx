@@ -20,7 +20,7 @@ export default function FacultyPage() {
   return (
     <div className="min-h-screen">
       <section className="relative py-24 bg-[#0d0d3b] text-center text-white">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-4">Our Mentors</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Faculty & Leadership
@@ -33,7 +33,7 @@ export default function FacultyPage() {
 
       {/* Stats */}
       <section className="py-12 bg-[#c9a227]">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center text-[#0d0d3b]">
             {[
               { icon: GraduationCap, stat: "80+", label: "Qualified Teachers" },
@@ -55,21 +55,25 @@ export default function FacultyPage() {
 
       {/* Leadership */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-[#1a1a5e] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>School Leadership</h2>
             <div className="w-16 h-1 bg-[#c9a227] mx-auto rounded-full" />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {leadership.map((leader, i) => (
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              { name: "Mr. Suresh Kumar", role: "Secretary", image: "/images/secretary.png", desc: "Overseeing administration and ensuring our institution meets the highest educational standards." },
+              { name: "Dr. Smita Sharma", role: "Principal", image: "/images/principal.png", desc: "Award-winning administrator focusing on holistic student development and academic excellence." },
+              { name: "Mr. R.K. Sharma", role: "Vice Principal", image: "/images/vice_principal.png", desc: "Dedicated to student welfare, discipline, and fostering a positive learning environment." }
+            ].map((leader, i) => (
               <motion.div key={leader.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                className="bg-[#fdf8f0] p-8 rounded-2xl border border-[#c9a227]/20 text-center hover:shadow-xl transition-all">
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#1a1a5e] to-[#252580] text-white flex items-center justify-center text-3xl font-bold mx-auto mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  {leader.name[4]}
+                className="bg-[#fdf8f0] p-8 rounded-2xl border border-[#c9a227]/20 text-center hover:shadow-xl transition-all flex flex-col items-center">
+                <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg mb-6 ring-2 ring-[#c9a227]/30">
+                  <img src={leader.image} alt={leader.name} className="w-full h-full object-cover" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#1a1a5e] mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{leader.name}</h3>
-                <p className="text-[#c9a227] font-semibold text-sm mb-4">{leader.role} • {leader.exp}</p>
+                <h3 className="text-xl font-bold text-[#1a1a5e] mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{leader.name}</h3>
+                <p className="text-[#c9a227] font-semibold text-sm mb-4 uppercase tracking-wider">{leader.role}</p>
                 <p className="text-gray-600 text-sm leading-relaxed">{leader.desc}</p>
               </motion.div>
             ))}
@@ -79,7 +83,7 @@ export default function FacultyPage() {
 
       {/* Departments */}
       <section className="py-20 bg-[#fdf8f0]">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-[#1a1a5e] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Academic Departments</h2>
             <p className="text-gray-500">Structured for specialized learning and mentorship.</p>

@@ -45,7 +45,7 @@ export default function AcademicsPage() {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative py-24 bg-[#0d0d3b]">
-        <div className="max-w-4xl mx-auto px-6 text-center text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center text-white">
           <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-4">Academic Excellence</p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Our Curriculum
@@ -58,7 +58,7 @@ export default function AcademicsPage() {
 
       {/* Educational Stages */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-[#1a1a5e] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Educational Stages</h2>
             <div className="w-16 h-1 bg-[#c9a227] mx-auto rounded-full" />
@@ -80,7 +80,7 @@ export default function AcademicsPage() {
 
       {/* Departments */}
       <section className="py-20 bg-[#fdf8f0]" id="departments">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-[#1a1a5e] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Academic Departments</h2>
             <p className="text-gray-500">Dedicated faculty across all major disciplines.</p>
@@ -109,7 +109,7 @@ export default function AcademicsPage() {
 
       {/* Streams for XI & XII */}
       <section className="py-20 bg-[#0d0d3b] text-white">
-        <div className="max-w-5xl mx-auto px-6 text-center">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl font-bold mb-12" style={{ fontFamily: "'Playfair Display', serif" }}>Higher Secondary Streams (XI & XII)</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm text-left">

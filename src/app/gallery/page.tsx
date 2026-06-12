@@ -12,7 +12,7 @@ export default function GalleryPage() {
   return (
     <div className="min-h-screen pb-20">
       <section className="relative py-24 bg-[#0d0d3b] text-center text-white mb-16">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-4">Campus Life</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Photo Gallery
@@ -21,7 +21,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Placeholder grid for actual images later */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {images.map((img, i) => (

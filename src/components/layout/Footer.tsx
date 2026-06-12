@@ -29,7 +29,7 @@ export default function Footer() {
     <footer className="bg-[#0d0d3b] text-white/80">
       {/* Top Stats Banner */}
       <div className="bg-gradient-to-r from-[#c9a227] via-[#f0c040] to-[#c9a227]">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-wrap justify-center gap-8 text-[#0d0d3b]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap justify-center gap-8 text-[#0d0d3b]">
           {[
             { icon: GraduationCap, label: "2000+ Alumni" },
             { icon: BookOpen, label: "Experienced Faculty" },
@@ -43,8 +43,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* School Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
@@ -63,7 +63,7 @@ export default function Footer() {
                    style={{ fontFamily: "'Playfair Display', serif" }}>
                   MM Matric Higher Secondary School
                 </p>
-                <p className="text-[#c9a227]/60 text-xs">Pattanamangalam</p>
+                <p className="text-[#c9a227]/60 text-xs">Patemanagaram</p>
               </div>
             </div>
             <p className="text-sm text-white/60 leading-relaxed mb-4">
@@ -140,7 +140,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <MapPin size={16} className="text-[#c9a227] mt-0.5 flex-shrink-0" />
-                <span>MM Matric Higher Secondary School, Pattanamangalam, Tamil Nadu</span>
+                <span>MM Matric Higher Secondary School, Patemanagaram, Tamil Nadu</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60">
                 <Phone size={16} className="text-[#c9a227] flex-shrink-0" />
@@ -172,9 +172,9 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-white/40">
-            © {new Date().getFullYear()} MM Matric Higher Secondary School, Pattanamangalam. All rights reserved.
+            © {new Date().getFullYear()} MM Matric Higher Secondary School, Patemanagaram. All rights reserved.
           </p>
           <p className="text-xs text-white/30">
             Crafted with ❤️ for education

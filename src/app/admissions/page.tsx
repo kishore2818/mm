@@ -16,7 +16,7 @@ export default function AdmissionsPage() {
       {/* Hero */}
       <section className="relative py-24 bg-[#0d0d3b] text-center text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ background: "radial-gradient(circle, #c9a227, transparent 70%)" }} />
-        <div className="relative z-10 max-w-3xl mx-auto px-6">
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6">
           <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-4">Admissions 2025–26</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Begin Your Journey
@@ -25,7 +25,7 @@ export default function AdmissionsPage() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-6 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Main Content - Left */}
           <div className="lg:col-span-2 space-y-16">
@@ -91,7 +91,7 @@ export default function AdmissionsPage() {
                   <MapPin size={18} className="text-[#c9a227] mt-0.5" />
                   <div>
                     <p className="text-sm font-medium text-[#1a1a5e]">Visit Office</p>
-                    <p className="text-sm text-gray-500 leading-relaxed">MM Matric Hr. Sec. School,<br/>Pattanamangalam</p>
+                    <p className="text-sm text-gray-500 leading-relaxed">MM Matric Hr. Sec. School,<br/>Patemanagaram</p>
                   </div>
                 </div>
               </div>

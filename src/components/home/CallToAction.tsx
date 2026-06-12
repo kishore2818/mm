@@ -35,8 +35,8 @@ export default function CallToAction() {
           }} />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* Left */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}

@@ -32,7 +32,7 @@ export default function AboutPage() {
       <section className="relative py-28 overflow-hidden" style={{ background: "linear-gradient(135deg, #060622, #0d0d3b, #1a1a5e)" }}>
         <div className="absolute inset-0 opacity-[0.04]"
           style={{ backgroundImage: "linear-gradient(#c9a227 1px, transparent 1px), linear-gradient(90deg, #c9a227 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <motion.p initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}
             className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-4">Our Story</motion.p>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
@@ -48,7 +48,7 @@ export default function AboutPage() {
 
       {/* Mission & Vision */}
       <section className="py-20 bg-[#fdf8f0]">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-8">
             {values.map((v, i) => {
               const Icon = v.icon;
@@ -102,7 +102,7 @@ export default function AboutPage() {
 
       {/* Timeline */}
       <section ref={ref} className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-3">Milestones</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a5e]" style={{ fontFamily: "'Playfair Display', serif" }}>Our Journey</h2>
@@ -134,7 +134,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-[#1a1a5e] to-[#0d0d3b]">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
             Ready to Join Our Family?
           </h2>

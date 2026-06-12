@@ -7,7 +7,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       <section className="relative py-24 bg-[#0d0d3b] text-center text-white mb-16">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-4">Get in Touch</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Contact Us
@@ -16,7 +16,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-6 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Info */}
           <div>
@@ -29,7 +29,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-[#1a1a5e] text-lg mb-1">Campus Address</h3>
-                  <p className="text-gray-500 leading-relaxed">MM Matric Higher Secondary School,<br/>Pattanamangalam,<br/>Tamil Nadu, India - 600XXX</p>
+                  <p className="text-gray-500 leading-relaxed">MM Matric Higher Secondary School,<br/>Patemanagaram,<br/>Tamil Nadu, India - 600XXX</p>
                 </div>
               </div>
 

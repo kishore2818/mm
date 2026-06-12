@@ -22,7 +22,7 @@ export default function EventsPage() {
   return (
     <div className="min-h-screen bg-[#fdf8f0]">
       <section className="relative py-24 bg-[#0d0d3b] text-center text-white mb-16">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-4">Stay Updated</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             News & Events
@@ -30,7 +30,7 @@ export default function EventsPage() {
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-6 pb-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20">
         <div className="space-y-16">
           {allEvents.map((monthGrp, idx) => (
             <motion.div key={monthGrp.month} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.1 }}>

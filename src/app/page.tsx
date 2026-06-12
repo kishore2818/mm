@@ -7,11 +7,14 @@ import EventsPreview from "@/components/home/EventsPreview";
 import CallToAction from "@/components/home/CallToAction";
 import PrincipalsMessage from "@/components/home/PrincipalsMessage";
 
+import FounderSnippet from "@/components/home/FounderSnippet";
+
 export default function HomePage() {
   return (
     <>
       <HeroSection />
       <AnnouncementBar />
+      <FounderSnippet />
       <PrincipalsMessage />
       <StatsSection />
       <AboutSnippet />

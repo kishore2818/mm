@@ -19,7 +19,7 @@ export default function PrincipalsMessage() {
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-[0.04] translate-y-1/2 -translate-x-1/4"
         style={{ background: "radial-gradient(circle, #1a1a5e, transparent 70%)" }} />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
 
         {/* Section Label */}
         <motion.div
@@ -37,7 +37,7 @@ export default function PrincipalsMessage() {
         </motion.div>
 
         {/* Main content: Quote + Image */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-20 sm:mb-24">
 
           {/* Quote block */}
           <motion.div
@@ -51,7 +51,7 @@ export default function PrincipalsMessage() {
               Education is not merely the filling of a pail, but the lighting of a fire. At MM Matric, we ignite that spark in every child who walks through our doors.
             </blockquote>
             <p className="text-[#555] text-base leading-loose mb-8">
-              For over three and a half decades, MM Matriculation Higher Secondary School has stood as a beacon of quality education in Pattanamangalam. Our journey has been one of unwavering commitment — to our students, our community, and to the timeless values that define genuine education.
+              For over three and a half decades, MM Matriculation Higher Secondary School has stood as a beacon of quality education in Patemanagaram. Our journey has been one of unwavering commitment — to our students, our community, and to the timeless values that define genuine education.
             </p>
             <p className="text-[#555] text-base leading-loose mb-10">
               We believe that every student carries within them an extraordinary potential. Our dedicated faculty, world-class facilities, and nurturing environment are designed to bring out the very best in each child — academically, morally, and creatively.
@@ -107,7 +107,7 @@ export default function PrincipalsMessage() {
               {/* Bottom bar */}
               <div className="px-10 py-6 border-t border-white/10 flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-[#f0c040] animate-pulse" />
-                <span className="text-white/50 text-xs tracking-widest uppercase">Established 1990 · Pattanamangalam</span>
+                <span className="text-white/50 text-xs tracking-widest uppercase">Established 1990 · Patemanagaram</span>
               </div>
             </div>
           </motion.div>
