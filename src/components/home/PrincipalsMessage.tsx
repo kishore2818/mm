@@ -1,0 +1,145 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Quote, Award, Heart, Lightbulb, Shield } from "lucide-react";
+
+const values = [
+  { icon: Lightbulb, title: "Academic Excellence", desc: "Rigorous curriculum with personalized mentoring to bring out each student's full potential." },
+  { icon: Heart, title: "Character Building", desc: "Instilling values of integrity, empathy, and social responsibility in every student." },
+  { icon: Award, title: "Holistic Growth", desc: "Sports, arts, and co-curriculars to nurture well-rounded, confident individuals." },
+  { icon: Shield, title: "Safe Environment", desc: "A secure, inclusive campus where every child thrives and feels truly at home." },
+];
+
+export default function PrincipalsMessage() {
+  return (
+    <section id="principals-message" className="py-24 bg-white relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-[0.04] -translate-y-1/2 translate-x-1/4"
+        style={{ background: "radial-gradient(circle, #c9a227, transparent 70%)" }} />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-[0.04] translate-y-1/2 -translate-x-1/4"
+        style={{ background: "radial-gradient(circle, #1a1a5e, transparent 70%)" }} />
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+
+        {/* Section Label */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <span className="inline-block px-5 py-2 rounded-full bg-[#c9a227]/10 text-[#c9a227] text-xs font-semibold tracking-[0.25em] uppercase mb-4">
+            A Word From Our Leader
+          </span>
+          <h2 className="text-4xl sm:text-5xl font-bold text-[#0d0d3b]" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Principal&apos;s Message
+          </h2>
+          <div className="mt-4 mx-auto w-20 h-1 rounded-full" style={{ background: "linear-gradient(90deg, #c9a227, #f0c040)" }} />
+        </motion.div>
+
+        {/* Main content: Quote + Image */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+
+          {/* Quote block */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }} transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <Quote size={64} className="text-[#c9a227]/20 mb-4 -ml-2" />
+            <blockquote className="text-2xl sm:text-3xl font-medium text-[#0d0d3b] leading-relaxed mb-8"
+              style={{ fontFamily: "'Playfair Display', serif" }}>
+              Education is not merely the filling of a pail, but the lighting of a fire. At MM Matric, we ignite that spark in every child who walks through our doors.
+            </blockquote>
+            <p className="text-[#555] text-base leading-loose mb-8">
+              For over three and a half decades, MM Matriculation Higher Secondary School has stood as a beacon of quality education in Pattanamangalam. Our journey has been one of unwavering commitment — to our students, our community, and to the timeless values that define genuine education.
+            </p>
+            <p className="text-[#555] text-base leading-loose mb-10">
+              We believe that every student carries within them an extraordinary potential. Our dedicated faculty, world-class facilities, and nurturing environment are designed to bring out the very best in each child — academically, morally, and creatively.
+            </p>
+
+            {/* Principal signature */}
+            <div className="flex items-center gap-5">
+              <div className="w-14 h-14 rounded-full flex items-center justify-center font-bold text-white text-xl"
+                style={{ background: "linear-gradient(135deg, #c9a227, #f0c040)" }}>
+                P
+              </div>
+              <div>
+                <p className="font-bold text-[#0d0d3b] text-lg" style={{ fontFamily: "'Playfair Display', serif" }}>The Principal</p>
+                <p className="text-[#c9a227] text-sm font-medium tracking-wide">MM Matric Higher Secondary School</p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Vision card stack */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative"
+          >
+            {/* Decorative card behind */}
+            <div className="absolute inset-4 rounded-3xl rotate-3 opacity-20"
+              style={{ background: "linear-gradient(135deg, #c9a227, #f0c040)" }} />
+
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl"
+              style={{ background: "linear-gradient(160deg, #060622 0%, #1a1a5e 100%)" }}>
+              <div className="p-10">
+                <h3 className="text-2xl font-bold text-white mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  Our Vision & Mission
+                </h3>
+                <div className="w-12 h-0.5 mb-8" style={{ background: "linear-gradient(90deg, #c9a227, transparent)" }} />
+                <div className="space-y-6">
+                  {[
+                    { label: "Vision", text: "To be the leading institution in Tamil Nadu that shapes future leaders with knowledge, values, and compassion." },
+                    { label: "Mission", text: "To provide holistic education that empowers students academically and morally to excel in a dynamic world." },
+                    { label: "Philosophy", text: "Every child is unique. We tailor our approach to celebrate individuality while nurturing a strong sense of community." },
+                  ].map((item) => (
+                    <div key={item.label} className="flex gap-4">
+                      <span className="flex-shrink-0 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase h-fit mt-0.5"
+                        style={{ background: "linear-gradient(135deg, #c9a227, #f0c040)", color: "#0d0d3b" }}>
+                        {item.label}
+                      </span>
+                      <p className="text-white/75 text-sm leading-relaxed">{item.text}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Bottom bar */}
+              <div className="px-10 py-6 border-t border-white/10 flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-[#f0c040] animate-pulse" />
+                <span className="text-white/50 text-xs tracking-widest uppercase">Established 1990 · Pattanamangalam</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Core Values Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} transition={{ duration: 0.7 }}
+        >
+          <h3 className="text-center text-3xl font-bold text-[#0d0d3b] mb-12" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Our Core Values
+          </h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {values.map(({ icon: Icon, title, desc }, i) => (
+              <motion.div
+                key={title}
+                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="group p-8 rounded-2xl bg-[#fdf8f0] border border-[#e8d9b5]/60 hover:border-[#c9a227]/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+                  style={{ background: "linear-gradient(135deg, #c9a227, #f0c040)" }}>
+                  <Icon size={22} className="text-[#0d0d3b]" />
+                </div>
+                <h4 className="font-bold text-[#0d0d3b] text-lg mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{title}</h4>
+                <p className="text-[#666] text-sm leading-relaxed">{desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
