@@ -17,8 +17,8 @@ export default function HeroSection() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          {/* Sample stock video of school/students */}
-          <source src="https://videos.pexels.com/video-files/4144186/4144186-hd_1920_1080_25fps.mp4" type="video/mp4" />
+          {/* School hero video */}
+          <source src="/videos/hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         
