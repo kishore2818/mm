@@ -14,6 +14,7 @@
   --white: #ffffff;
   --text-dark: #1a1a2e;
   --text-muted: #6b7280;
+  --max-width: 1280px;
 }
 
 @theme inline {
@@ -45,10 +46,31 @@ body {
   color: var(--text-dark);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Ensure body never overflows horizontally */
+  overflow-x: hidden;
+  width: 100%;
 }
 
 h1, h2, h3, h4 {
   font-family: "Playfair Display", serif;
+}
+
+/* ─── Global Page Centering ─────────────────────────────────────────
+   All full-width sections should contain a .container inside them.
+   Direct-child sections of <main> are always full-width but their
+   inner content is constrained and centred via max-w-7xl mx-auto.
+──────────────────────────────────────────────────────────────────── */
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Every section inside main stretches full width */
+main > section,
+main > div > section {
+  width: 100%;
 }
 
 /* Scrollbar */
@@ -91,3 +113,4 @@ h1, h2, h3, h4 {
 .ticker-track:hover {
   animation-play-state: paused;
 }
+

@@ -47,16 +47,18 @@ export default function Navbar() {
   return (
     <>
       {/* Top Info Bar */}
-      <div className="hidden md:flex bg-[#0d0d3b] border-b border-white/5 text-white/50 text-xs justify-between items-center px-8 py-1.5">
-        <span>MM Matric Higher Secondary School, Pattanamangalam</span>
-        <div className="flex items-center gap-4">
-          <a href="tel:+91XXXXXXXXXX" className="flex items-center gap-1.5 hover:text-[#f0c040] transition-colors">
-            <Phone size={11} /> +91 XXXXX XXXXX
-          </a>
-          <span className="text-white/20">|</span>
-          <a href="mailto:info@mmmatric.edu.in" className="hover:text-[#f0c040] transition-colors">
-            info@mmmatric.edu.in
-          </a>
+      <div className="hidden md:block bg-[#0d0d3b] border-b border-white/5 text-white/50 text-xs">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-1.5">
+          <span>MM Matric Higher Secondary School, Pattanamangalam</span>
+          <div className="flex items-center gap-4">
+            <a href="tel:+91XXXXXXXXXX" className="flex items-center gap-1.5 hover:text-[#f0c040] transition-colors">
+              <Phone size={11} /> +91 XXXXX XXXXX
+            </a>
+            <span className="text-white/20">|</span>
+            <a href="mailto:info@mmmatric.edu.in" className="hover:text-[#f0c040] transition-colors">
+              info@mmmatric.edu.in
+            </a>
+          </div>
         </div>
       </div>
 
