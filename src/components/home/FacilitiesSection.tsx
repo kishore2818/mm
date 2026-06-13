@@ -96,7 +96,7 @@ export default function FacilitiesSection() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className={`group p-6 rounded-2xl border transition-all duration-300 cursor-default
-                  hover:-translate-y-2 hover:shadow-xl
+                  hover:-translate-y-2 hover:shadow-xl ${i >= 4 ? "hidden sm:block" : ""}
                   ${isGold
                     ? "bg-gradient-to-br from-[#c9a227]/10 to-[#f0c040]/5 border-[#c9a227]/20 hover:border-[#c9a227]/50 hover:shadow-[#c9a227]/10"
                     : "bg-gradient-to-br from-[#1a1a5e]/5 to-[#252580]/5 border-[#1a1a5e]/10 hover:border-[#1a1a5e]/30 hover:shadow-[#1a1a5e]/10"

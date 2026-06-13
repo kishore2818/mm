@@ -80,7 +80,7 @@ export default function EventsPreview() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
+              className={`bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group ${i >= 2 ? "hidden md:block" : ""}`}
             >
               {/* Top accent */}
               <div className="h-1 bg-gradient-to-r from-[#1a1a5e] to-[#c9a227]" />

@@ -24,12 +24,12 @@ export default function AnnouncementBar() {
         </div>
 
         {/* Ticker */}
-        <div className="overflow-hidden flex-1">
-          <div className="ticker-track flex whitespace-nowrap">
+        <div className="overflow-hidden flex-1 group">
+          <div className="ticker-track flex whitespace-nowrap group-hover:[animation-play-state:paused] transition-all duration-300">
             {doubled.map((notice, i) => (
               <span
                 key={i}
-                className="inline-block text-[#f0c040]/80 text-xs sm:text-sm px-8 py-2.5"
+                className="inline-block text-[#f0c040]/80 text-xs sm:text-sm px-8 py-2.5 cursor-default hover:text-[#f0c040] transition-colors"
               >
                 {notice}
                 <span className="text-[#c9a227]/40 mx-6">|</span>

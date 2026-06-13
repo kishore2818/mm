@@ -1,49 +1,60 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
+import { Award, GraduationCap, Users, Trophy } from "lucide-react";
 
 const stats = [
-  { value: 35, suffix: "+", label: "Years of Excellence" },
-  { value: 1200, suffix: "+", label: "Students Enrolled" },
-  { value: 80, suffix: "+", label: "Qualified Faculty" },
-  { value: 98, suffix: "%", label: "Board Pass Rate" },
+  { value: 35, suffix: "+", label: "Years of Educational Legacy", icon: Award },
+  { value: 1200, suffix: "+", label: "Active Scholars", icon: GraduationCap },
+  { value: 80, suffix: "+", label: "Distinguished Educators", icon: Users },
+  { value: 98, suffix: "%", label: "Academic Success Rate", icon: Trophy },
 ];
+
+function CountUp({ target, start }: { target: number; start: boolean }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!start) return;
+    let startTime: number | null = null;
+    const duration = 2000; // 2 seconds
+
+    const animateCount = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = timestamp - startTime;
+      const progressPercent = Math.min(progress / duration, 1);
+      
+      // Easing function: easeOutExpo for smooth deceleration
+      const easeOutExpo = (x: number): number => {
+        return x === 1 ? 1 : 1 - Math.pow(2, -10 * x);
+      };
+      
+      const currentCount = Math.floor(easeOutExpo(progressPercent) * target);
+      setCount(currentCount);
+
+      if (progressPercent < 1) {
+        requestAnimationFrame(animateCount);
+      }
+    };
+
+    requestAnimationFrame(animateCount);
+  }, [target, start]);
+
+  return <span>{count.toLocaleString()}</span>;
+}
 
 function Counter({ value, suffix }: { value: number; suffix: string }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   return (
-    <motion.span
+    <span
       ref={ref}
-      className="text-4xl sm:text-5xl font-bold text-[#f0c040]"
-      style={{ fontFamily: "'Playfair Display', serif" }}
+      className="text-2xl sm:text-3xl font-mono font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-[#1a1a5e] to-[#c9a227]"
     >
-      {isInView ? (
-        <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-        >
-          <CountUp target={value} />{suffix}
-        </motion.span>
-      ) : (
-        <span>0{suffix}</span>
-      )}
-    </motion.span>
-  );
-}
-
-function CountUp({ target }: { target: number }) {
-  return (
-    <motion.span
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 2 }}
-    >
-      {target}
-    </motion.span>
+      <CountUp target={value} start={isInView} />
+      {suffix}
+    </span>
   );
 }
 
@@ -51,25 +62,49 @@ export default function StatsSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  // Custom border positioning for mobile (2 cols) vs desktop (4 cols) bento layout
+  const borderClasses = [
+    "border-r border-b border-white/[0.08] lg:border-b-0", // Index 0
+    "border-b border-white/[0.08] lg:border-b-0 lg:border-r", // Index 1
+    "border-r border-white/[0.08]", // Index 2
+    "border-none", // Index 3
+  ];
+
   return (
-    <section ref={ref} className="py-8 sm:py-10 bg-gradient-to-r from-[#0d0d3b] via-[#1a1a5e] to-[#0d0d3b]">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          {stats.map((stat, i) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="text-center group"
-            >
-              <div className="relative mb-2">
-                <Counter value={stat.value} suffix={stat.suffix} />
-              </div>
-              <div className="w-8 h-0.5 bg-[#c9a227] mx-auto mb-2 group-hover:w-16 transition-all duration-300" />
-              <p className="text-white/60 text-sm font-medium">{stat.label}</p>
-            </motion.div>
-          ))}
+    <section ref={ref} className="py-8 sm:py-10 relative overflow-hidden bg-gradient-to-b from-[#060622] via-[#0d0d3b] to-[#060622]">
+      {/* Decorative background glows */}
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-48 h-48 rounded-full bg-[#c9a227]/3 blur-[60px] pointer-events-none" />
+      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-48 h-48 rounded-full bg-[#1a1a5e]/15 blur-[80px] pointer-events-none" />
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+        <div className="rounded-2xl bg-white/[0.02] border border-white/[0.08] backdrop-blur-md shadow-2xl overflow-hidden grid grid-cols-2 lg:grid-cols-4">
+          {stats.map((stat, i) => {
+            const Icon = stat.icon;
+            return (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 15 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className={`group relative flex flex-col items-center justify-center py-5 px-3 sm:py-6 sm:px-4 hover:bg-white/[0.03] transition-all duration-300 ${borderClasses[i]}`}
+              >
+                {/* Icon Container */}
+                <div className="p-2 rounded-xl bg-white/[0.02] border border-white/5 text-[#f0c040] mb-2.5 group-hover:bg-[#c9a227]/10 group-hover:border-[#c9a227]/20 group-hover:scale-105 transition-all duration-300">
+                  <Icon size={18} className="stroke-[1.75]" />
+                </div>
+
+                {/* Count and Suffix */}
+                <div className="mb-1 text-center">
+                  <Counter value={stat.value} suffix={stat.suffix} />
+                </div>
+
+                {/* Professional Label */}
+                <p className="text-white/60 text-[10px] sm:text-[11px] font-semibold tracking-wider text-center group-hover:text-white transition-colors duration-300 max-w-[150px]">
+                  {stat.label}
+                </p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

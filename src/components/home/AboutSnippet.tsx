@@ -66,7 +66,7 @@ export default function AboutSnippet() {
             initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative mt-8 lg:mt-0"
+            className="hidden md:block relative mt-8 lg:mt-0"
           >
             <div className="bg-gradient-to-br from-[#1a1a5e] to-[#0d0d3b] rounded-2xl p-6 sm:p-8 text-white shadow-2xl relative overflow-hidden mb-6">
               {/* Decorative */}

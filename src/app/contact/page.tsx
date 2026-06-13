@@ -111,6 +111,25 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+
+      {/* Map Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24">
+        <h2 className="text-3xl font-bold text-[#1a1a5e] mb-8 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
+          Find Us Here
+        </h2>
+        <div className="w-full h-[400px] sm:h-[500px] rounded-3xl overflow-hidden shadow-xl border border-gray-100 relative group">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d183280.10357601158!2d77.81200623659603!3d8.687457514186626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03f5366c2c9e39%3A0x7341de523f6cb6a4!2sM.M.%20Matriculation%20School!5e0!3m2!1sen!2sin!4v1781337850442!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            className="absolute inset-0 grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
+          ></iframe>
+        </div>
+      </section>
     </div>
   );
 }

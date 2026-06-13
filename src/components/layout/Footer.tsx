@@ -35,16 +35,16 @@ export default function Footer() {
             { icon: BookOpen, label: "Experienced Faculty" },
             { icon: Award, label: "State Award Winners" },
           ].map(({ icon: Icon, label }) => (
-            <div key={label} className="flex items-center gap-2 font-semibold text-sm">
-              <Icon size={18} />
-              <span>{label}</span>
+            <div key={label} className="group flex items-center gap-2 font-semibold text-sm hover:scale-105 hover:-translate-y-0.5 transition-all duration-300 cursor-default">
+              <Icon size={18} className="group-hover:text-white transition-colors duration-300" />
+              <span className="group-hover:text-white transition-colors duration-300">{label}</span>
             </div>
           ))}
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4">
           {/* School Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
@@ -165,6 +165,25 @@ export default function Footer() {
               >
                 Apply Now →
               </Link>
+            </div>
+          </div>
+
+          {/* Small Map - Laptop only (5th Column) */}
+          <div className="hidden lg:flex flex-col">
+            <h4 className="text-[#f0c040] font-semibold text-sm uppercase tracking-widest mb-4 opacity-0 pointer-events-none">
+              Map View
+            </h4>
+            <div className="flex-1 rounded-xl overflow-hidden border border-[#c9a227]/20 min-h-[180px] w-full group relative">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d183280.10357601158!2d77.81200623659603!3d8.687457514186626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03f5366c2c9e39%3A0x7341de523f6cb6a4!2sM.M.%20Matriculation%20School!5e0!3m2!1sen!2sin!4v1781337850442!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0 grayscale-[40%] group-hover:grayscale-0 transition-all duration-500"
+              ></iframe>
             </div>
           </div>
         </div>

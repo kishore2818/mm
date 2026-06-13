@@ -87,6 +87,11 @@ export default function Navbar() {
                   Patemanagaram · Est. 1990
                 </p>
               </div>
+              <div className="md:hidden flex flex-col justify-center">
+                <p className="text-[#f0c040] font-bold text-base leading-none tracking-wider" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  MM SCHOOL
+                </p>
+              </div>
             </Link>
 
             {/* Desktop Nav */}
