@@ -44,8 +44,7 @@ export default function HeroSection() {
 
         {/* Main heading */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.1] mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.1] mb-6">
             MM Matric
             <span className="block mt-2" style={{
               background: "linear-gradient(135deg, #c9a227 0%, #f0c040 40%, #ffd700 60%, #c9a227 100%)",
@@ -70,8 +69,7 @@ export default function HeroSection() {
           className="flex items-center justify-center gap-6 mb-8">
           {["LEARN", "LEAD", "SERVE"].map((word, i) => (
             <div key={word} className="flex items-center gap-6">
-              <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#f0c040] tracking-widest drop-shadow-lg"
-                style={{ fontFamily: "'Playfair Display', serif" }}>{word}</span>
+              <span className="font-playfair text-2xl sm:text-3xl lg:text-4xl font-bold text-[#f0c040] tracking-widest drop-shadow-lg">{word}</span>
               {i < 2 && <span className="text-[#c9a227]/50 text-3xl">·</span>}
             </div>
           ))}
@@ -108,7 +106,7 @@ export default function HeroSection() {
           ].map(({ icon: Icon, stat, label }) => (
             <div key={label} className="flex flex-col items-center gap-2 px-5 py-4 rounded-2xl bg-black/30 border border-white/15 backdrop-blur-md shadow-xl hover:border-[#c9a227]/50 transition-colors duration-300">
               <Icon size={20} className="text-[#f0c040]" />
-              <span className="text-white font-bold text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>{stat}</span>
+              <span className="metric-number text-white text-2xl">{stat}</span>
               <span className="text-white/60 text-sm font-medium tracking-wider uppercase">{label}</span>
             </div>
           ))}

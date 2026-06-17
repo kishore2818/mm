@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { BookOpen, Beaker, Calculator, Globe, Monitor, PenTool } from "lucide-react";
@@ -47,7 +47,7 @@ export default function AcademicsPage() {
       <section className="relative py-24 bg-[#0d0d3b]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center text-white">
           <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-4">Academic Excellence</p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
             Our Curriculum
           </h1>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
@@ -60,7 +60,7 @@ export default function AcademicsPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#1a1a5e] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Educational Stages</h2>
+            <h2 className="text-3xl font-bold text-[#1a1a5e] mb-4">Educational Stages</h2>
             <div className="w-16 h-1 bg-[#c9a227] mx-auto rounded-full" />
           </div>
 
@@ -70,7 +70,7 @@ export default function AcademicsPage() {
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                 className="bg-[#fdf8f0] p-8 rounded-2xl border border-[#c9a227]/20 hover:shadow-xl hover:-translate-y-1 transition-all group">
                 <div className="text-[#c9a227] font-semibold text-sm mb-2">{stage.grades}</div>
-                <h3 className="text-xl font-bold text-[#1a1a5e] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>{stage.title}</h3>
+                <h3 className="text-xl font-bold text-[#1a1a5e] mb-4">{stage.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{stage.desc}</p>
               </motion.div>
             ))}
@@ -82,7 +82,7 @@ export default function AcademicsPage() {
       <section className="py-20 bg-[#fdf8f0]" id="departments">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#1a1a5e] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Academic Departments</h2>
+            <h2 className="text-3xl font-bold text-[#1a1a5e] mb-4">Academic Departments</h2>
             <p className="text-gray-500">Dedicated faculty across all major disciplines.</p>
           </div>
 
@@ -97,7 +97,7 @@ export default function AcademicsPage() {
                     <Icon size={20} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-[#1a1a5e] mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{dept.name}</h3>
+                    <h3 className="font-bold text-[#1a1a5e] mb-1">{dept.name}</h3>
                     <p className="text-gray-500 text-sm leading-relaxed">{dept.desc}</p>
                   </div>
                 </motion.div>
@@ -110,17 +110,17 @@ export default function AcademicsPage() {
       {/* Streams for XI & XII */}
       <section className="py-20 bg-[#0d0d3b] text-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl font-bold mb-12" style={{ fontFamily: "'Playfair Display', serif" }}>Higher Secondary Streams (XI & XII)</h2>
+          <h2 className="text-3xl font-bold mb-12">Higher Secondary Streams (XI & XII)</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm text-left">
-              <h3 className="text-[#f0c040] text-xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Science Stream</h3>
+              <h3 className="text-[#f0c040] text-xl font-bold mb-4">Science Stream</h3>
               <ul className="space-y-3 text-white/70">
                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#c9a227]" /> Physics, Chemistry, Biology, Maths</li>
                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#c9a227]" /> Physics, Chemistry, Comp Sci, Maths</li>
               </ul>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm text-left">
-              <h3 className="text-[#f0c040] text-xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Commerce Stream</h3>
+              <h3 className="text-[#f0c040] text-xl font-bold mb-4">Commerce Stream</h3>
               <ul className="space-y-3 text-white/70">
                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#c9a227]" /> Accountancy, Commerce, Economics, Bus. Maths</li>
                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#c9a227]" /> Accountancy, Commerce, Economics, Comp Sci</li>

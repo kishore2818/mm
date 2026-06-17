@@ -56,10 +56,7 @@ export default function EventsPreview() {
             <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-2">
               What&apos;s Happening
             </p>
-            <h2
-              className="text-3xl sm:text-4xl font-bold text-[#1a1a5e]"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
+            <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-[#1a1a5e]">
               Upcoming Events
             </h2>
           </div>
@@ -90,7 +87,7 @@ export default function EventsPreview() {
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#1a1a5e] to-[#252580] flex flex-col items-center justify-center text-white flex-shrink-0">
-                      <span className="text-xl font-bold leading-none" style={{ fontFamily: "'Playfair Display', serif" }}>
+                      <span className="metric-number text-xl text-white leading-none">
                         {event.date.day}
                       </span>
                       <span className="text-xs text-[#c9a227] font-medium">{event.date.month}</span>
@@ -101,10 +98,7 @@ export default function EventsPreview() {
                   </span>
                 </div>
 
-                <h3
-                  className="font-bold text-[#1a1a5e] text-base mb-2 group-hover:text-[#c9a227] transition-colors"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
+                <h3 className="font-playfair font-bold text-[#1a1a5e] text-base mb-2 group-hover:text-[#c9a227] transition-colors">
                   {event.title}
                 </h3>
                 <p className="text-gray-500 text-xs leading-relaxed mb-4">{event.description}</p>

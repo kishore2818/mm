@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 @import "tailwindcss";
 
@@ -30,8 +30,6 @@
   --font-inter: "Inter", sans-serif;
 }
 
-
-
 html {
   scroll-behavior: smooth;
 }
@@ -42,20 +40,76 @@ body {
   color: var(--text-dark);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Ensure body never overflows horizontally */
   overflow-x: hidden;
   width: 100%;
 }
 
-h1, h2, h3, h4 {
-  font-family: "Playfair Display", serif;
+/* All headings default to Inter — apply .font-playfair manually for brand titles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", sans-serif;
 }
 
-/* ─── Global Page Centering ─────────────────────────────────────────
-   All full-width sections should contain a .container inside them.
-   Direct-child sections of <main> are always full-width but their
-   inner content is constrained and centred via max-w-7xl mx-auto.
-──────────────────────────────────────────────────────────────────── */
+/* Opt-in Playfair class for brand/hero headings */
+.font-playfair {
+  font-family: "Playfair Display", serif !important;
+}
+
+/* ─── Global Typography System ──────────────────────────────────────────────
+   Use these classes wherever you display numbers, statistics, counters,
+   percentages, years, marks, rankings, or any numeric metric.
+─────────────────────────────────────────────────────────────────────────── */
+
+/* Primary stat — large hero numbers (e.g. 5000+, 98%) */
+.stat-number {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* Medium metric — section stats, counters */
+.metric-number {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* Counter — animated count-up numbers */
+.counter-number {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 800;
+  font-size: 2.25rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* Percentage values */
+.percentage-value {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+/* Year values (e.g. 35 Years, 2024) */
+.year-value {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Small inline stat label */
+.stat-label {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ─── Global Page Centering ──────────────────────────────────────────────── */
 main {
   width: 100%;
   display: flex;
@@ -63,28 +117,20 @@ main {
   align-items: stretch;
 }
 
-/* Every section inside main stretches full width */
 main > section,
 main > div > section {
   width: 100%;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--cream);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--gold);
-  border-radius: 3px;
-}
+/* ─── Scrollbar ──────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
 
-/* Gold shimmer animation */
+/* ─── Gold shimmer animation ─────────────────────────────────────────────── */
 @keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
 }
 
 .gold-shimmer {
@@ -96,17 +142,15 @@ main > div > section {
   animation: shimmer 3s linear infinite;
 }
 
-/* Ticker animation */
+/* ─── Ticker animation ───────────────────────────────────────────────────── */
 @keyframes ticker {
-  0% { transform: translateX(0); }
+  0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
-.ticker-track {
-  animation: ticker 30s linear infinite;
-}
+.ticker-track { animation: ticker 30s linear infinite; }
+.ticker-track:hover { animation-play-state: paused; }
 
-.ticker-track:hover {
-  animation-play-state: paused;
-}
-
+/* ─── Hide scrollbar for category filter strip ───────────────────────────── */
+.scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }

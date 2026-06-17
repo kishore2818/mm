@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -80,7 +80,7 @@ export default function Navbar() {
                 <Image src="/images/logo.png" alt="MM Matric Logo" width={40} height={40} className="object-contain" priority unoptimized />
               </div>
               <div className="hidden md:flex flex-col justify-center">
-                <p className="text-[#f0c040] font-bold text-[13px] lg:text-sm leading-tight tracking-wide whitespace-nowrap" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <p className="text-[#f0c040] font-bold text-[13px] lg:text-sm leading-tight tracking-wide whitespace-nowrap">
                   MM Matric Higher Secondary School
                 </p>
                 <p className="text-[#c9a227]/60 text-[9px] lg:text-[10px] tracking-[0.2em] lg:tracking-[0.25em] uppercase mt-0.5 whitespace-nowrap">
@@ -88,7 +88,7 @@ export default function Navbar() {
                 </p>
               </div>
               <div className="md:hidden flex flex-col justify-center">
-                <p className="text-[#f0c040] font-bold text-base leading-none tracking-wider" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <p className="text-[#f0c040] font-bold text-base leading-none tracking-wider">
                   MM SCHOOL
                 </p>
               </div>

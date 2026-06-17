@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { useRef } from "react";
@@ -36,7 +36,7 @@ export default function AboutPage() {
           <motion.p initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}
             className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-4">Our Story</motion.p>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
-            className="text-4xl sm:text-6xl font-bold text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+            className="text-4xl sm:text-6xl font-bold text-white mb-6">
             About Our <span style={{ background: "linear-gradient(135deg, #c9a227, #f0c040)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>School</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}
@@ -60,7 +60,7 @@ export default function AboutPage() {
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1a1a5e] to-[#252580] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                     <Icon size={22} className="text-[#c9a227]" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#1a1a5e] mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{v.title}</h3>
+                  <h3 className="text-xl font-bold text-[#1a1a5e] mb-3">{v.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
                 </motion.div>
               );
@@ -81,7 +81,7 @@ export default function AboutPage() {
                       P
                     </div>
                     <div>
-                      <p className="text-[#f0c040] font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>The Principal</p>
+                      <p className="text-[#f0c040] font-bold">The Principal</p>
                       <p className="text-white/50 text-sm">MM Matric Higher Secondary School</p>
                     </div>
                   </div>
@@ -105,7 +105,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-3">Milestones</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a5e]" style={{ fontFamily: "'Playfair Display', serif" }}>Our Journey</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a5e]">Our Journey</h2>
           </div>
           <div className="relative">
             <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#c9a227] via-[#f0c040] to-transparent" />
@@ -119,7 +119,7 @@ export default function AboutPage() {
                   <div className={`flex-1 ${i % 2 === 0 ? "text-right" : "text-left"}`}>
                     <div className="bg-[#fdf8f0] rounded-2xl p-5 border border-[#c9a227]/15 inline-block max-w-xs">
                       <p className="text-[#c9a227] font-bold text-sm mb-1">{item.year}</p>
-                      <h3 className="text-[#1a1a5e] font-bold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+                      <h3 className="text-[#1a1a5e] font-bold mb-2">{item.title}</h3>
                       <p className="text-gray-500 text-sm">{item.desc}</p>
                     </div>
                   </div>
@@ -135,7 +135,7 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-[#1a1a5e] to-[#0d0d3b]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Join Our Family?
           </h2>
           <p className="text-white/60 mb-8">Start your child&apos;s journey toward excellence today.</p>

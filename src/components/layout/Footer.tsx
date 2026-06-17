@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 import {
   MapPin, Phone, Mail, ExternalLink, PlayCircle, Camera,
@@ -60,7 +60,7 @@ export default function Footer() {
               </div>
               <div>
                 <p className="text-[#f0c040] font-bold text-sm leading-snug"
-                   style={{ fontFamily: "'Playfair Display', serif" }}>
+                  >
                   MM Matric Higher Secondary School
                 </p>
                 <p className="text-[#c9a227]/60 text-xs">Patemanagaram</p>
@@ -93,7 +93,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="hidden sm:block">
             <h4 className="text-[#f0c040] font-semibold text-sm uppercase tracking-widest mb-4">
               Quick Links
             </h4>

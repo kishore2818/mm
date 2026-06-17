@@ -75,10 +75,7 @@ export default function FacilitiesSection() {
           <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-3">
             World-Class Infrastructure
           </p>
-          <h2
-            className="text-3xl sm:text-4xl font-bold text-[#1a1a5e]"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
+          <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-[#1a1a5e]">
             Our Facilities
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-[#c9a227] to-[#f0c040] mx-auto mt-4 rounded-full" />
@@ -108,10 +105,7 @@ export default function FacilitiesSection() {
                 >
                   <Icon size={22} style={{ color: facility.color }} />
                 </div>
-                <h3
-                  className="font-bold text-[#1a1a5e] text-base mb-2"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
+                <h3 className="font-playfair font-bold text-[#1a1a5e] text-base mb-2">
                   {facility.title}
                 </h3>
                 <p className="text-gray-500 text-xs leading-relaxed">{facility.description}</p>

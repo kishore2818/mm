@@ -22,10 +22,7 @@ export default function AboutSnippet() {
             <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-3">
               About Our School
             </p>
-            <h2
-              className="text-3xl sm:text-4xl font-bold text-[#1a1a5e] leading-tight mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
+            <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-[#1a1a5e] leading-tight mb-6">
               A Legacy of{" "}
               <span className="text-[#c9a227]">Academic Excellence</span>{" "}
               and Character
@@ -46,7 +43,7 @@ export default function AboutSnippet() {
                 { label: "Strong", value: "Values" },
               ].map((item) => (
                 <div key={item.label} className="text-center p-3 bg-white rounded-xl border border-[#c9a227]/20 shadow-sm">
-                  <p className="text-[#1a1a5e] font-bold text-xs sm:text-sm" style={{ fontFamily: "'Playfair Display', serif" }}>{item.value}</p>
+                  <p className="text-[#1a1a5e] font-bold text-xs sm:text-sm">{item.value}</p>
                   <p className="text-gray-400 text-xs mt-0.5">{item.label}</p>
                 </div>
               ))}
@@ -85,9 +82,7 @@ export default function AboutSnippet() {
                   P
                 </div>
                 <div>
-                  <p className="font-semibold text-[#f0c040]" style={{ fontFamily: "'Playfair Display', serif" }}>
-                    The Principal
-                  </p>
+                  <p className="font-semibold text-[#f0c040]">The Principal</p>
                   <p className="text-white/50 text-xs">MM Matric Higher Secondary School</p>
                   <p className="text-white/40 text-xs">Patemanagaram</p>
                 </div>
@@ -97,8 +92,8 @@ export default function AboutSnippet() {
             {/* Badge — inline on mobile, absolute on desktop */}
             <div className="flex lg:absolute lg:-bottom-4 lg:-left-4 justify-start">
               <div className="bg-[#c9a227] text-[#0d0d3b] rounded-xl p-4 shadow-lg inline-block">
-                <p className="font-bold text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>35+</p>
-                <p className="text-xs font-medium">Years of Trust</p>
+                <p className="metric-number text-2xl">35+</p>
+                <p className="text-xs font-semibold tracking-wide">Years of Trust</p>
               </div>
             </div>
           </motion.div>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
@@ -9,7 +9,7 @@ export default function ContactPage() {
       <section className="relative py-24 bg-[#0d0d3b] text-center text-white mb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-4">Get in Touch</p>
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
             Contact Us
           </h1>
           <p className="text-white/60 text-lg">We&apos;re here to answer any questions you may have about admissions, academics, or campus life.</p>
@@ -20,7 +20,7 @@ export default function ContactPage() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Info */}
           <div>
-            <h2 className="text-3xl font-bold text-[#1a1a5e] mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>Contact Information</h2>
+            <h2 className="text-3xl font-bold text-[#1a1a5e] mb-8">Contact Information</h2>
             
             <div className="space-y-8">
               <div className="flex gap-5">
@@ -71,7 +71,7 @@ export default function ContactPage() {
 
           {/* Form */}
           <div className="bg-white p-8 sm:p-10 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/40">
-            <h3 className="text-2xl font-bold text-[#1a1a5e] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Send us a Message</h3>
+            <h3 className="text-2xl font-bold text-[#1a1a5e] mb-6">Send us a Message</h3>
             <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
               <div className="grid sm:grid-cols-2 gap-5">
                 <div className="space-y-1.5">
@@ -114,7 +114,7 @@ export default function ContactPage() {
 
       {/* Map Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24">
-        <h2 className="text-3xl font-bold text-[#1a1a5e] mb-8 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <h2 className="text-3xl font-bold text-[#1a1a5e] mb-8 text-center">
           Find Us Here
         </h2>
         <div className="w-full h-[400px] sm:h-[500px] rounded-3xl overflow-hidden shadow-xl border border-gray-100 relative group">

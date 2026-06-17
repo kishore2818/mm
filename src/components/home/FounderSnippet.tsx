@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -35,7 +35,7 @@ export default function FounderSnippet() {
             </div>
             
             <div className="text-center">
-              <h3 className="text-2xl font-bold text-[#0d0d3b] mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>Mr. Ananth Sharma</h3>
+              <h3 className="text-2xl font-bold text-[#0d0d3b] mb-1">Mr. Ananth Sharma</h3>
               <p className="text-[#c9a227] font-bold text-sm tracking-[0.2em] uppercase mb-4">Founder & Chairman</p>
               <div className="w-12 h-1 bg-[#0d0d3b] mx-auto rounded-full opacity-20"></div>
             </div>
@@ -52,7 +52,7 @@ export default function FounderSnippet() {
               Our Visionary
             </span>
             
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0d0d3b] mb-8 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0d0d3b] mb-8 leading-tight">
               A Legacy of <span className="text-[#c9a227]">Excellence</span> & Dedication
             </h2>
             
@@ -68,7 +68,7 @@ export default function FounderSnippet() {
             {/* Quote */}
             <div className="relative p-8 rounded-2xl bg-[#fdf8f0] border-l-4 border-[#c9a227] shadow-sm">
               <span className="absolute top-4 left-4 text-5xl text-[#c9a227]/20 font-serif leading-none">"</span>
-              <p className="text-xl italic text-[#1a1a5e] font-medium leading-relaxed relative z-10 pl-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <p className="text-xl italic text-[#1a1a5e] font-medium leading-relaxed relative z-10 pl-6">
                 True education empowers the mind, ennobles the heart, and elevates the spirit of a community.
               </p>
             </div>

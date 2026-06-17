@@ -30,7 +30,7 @@ export default function PrincipalsMessage() {
           <span className="inline-block px-5 py-2 rounded-full bg-[#c9a227]/10 text-[#c9a227] text-xs font-semibold tracking-[0.25em] uppercase mb-4">
             A Word From Our Leader
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#0d0d3b]" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="font-playfair text-4xl sm:text-5xl font-bold text-[#0d0d3b]">
             Principal&apos;s Message
           </h2>
           <div className="mt-4 mx-auto w-20 h-1 rounded-full" style={{ background: "linear-gradient(90deg, #c9a227, #f0c040)" }} />
@@ -46,8 +46,7 @@ export default function PrincipalsMessage() {
             className="relative"
           >
             <Quote size={64} className="text-[#c9a227]/20 mb-4 -ml-2" />
-            <blockquote className="text-2xl sm:text-3xl font-medium text-[#0d0d3b] leading-relaxed mb-8"
-              style={{ fontFamily: "'Playfair Display', serif" }}>
+            <blockquote className="font-playfair text-2xl sm:text-3xl font-medium text-[#0d0d3b] leading-relaxed mb-8">
               Education is not merely the filling of a pail, but the lighting of a fire. At MM Matric, we ignite that spark in every child who walks through our doors.
             </blockquote>
             <p className="text-[#555] text-base leading-loose mb-8">
@@ -64,7 +63,7 @@ export default function PrincipalsMessage() {
                 P
               </div>
               <div>
-                <p className="font-bold text-[#0d0d3b] text-lg" style={{ fontFamily: "'Playfair Display', serif" }}>The Principal</p>
+                <p className="font-bold text-[#0d0d3b] text-lg">The Principal</p>
                 <p className="text-[#c9a227] text-sm font-medium tracking-wide">MM Matric Higher Secondary School</p>
               </div>
             </div>
@@ -83,7 +82,7 @@ export default function PrincipalsMessage() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl"
               style={{ background: "linear-gradient(160deg, #060622 0%, #1a1a5e 100%)" }}>
               <div className="p-10">
-                <h3 className="text-2xl font-bold text-white mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="font-playfair text-2xl font-bold text-white mb-2">
                   Our Vision & Mission
                 </h3>
                 <div className="w-12 h-0.5 mb-8" style={{ background: "linear-gradient(90deg, #c9a227, transparent)" }} />
@@ -118,7 +117,7 @@ export default function PrincipalsMessage() {
           initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }} transition={{ duration: 0.7 }}
         >
-          <h3 className="text-center text-3xl font-bold text-[#0d0d3b] mb-12" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h3 className="font-playfair text-center text-3xl font-bold text-[#0d0d3b] mb-12">
             Our Core Values
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -133,7 +132,7 @@ export default function PrincipalsMessage() {
                   style={{ background: "linear-gradient(135deg, #c9a227, #f0c040)" }}>
                   <Icon size={22} className="text-[#0d0d3b]" />
                 </div>
-                <h4 className="font-bold text-[#0d0d3b] text-lg mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{title}</h4>
+                <h4 className="font-playfair font-bold text-[#0d0d3b] text-lg mb-3">{title}</h4>
                 <p className="text-[#666] text-sm leading-relaxed">{desc}</p>
               </motion.div>
             ))}

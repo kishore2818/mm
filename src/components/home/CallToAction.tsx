@@ -48,10 +48,7 @@ export default function CallToAction() {
               Admissions Open 2025–26
             </div>
 
-            <h2
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
+            <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
               Begin Your{" "}
               <span style={{
                 background: "linear-gradient(90deg, #c9a227, #f0c040)",
@@ -104,10 +101,7 @@ export default function CallToAction() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-              <h3
-                className="text-[#f0c040] font-bold text-xl mb-6"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
+              <h3 className="font-playfair text-[#f0c040] font-bold text-xl mb-6">
                 Admission Details
               </h3>
 

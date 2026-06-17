@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { CheckCircle2, Download, Phone, MapPin } from "lucide-react";
@@ -18,7 +18,7 @@ export default function AdmissionsPage() {
         <div className="absolute inset-0 opacity-10" style={{ background: "radial-gradient(circle, #c9a227, transparent 70%)" }} />
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6">
           <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-4">Admissions 2025–26</p>
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
             Begin Your Journey
           </h1>
           <p className="text-white/60 text-lg">We welcome students from all backgrounds who show a desire to learn, lead, and serve.</p>
@@ -32,7 +32,7 @@ export default function AdmissionsPage() {
             
             {/* Process */}
             <section>
-              <h2 className="text-2xl font-bold text-[#1a1a5e] mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>Admission Process</h2>
+              <h2 className="text-2xl font-bold text-[#1a1a5e] mb-8">Admission Process</h2>
               <div className="space-y-6">
                 {steps.map((step, i) => (
                   <motion.div key={step.title} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
@@ -51,7 +51,7 @@ export default function AdmissionsPage() {
 
             {/* Documents */}
             <section>
-              <h2 className="text-2xl font-bold text-[#1a1a5e] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Required Documents</h2>
+              <h2 className="text-2xl font-bold text-[#1a1a5e] mb-6">Required Documents</h2>
               <ul className="grid sm:grid-cols-2 gap-4">
                 {["Original Birth Certificate", "Transfer Certificate (if applicable)", "Recent Passport Photos (4)", "Aadhar Card Copy", "Previous Year Marksheet", "Community Certificate"].map((doc) => (
                   <li key={doc} className="flex items-center gap-3 text-gray-600 text-sm p-4 bg-[#fdf8f0] rounded-xl border border-[#c9a227]/10">
@@ -67,7 +67,7 @@ export default function AdmissionsPage() {
             {/* Apply Card */}
             <div className="bg-gradient-to-b from-[#1a1a5e] to-[#0d0d3b] p-8 rounded-2xl text-white shadow-xl relative overflow-hidden">
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#c9a227] rounded-full opacity-20 blur-2xl" />
-              <h3 className="text-xl font-bold text-[#f0c040] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Ready to Apply?</h3>
+              <h3 className="text-xl font-bold text-[#f0c040] mb-4">Ready to Apply?</h3>
               <p className="text-white/70 text-sm mb-6">Admissions are currently open for Classes I to IX and XI for the academic year 2025-26.</p>
               <a href="#" className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-[#c9a227] to-[#f0c040] text-[#0d0d3b] font-semibold rounded-xl mb-3 hover:scale-105 transition-transform">
                 <Download size={18} /> Download Form
@@ -77,7 +77,7 @@ export default function AdmissionsPage() {
 
             {/* Contact Card */}
             <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
-              <h3 className="text-lg font-bold text-[#1a1a5e] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Admission Enquiry</h3>
+              <h3 className="text-lg font-bold text-[#1a1a5e] mb-6">Admission Enquiry</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <Phone size={18} className="text-[#c9a227] mt-0.5" />
