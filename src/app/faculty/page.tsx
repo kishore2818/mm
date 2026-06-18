@@ -267,7 +267,7 @@ export default function FacultyPage() {
                       {/* Name */}
                       <h3
                         className="text-[9px] sm:text-base md:text-lg font-bold text-[#1a1a5e] mb-0.5 sm:mb-1 group-hover:text-[#c9a227] transition-colors duration-200 leading-tight"
-                       
+
                       >
                         {faculty.name}
                       </h3>
