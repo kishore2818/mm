@@ -3,45 +3,44 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import {
-  BookOpen, FlaskConical, Laptop, Trophy, Bus, Utensils,
-  Music, HeartPulse
+  BookOpen, FlaskConical, Laptop, Bus, Music, HeartPulse, Building2, Droplets
 } from "lucide-react";
 
 const facilities = [
   {
-    icon: BookOpen,
-    title: "Library",
-    description: "10,000+ books, digital resources, and a quiet study environment for every learner.",
+    icon: Building2,
+    title: "Campus & Playground",
+    description: "Well-designed buildings, an excellent playground, and ample parking space for vehicles.",
     color: "#1a1a5e",
   },
   {
-    icon: FlaskConical,
-    title: "Science Labs",
-    description: "Fully equipped Physics, Chemistry, and Biology labs for hands-on experiments.",
+    icon: Droplets,
+    title: "Purified Drinking Water",
+    description: "Completely hygienic, purified drinking water facilities are provided for all students.",
     color: "#c9a227",
   },
   {
     icon: Laptop,
     title: "Computer Lab",
-    description: "Modern computers with high-speed internet and programming tools for tech education.",
+    description: "Modern computer laboratory set up for quality education and managed by qualified teachers.",
     color: "#1a1a5e",
   },
   {
-    icon: Trophy,
-    title: "Sports Complex",
-    description: "Cricket ground, basketball court, badminton, chess, and kabaddi facilities.",
+    icon: FlaskConical,
+    title: "Science Labs",
+    description: "Well-equipped and structured laboratories for Physics, Chemistry, and Biology.",
     color: "#c9a227",
+  },
+  {
+    icon: BookOpen,
+    title: "AC Library",
+    description: "Fully operational air-conditioned library housing approximately 5,000 reference books.",
+    color: "#1a1a5e",
   },
   {
     icon: Bus,
     title: "School Transport",
-    description: "Safe and punctual GPS-tracked buses covering all nearby areas and villages.",
-    color: "#1a1a5e",
-  },
-  {
-    icon: Utensils,
-    title: "Canteen",
-    description: "Hygienic, nutritious meals prepared fresh daily under supervision.",
+    description: "Operates 6 to 7 vehicles driven by qualified drivers, serving students across 32 villages.",
     color: "#c9a227",
   },
   {

@@ -5,10 +5,10 @@ import { motion, useInView } from "framer-motion";
 import { Award, GraduationCap, Users, Trophy } from "lucide-react";
 
 const stats = [
-  { value: 35, suffix: "+", label: "Years of Educational Legacy", icon: Award },
-  { value: 1200, suffix: "+", label: "Active Scholars", icon: GraduationCap },
-  { value: 80, suffix: "+", label: "Distinguished Educators", icon: Users },
-  { value: 98, suffix: "%", label: "Academic Success Rate", icon: Trophy },
+  { value: 28, suffix: "", label: "Years of Educational Legacy", icon: Award },
+  { value: 660, suffix: "+", label: "HSC Graduates / Alumni", icon: GraduationCap },
+  { value: 50, suffix: "", label: "Dedicated Educators", icon: Users },
+  { value: 100, suffix: "%", label: "Board Exam Pass Rate", icon: Trophy },
 ];
 
 function CountUp({ target, start }: { target: number; start: boolean }) {

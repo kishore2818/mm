@@ -3,12 +3,12 @@
 import { Bell } from "lucide-react";
 
 const notices = [
-  "📢 Admissions Open for 2025–26 Academic Year — Apply Now",
-  "🏆 Our students secured State Rank in Board Examinations 2024",
-  "📅 Annual Sports Day on July 15, 2025 — Parents are invited",
-  "🎓 Parent-Teacher Meeting scheduled for June 28, 2025",
-  "📚 New Science Lab inaugurated by District Collector",
-  "🌟 Registration open for Summer Coaching Classes — Limited Seats",
+  "📢 Admissions Open for 2026–27 Academic Year — Apply Now",
+  "🏆 Raveen secured 1st rank in Thoothukudi district in Class 10 public exams with 497/500 marks!",
+  "📅 Admissions open for Class XI streams (Science & Commerce)",
+  "🥇 Koshal won 1st place in state-level Under-14 Silambam competition!",
+  "🎓 Congratulations to our alumni practicing Medicine (MBBS) & Defence (BSF) careers!",
+  "🌟 Established on June 1, 1998 — Celebrating 28 years of academic legacy",
 ];
 
 export default function AnnouncementBar() {

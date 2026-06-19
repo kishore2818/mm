@@ -50,7 +50,7 @@ export default function PrincipalsMessage() {
               Education is not merely the filling of a pail, but the lighting of a fire. At MM Matric, we ignite that spark in every child who walks through our doors.
             </blockquote>
             <p className="text-[#555] text-base leading-loose mb-8">
-              For over three and a half decades, MM Matriculation Higher Secondary School has stood as a beacon of quality education in Patemanagaram. Our journey has been one of unwavering commitment — to our students, our community, and to the timeless values that define genuine education.
+              For nearly three decades, MM Matriculation Higher Secondary School has stood as a beacon of quality education in Patemanagaram. Our journey has been one of unwavering commitment — to our students, our community, and to the timeless values that define genuine education.
             </p>
             <p className="text-[#555] text-base leading-loose mb-10">
               We believe that every student carries within them an extraordinary potential. Our dedicated faculty, world-class facilities, and nurturing environment are designed to bring out the very best in each child — academically, morally, and creatively.
@@ -106,7 +106,7 @@ export default function PrincipalsMessage() {
               {/* Bottom bar */}
               <div className="px-10 py-6 border-t border-white/10 flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-[#f0c040] animate-pulse" />
-                <span className="text-white/50 text-xs tracking-widest uppercase">Established 1990 · Patemanagaram</span>
+                <span className="text-white/50 text-xs tracking-widest uppercase">Established 1998 · Patemanagaram</span>
               </div>
             </div>
           </motion.div>

@@ -39,7 +39,7 @@ export default function HeroSection() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#f0c040] opacity-75" />
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#f0c040]" />
           </span>
-          Admissions Open 2025–26
+          Admissions Open 2026–27
         </motion.div>
 
         {/* Main heading */}
@@ -78,7 +78,7 @@ export default function HeroSection() {
         {/* Description */}
         <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.85 }}
           className="text-white/80 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed mb-10 font-light drop-shadow-md">
-          Nurturing brilliant minds and building tomorrow&apos;s leaders with academic excellence, holistic development, and deep moral values since 1990.
+          Nurturing brilliant minds and building tomorrow&apos;s leaders with academic excellence, holistic development, and deep moral values since 1998.
         </motion.p>
 
         {/* CTAs */}
@@ -100,9 +100,9 @@ export default function HeroSection() {
           className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl mx-auto">
           {[
             { icon: Users, stat: "1200+", label: "Students" },
-            { icon: BookOpen, stat: "80+", label: "Faculty" },
+            { icon: BookOpen, stat: "50", label: "Faculty" },
             { icon: Trophy, stat: "State", label: "Toppers" },
-            { icon: Star, stat: "35+", label: "Years" },
+            { icon: Star, stat: "28", label: "Years" },
           ].map(({ icon: Icon, stat, label }) => (
             <div key={label} className="flex flex-col items-center gap-2 px-5 py-4 rounded-2xl bg-black/30 border border-white/15 backdrop-blur-md shadow-xl hover:border-[#c9a227]/50 transition-colors duration-300">
               <Icon size={20} className="text-[#f0c040]" />

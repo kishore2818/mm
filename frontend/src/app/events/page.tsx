@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { Calendar as CalendarIcon, Clock, MapPin, ArrowRight } from "lucide-react";
@@ -7,7 +7,7 @@ export default function EventsPage() {
   const allEvents = [
     {
       id: 1, month: "June", events: [
-        { date: "15", title: "School Reopening", type: "Academic", desc: "Welcome back for the new academic year 2025-26. Assembly at 8:30 AM.", time: "8:30 AM", loc: "Main Ground" },
+        { date: "15", title: "School Reopening", type: "Academic", desc: "Welcome back for the new academic year 2026-27. Assembly at 8:30 AM.", time: "8:30 AM", loc: "Main Ground" },
         { date: "28", title: "PTA Meeting", type: "Meeting", desc: "First parent-teacher interaction for the academic year.", time: "10:00 AM", loc: "Auditorium" }
       ]
     },
@@ -35,7 +35,7 @@ export default function EventsPage() {
           {allEvents.map((monthGrp, idx) => (
             <motion.div key={monthGrp.month} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.1 }}>
               <div className="flex items-center gap-4 mb-8">
-                <h2 className="text-2xl font-bold text-[#1a1a5e]">{monthGrp.month} 2025</h2>
+                <h2 className="text-2xl font-bold text-[#1a1a5e]">{monthGrp.month} 2026</h2>
                 <div className="flex-1 h-px bg-gradient-to-r from-[#c9a227]/40 to-transparent" />
               </div>
 
@@ -77,7 +77,7 @@ export default function EventsPage() {
         <div className="mt-20 p-8 border-2 border-dashed border-[#c9a227]/30 rounded-3xl text-center bg-white">
           <CalendarIcon size={40} className="mx-auto text-[#c9a227] mb-4" />
           <h3 className="text-xl font-bold text-[#1a1a5e] mb-2">Full Academic Calendar</h3>
-          <p className="text-gray-500 text-sm mb-6">Download the complete academic planner for 2025-26 including holidays and exam schedules.</p>
+          <p className="text-gray-500 text-sm mb-6">Download the complete academic planner for 2026-27 including holidays and exam schedules.</p>
           <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#1a1a5e] text-white rounded-full text-sm font-semibold hover:bg-[#0d0d3b] transition-colors">
             Download PDF <ArrowRight size={16} />
           </button>

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { CheckCircle2, Download, Phone, MapPin } from "lucide-react";
@@ -17,7 +17,7 @@ export default function AdmissionsPage() {
       <section className="relative py-24 bg-[#0d0d3b] text-center text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ background: "radial-gradient(circle, #c9a227, transparent 70%)" }} />
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6">
-          <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-4">Admissions 2025–26</p>
+          <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-4">Admissions 2026–27</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">
             Begin Your Journey
           </h1>
@@ -68,7 +68,7 @@ export default function AdmissionsPage() {
             <div className="bg-gradient-to-b from-[#1a1a5e] to-[#0d0d3b] p-8 rounded-2xl text-white shadow-xl relative overflow-hidden">
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#c9a227] rounded-full opacity-20 blur-2xl" />
               <h3 className="text-xl font-bold text-[#f0c040] mb-4">Ready to Apply?</h3>
-              <p className="text-white/70 text-sm mb-6">Admissions are currently open for Classes I to IX and XI for the academic year 2025-26.</p>
+              <p className="text-white/70 text-sm mb-6">Admissions are currently open for Classes I to IX and XI for the academic year 2026-27.</p>
               <a href="#" className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-[#c9a227] to-[#f0c040] text-[#0d0d3b] font-semibold rounded-xl mb-3 hover:scale-105 transition-transform">
                 <Download size={18} /> Download Form
               </a>

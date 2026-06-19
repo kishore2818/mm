@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { GraduationCap, Award, BookOpen } from "lucide-react";
@@ -159,9 +159,9 @@ export default function FacultyPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center text-[#0d0d3b]">
             {[
-              { icon: GraduationCap, stat: "80+", label: "Qualified Teachers" },
-              { icon: BookOpen, stat: "15:1", label: "Student-Teacher Ratio" },
-              { icon: Award, stat: "10+", label: "Ph.D. Holders" },
+              { icon: GraduationCap, stat: "50", label: "Dedicated Teachers" },
+              { icon: BookOpen, stat: "28", label: "Support & Non-Teaching Staff" },
+              { icon: Award, stat: "4", label: "Founding Teachers" },
             ].map((item) => {
               const Icon = item.icon;
               return (

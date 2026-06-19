@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 import {
   MapPin, Phone, Mail, ExternalLink, PlayCircle, Camera,
@@ -31,7 +31,7 @@ export default function Footer() {
       <div className="bg-gradient-to-r from-[#c9a227] via-[#f0c040] to-[#c9a227]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap justify-center gap-8 text-[#0d0d3b]">
           {[
-            { icon: GraduationCap, label: "2000+ Alumni" },
+            { icon: GraduationCap, label: "660+ HSC Graduates" },
             { icon: BookOpen, label: "Experienced Faculty" },
             { icon: Award, label: "State Award Winners" },
           ].map(({ icon: Icon, label }) => (
@@ -157,7 +157,7 @@ export default function Footer() {
             </ul>
 
             <div className="mt-5 p-3 bg-white/5 rounded-lg border border-[#c9a227]/20">
-              <p className="text-xs text-[#c9a227] font-medium mb-1">Admissions Open 2025–26</p>
+              <p className="text-xs text-[#c9a227] font-medium mb-1">Admissions Open 2026–27</p>
               <p className="text-xs text-white/50">Apply before the deadline. Limited seats available.</p>
               <Link
                 href="/admissions"

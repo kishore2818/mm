@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -84,7 +84,7 @@ export default function Navbar() {
                   MM Matric Higher Secondary School
                 </p>
                 <p className="text-[#c9a227]/60 text-[9px] lg:text-[10px] tracking-[0.2em] lg:tracking-[0.25em] uppercase mt-0.5 whitespace-nowrap">
-                  Patemanagaram · Est. 1990
+                  Patemanagaram · Est. 1998
                 </p>
               </div>
               <div className="md:hidden flex flex-col justify-center">

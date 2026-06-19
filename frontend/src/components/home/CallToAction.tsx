@@ -45,7 +45,7 @@ export default function CallToAction() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#c9a227]/40 bg-[#c9a227]/10 text-[#f0c040] text-xs tracking-widest uppercase mb-6">
               <GraduationCap size={14} />
-              Admissions Open 2025–26
+              Admissions Open 2026–27
             </div>
 
             <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
@@ -110,7 +110,7 @@ export default function CallToAction() {
                 { label: "Medium of Instruction", value: "Tamil & English" },
                 { label: "Board", value: "Tamil Nadu Matriculation" },
                 { label: "Application Mode", value: "Walk-in / Online" },
-                { label: "Academic Year", value: "June 2025 – March 2026" },
+                { label: "Academic Year", value: "June 2026 – March 2027" },
               ].map(({ label, value }) => (
                 <div key={label} className="flex justify-between items-center py-3 border-b border-white/10 last:border-0">
                   <span className="text-white/50 text-sm">{label}</span>

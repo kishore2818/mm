@@ -28,7 +28,7 @@ export default function AboutSnippet() {
               and Character
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              MM Matric Higher Secondary School, Patemanagaram has stood as a beacon of quality education for over three decades. We blend traditional values with modern pedagogy to create well-rounded individuals.
+              MM Matric Higher Secondary School, Patemanagaram has stood as a beacon of quality education for nearly three decades. We blend traditional values with modern pedagogy to create well-rounded individuals.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
               Our curriculum is designed to challenge students intellectually while nurturing creativity, leadership, and civic responsibility — true to our motto:{" "}
@@ -92,7 +92,7 @@ export default function AboutSnippet() {
             {/* Badge — inline on mobile, absolute on desktop */}
             <div className="flex lg:absolute lg:-bottom-4 lg:-left-4 justify-start">
               <div className="bg-[#c9a227] text-[#0d0d3b] rounded-xl p-4 shadow-lg inline-block">
-                <p className="metric-number text-2xl">35+</p>
+                <p className="metric-number text-2xl">28</p>
                 <p className="text-xs font-semibold tracking-wide">Years of Trust</p>
               </div>
             </div>

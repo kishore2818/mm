@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -35,7 +35,7 @@ export default function FounderSnippet() {
             </div>
             
             <div className="text-center">
-              <h3 className="text-2xl font-bold text-[#0d0d3b] mb-1">Mr. Ananth Sharma</h3>
+              <h3 className="text-2xl font-bold text-[#0d0d3b] mb-1">Haji K. Mohamed Meeran</h3>
               <p className="text-[#c9a227] font-bold text-sm tracking-[0.2em] uppercase mb-4">Founder & Chairman</p>
               <div className="w-12 h-1 bg-[#0d0d3b] mx-auto rounded-full opacity-20"></div>
             </div>
@@ -58,10 +58,10 @@ export default function FounderSnippet() {
             
             <div className="prose prose-lg text-gray-600 mb-10 leading-relaxed">
               <p className="mb-6">
-                Established in 1990, MM Matric Higher Secondary School in Patemanagaram is the realization of our founder's lifelong dream to bring world-class education to the heart of Tamil Nadu.
+                Established on June 1, 1998, with approximately 38 KG students, MM Matric Higher Secondary School in Patemanagaram is the realization of our founder's vision to bring high-quality education to his home soil.
               </p>
               <p>
-                Believing firmly that education is the most powerful tool to change the world, he laid the foundation of this institution with a focus on holistic development—nurturing not just academic brilliance, but strong moral character. Over the past three decades, his unwavering commitment has transformed the lives of thousands of students, guiding them to become leaders, innovators, and responsible citizens.
+                The school was founded by Haji K. Mohamed Meeran, Former Managing Director of Rorito Pens International Pvt Ltd, Chennai, and a native of Patemanagaram, with the future well-being and welfare of the children of Patemanagaram and its surrounding areas in mind. Having started with just four teachers and a principal, the school now runs successfully with 50 dedicated teachers and 28 non-teaching staff members, shaping thousands of successful lives over nearly three decades.
               </p>
             </div>
             
