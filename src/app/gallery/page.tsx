@@ -385,7 +385,7 @@ export default function GalleryPage() {
                   </h3>
                   <p className="text-gray-500 text-sm leading-relaxed mb-5">{ev.desc}</p>
                   <button
-                    onClick={() => setActiveCategory(ev.title.includes("Science") ? "Science Exhibition" : ev.title.includes("Sports") ? "Sports Day" : "Annual Day")}
+                    onClick={() => setActiveCategory(ev.title === "KG Graduation" ? "KG Graduation" : ev.title === "NCC & Scouts" ? "NCC & Scouts" : "Events & Celebrations")}
                     className="w-full py-2.5 rounded-xl bg-[#0d0d3b] text-[#c9a227] font-semibold text-sm hover:bg-[#1a1a5e] transition-colors duration-200"
                   >
                     View Gallery →
