@@ -23,7 +23,7 @@ export default function FounderSnippet() {
             transition={{ duration: 0.8 }}
             className="flex flex-col items-center"
           >
-            <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden shadow-2xl mb-6 group">
+            <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden shadow-2xl mb-8 group">
               <div className="absolute inset-0 bg-[#1a1a5e]/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
               <Image 
                 src="/images/founder.jpeg" 
@@ -33,18 +33,6 @@ export default function FounderSnippet() {
                 className="object-cover group-hover:scale-105 transition-transform duration-700" 
               />
               <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-2xl z-20"></div>
-            </div>
-
-            {/* Extra founder photos row */}
-            <div className="flex gap-3 mb-6">
-              {[
-                { src: "/images/founder-speaking.jpeg", alt: "Founder speaking at an event" },
-                { src: "/images/founder-celebrity.jpeg", alt: "Founder with renowned personality" },
-              ].map((photo) => (
-                <div key={photo.alt} className="relative w-24 h-24 rounded-xl overflow-hidden shadow-md ring-2 ring-[#c9a227]/20 hover:ring-[#c9a227]/60 transition-all group">
-                  <Image src={photo.src} alt={photo.alt} fill sizes="96px" className="object-cover group-hover:scale-110 transition-transform duration-500" />
-                </div>
-              ))}
             </div>
             
             <div className="text-center">
