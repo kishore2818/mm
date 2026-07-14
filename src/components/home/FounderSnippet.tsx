@@ -23,23 +23,37 @@ export default function FounderSnippet() {
             transition={{ duration: 0.8 }}
             className="flex flex-col items-center"
           >
-            <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden shadow-2xl mb-8 group">
+            <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden shadow-2xl mb-6 group">
               <div className="absolute inset-0 bg-[#1a1a5e]/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
               <Image 
-                src="/images/founder.png" 
+                src="/images/founder.jpeg" 
                 alt="Founder" 
                 fill 
+                sizes="(max-width: 768px) 256px, 288px"
                 className="object-cover group-hover:scale-105 transition-transform duration-700" 
               />
               <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-2xl z-20"></div>
             </div>
+
+            {/* Extra founder photos row */}
+            <div className="flex gap-3 mb-6">
+              {[
+                { src: "/images/founder-speaking.jpeg", alt: "Founder speaking at an event" },
+                { src: "/images/founder-celebrity.jpeg", alt: "Founder with renowned personality" },
+              ].map((photo) => (
+                <div key={photo.alt} className="relative w-24 h-24 rounded-xl overflow-hidden shadow-md ring-2 ring-[#c9a227]/20 hover:ring-[#c9a227]/60 transition-all group">
+                  <Image src={photo.src} alt={photo.alt} fill sizes="96px" className="object-cover group-hover:scale-110 transition-transform duration-500" />
+                </div>
+              ))}
+            </div>
             
             <div className="text-center">
               <h3 className="text-2xl font-bold text-[#0d0d3b] mb-1">Haji K. Mohamed Meeran</h3>
-              <p className="text-[#c9a227] font-bold text-sm tracking-[0.2em] uppercase mb-4">Founder & Chairman</p>
+              <p className="text-[#c9a227] font-bold text-sm tracking-[0.2em] uppercase mb-4">Founder &amp; Chairman</p>
               <div className="w-12 h-1 bg-[#0d0d3b] mx-auto rounded-full opacity-20"></div>
             </div>
           </motion.div>
+
 
           {/* Details */}
           <motion.div 

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -20,24 +20,24 @@ import {
 
 const heroSlides = [
   {
-    bg: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=1600&q=80",
-    label: "Annual Day 2024",
+    bg: "/images/campus-assembly.jpeg",
+    label: "Morning Assembly",
   },
   {
-    bg: "https://images.unsplash.com/photo-1579710758923-e9e43c55ff78?w=1600&q=80",
-    label: "Sports Day Champions",
+    bg: "/images/event-kg-graduation-1.jpeg",
+    label: "KG Graduation Ceremony",
   },
   {
-    bg: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1600&q=80",
-    label: "Science Exhibition",
+    bg: "/images/event-scout-parade.jpeg",
+    label: "NCC & Scouts March",
   },
   {
-    bg: "https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=1600&q=80",
-    label: "Cultural Celebration",
+    bg: "/images/event-flag-hoisting.jpeg",
+    label: "Flag Hoisting",
   },
   {
-    bg: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600&q=80",
-    label: "Graduation Ceremony",
+    bg: "/images/facility-library.jpeg",
+    label: "MM Modern Library",
   },
 ];
 
@@ -61,87 +61,71 @@ interface GalleryItem {
 }
 
 const galleryItems: GalleryItem[] = [
-  // Annual Day
-  { id: 1, src: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800&q=80", title: "Annual Day Cultural Performance", date: "Dec 15, 2024", category: "Annual Day", height: "tall" },
-  { id: 2, src: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&q=80", title: "Prize Distribution Ceremony", date: "Dec 15, 2024", category: "Annual Day", height: "short" },
-  { id: 3, src: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80", title: "Drama Presentation", date: "Dec 15, 2024", category: "Annual Day", height: "medium" },
-  // Sports Day
-  { id: 4, src: "https://images.unsplash.com/photo-1579710758923-e9e43c55ff78?w=800&q=80", title: "Track & Field Events", date: "Jan 20, 2025", category: "Sports Day", height: "medium" },
-  { id: 5, src: "https://images.unsplash.com/photo-1576458088443-04a19bb13da6?w=800&q=80", title: "March Past Parade", date: "Jan 20, 2025", category: "Sports Day", height: "tall" },
-  { id: 6, src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80", title: "Athletics Championship", date: "Jan 20, 2025", category: "Sports Day", height: "short" },
-  // Cultural Events
-  { id: 7, src: "https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=800&q=80", title: "Classical Dance Performance", date: "Nov 5, 2024", category: "Cultural Events", height: "short" },
-  { id: 8, src: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=800&q=80", title: "Music & Arts Festival", date: "Nov 5, 2024", category: "Cultural Events", height: "tall" },
-  { id: 9, src: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=800&q=80", title: "Traditional Folk Performance", date: "Nov 5, 2024", category: "Cultural Events", height: "medium" },
-  // Science Exhibition
-  { id: 10, src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80", title: "Science Fair 2024", date: "Feb 10, 2025", category: "Science Exhibition", height: "medium" },
-  { id: 11, src: "https://images.unsplash.com/photo-1532094349884-543cdce73330?w=800&q=80", title: "Robotics Project Display", date: "Feb 10, 2025", category: "Science Exhibition", height: "short" },
-  { id: 12, src: "https://images.unsplash.com/photo-1527515637462-cff94aca57a7?w=800&q=80", title: "Lab Experiment Showcase", date: "Feb 10, 2025", category: "Science Exhibition", height: "tall" },
-  // Independence Day
-  { id: 13, src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80", title: "Flag Hoisting Ceremony", date: "Aug 15, 2024", category: "Independence Day", height: "short" },
-  { id: 14, src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80", title: "Independence Day March", date: "Aug 15, 2024", category: "Independence Day", height: "medium" },
-  { id: 15, src: "https://images.unsplash.com/photo-1518281361980-b26bfd556770?w=800&q=80", title: "Patriotic Cultural Show", date: "Aug 15, 2024", category: "Independence Day", height: "tall" },
-  // Classroom Activities
-  { id: 16, src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80", title: "Interactive Learning Session", date: "Mar 5, 2025", category: "Classroom Activities", height: "medium" },
-  { id: 17, src: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=800&q=80", title: "Group Project Work", date: "Mar 5, 2025", category: "Classroom Activities", height: "short" },
-  { id: 18, src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80", title: "Creative Art Class", date: "Mar 5, 2025", category: "Classroom Activities", height: "tall" },
-  // Educational Tours
-  { id: 19, src: "https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=800&q=80", title: "Heritage Site Visit", date: "Dec 2, 2024", category: "Educational Tours", height: "tall" },
-  { id: 20, src: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80", title: "Nature Study Camp", date: "Dec 2, 2024", category: "Educational Tours", height: "short" },
-  { id: 21, src: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=800&q=80", title: "Industrial Visit", date: "Dec 2, 2024", category: "Educational Tours", height: "medium" },
-  // Extra
-  { id: 22, src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80", title: "Graduation Day 2024", date: "Apr 10, 2025", category: "Annual Day", height: "medium" },
-  { id: 23, src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80", title: "Yoga & Wellness Day", date: "Jun 21, 2024", category: "Sports Day", height: "short" },
-  { id: 24, src: "https://images.unsplash.com/photo-1565117125903-f05eb8abfdca?w=800&q=80", title: "Art Exhibition Opening", date: "Oct 12, 2024", category: "Cultural Events", height: "tall" },
+  // KG Graduation
+  { id: 1, src: "/images/event-kg-graduation-1.jpeg", title: "KG Graduation Ceremony", date: "2026", category: "KG Graduation", height: "tall" },
+  { id: 2, src: "/images/event-kg-graduation-2.jpeg", title: "KG Graduates Group Photo", date: "2026", category: "KG Graduation", height: "short" },
+  { id: 3, src: "/images/event-kg-graduation-3.jpeg", title: "Graduation Stage Group", date: "2026", category: "KG Graduation", height: "medium" },
+  // NCC & Scouts
+  { id: 4, src: "/images/event-scout-parade.jpeg", title: "Scout March Parade", date: "2026", category: "NCC & Scouts", height: "medium" },
+  { id: 5, src: "/images/event-scout-guard.jpeg", title: "Scout Honour Guard", date: "2026", category: "NCC & Scouts", height: "tall" },
+  { id: 6, src: "/images/event-tree-planting-1.jpeg", title: "Tree Planting Initiative", date: "2026", category: "NCC & Scouts", height: "short" },
+  { id: 7, src: "/images/event-tree-planting-2.jpeg", title: "Scouts Planting Saplings", date: "2026", category: "NCC & Scouts", height: "short" },
+  // Events & Celebrations
+  { id: 8, src: "/images/event-flag-hoisting.jpeg", title: "Flag Hoisting Ceremony", date: "Aug 15, 2026", category: "Events & Celebrations", height: "tall" },
+  { id: 9, src: "/images/event-teachers-day-1.jpeg", title: "Teacher's Day - Honoring the Principal", date: "Sep 5, 2026", category: "Events & Celebrations", height: "medium" },
+  { id: 10, src: "/images/event-teachers-day-2.jpeg", title: "Teacher's Day Address", date: "Sep 5, 2026", category: "Events & Celebrations", height: "medium" },
+  // Campus Life
+  { id: 11, src: "/images/campus-assembly.jpeg", title: "Morning Assembly", date: "2026", category: "Campus Life", height: "tall" },
+  { id: 12, src: "/images/campus-building-3.jpeg", title: "School Building", date: "2026", category: "Campus Life", height: "short" },
+  { id: 13, src: "/images/facility-library.jpeg", title: "MM Modern Library", date: "2026", category: "Campus Life", height: "medium" },
 ];
 
 const categories: Category[] = [
-  "All", "Annual Day", "Sports Day", "Cultural Events",
-  "Science Exhibition", "Independence Day", "Classroom Activities", "Educational Tours",
+  "All", "KG Graduation", "NCC & Scouts", "Events & Celebrations", "Campus Life",
 ];
 
 const featuredEvents = [
   {
-    image: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=900&q=80",
-    title: "Annual Day 2024",
-    desc: "A spectacular evening of performances, awards and celebrations marking another year of excellence.",
-    date: "December 15, 2024",
-    count: "150+ Photos",
+    image: "/images/event-kg-graduation-1.jpeg",
+    title: "KG Graduation",
+    desc: "A spectacular celebration marking our youngest achievers' transition to the next stage.",
+    date: "2026",
+    count: "15+ Photos",
   },
   {
-    image: "https://images.unsplash.com/photo-1579710758923-e9e43c55ff78?w=900&q=80",
-    title: "Sports Meet 2025",
-    desc: "Champions emerge as students compete across athletics, team sports and track events.",
-    date: "January 20, 2025",
-    count: "200+ Photos",
+    image: "/images/event-scout-parade.jpeg",
+    title: "NCC & Scouts",
+    desc: "Champions emerge as students participate in parades, rallies, and environment initiatives.",
+    date: "2026",
+    count: "20+ Photos",
   },
   {
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=900&q=80",
-    title: "Science Fair 2024",
-    desc: "Innovation on display as young scientists showcase projects across every discipline.",
-    date: "February 10, 2025",
-    count: "120+ Photos",
+    image: "/images/event-flag-hoisting.jpeg",
+    title: "Independence Day",
+    desc: "Patriotism on display as the school gathers for flag hoisting and cultural programs.",
+    date: "August 15, 2026",
+    count: "12+ Photos",
   },
 ];
 
 const videoCards = [
   {
-    thumb: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=700&q=80",
-    title: "Annual Day Highlights 2024",
+    thumb: "/images/event-kg-graduation-2.jpeg",
+    title: "KG Graduation Highlights 2026",
     duration: "8:42",
-    views: "12.4K views",
+    views: "1.4K views",
   },
   {
-    thumb: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=700&q=80",
-    title: "Sports Day Highlights 2025",
+    thumb: "/images/event-scout-parade.jpeg",
+    title: "NCC & Scouts Activities 2026",
     duration: "6:15",
-    views: "9.8K views",
+    views: "980 views",
   },
   {
-    thumb: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=700&q=80",
+    thumb: "/images/campus-assembly.jpeg",
     title: "Virtual School Campus Tour",
     duration: "10:30",
-    views: "22.1K views",
+    views: "2.1K views",
   },
 ];
 

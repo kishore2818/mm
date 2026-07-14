@@ -80,7 +80,31 @@ export default function FacilitiesSection() {
           <div className="w-16 h-1 bg-gradient-to-r from-[#c9a227] to-[#f0c040] mx-auto mt-4 rounded-full" />
         </motion.div>
 
-        {/* Grid */}
+        {/* Real facility photo showcase */}
+        <div className="grid md:grid-cols-3 gap-4 mb-14">
+          {[
+            { src: "/images/facility-library.jpeg", label: "AC Library", desc: "MM Modern Library — 5,000+ books" },
+            { src: "/images/facility-kg-classroom.jpeg", label: "KG Classrooms", desc: "Colourful, child-friendly learning spaces" },
+            { src: "/images/facility-computer-lab.jpeg", label: "Computer Lab", desc: "Technology-enabled learning" },
+          ].map((item, i) => (
+            <motion.div
+              key={item.label}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
+              className="relative rounded-2xl overflow-hidden h-52 group shadow-md"
+            >
+              <img src={item.src} alt={item.label} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d3b]/80 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <p className="text-[#f0c040] font-bold text-sm">{item.label}</p>
+                <p className="text-white/70 text-xs">{item.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {facilities.map((facility, i) => {
             const Icon = facility.icon;

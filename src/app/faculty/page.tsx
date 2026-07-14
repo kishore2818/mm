@@ -142,8 +142,12 @@ export default function FacultyPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-24 bg-[#0d0d3b] text-center text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <section className="relative py-24 bg-[#0d0d3b] text-center text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="/images/campus-building-2.jpeg" alt="MM School Campus" className="w-full h-full object-cover opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d3b]/60 to-[#0d0d3b]" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
           <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-4">Our Mentors</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">
             Faculty &amp; Leadership
@@ -172,6 +176,24 @@ export default function FacultyPage() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Real Staff Group Photo */}
+      <section className="py-14 bg-[#fdf8f0]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-3">Our Team</p>
+          <h2 className="text-2xl font-bold text-[#1a1a5e] mb-8">The People Behind Our Success</h2>
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+            <img
+              src="/images/staff-group.jpeg"
+              alt="MM Matric School Staff Group Photo"
+              className="w-full h-auto object-cover"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0d0d3b]/80 to-transparent p-6">
+              <p className="text-white font-semibold text-sm">Our dedicated faculty &amp; staff — the backbone of MM Matric Higher Secondary School, Patemanagaram</p>
+            </div>
           </div>
         </div>
       </section>

@@ -1,15 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
-import { ChevronDown, BookOpen, Trophy, Users, Star } from "lucide-react";
+import { BookOpen, Trophy, Users, Star } from "lucide-react";
 
 export default function HeroSection() {
   return (
     <section id="hero" className="relative min-h-screen flex flex-col items-center overflow-hidden bg-[#060622]">
 
-      {/* Background Video */}
+      {/* Background: real campus photo + video overlay */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+        {/* Real campus assembly photo as base */}
+        <Image
+          src="/images/campus-assembly.jpeg"
+          alt="MM Matric School Campus"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-top"
+        />
         <video
           autoPlay
           loop
@@ -18,16 +28,19 @@ export default function HeroSection() {
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/videos/hero.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-[#060622]/70"></div>
         {/* Diagonal gold accents */}
         <div className="absolute inset-0 opacity-20 overflow-hidden mix-blend-overlay">
           {[...Array(5)].map((_, i) => (
             <div key={i} className="absolute h-px w-[200%] -rotate-12"
               style={{ top: `${15 + i * 20}%`, left: "-50%", background: "linear-gradient(90deg, transparent, #c9a227, transparent)" }} />
           ))}
+        </div>
+        {/* School crest watermark */}
+        <div className="absolute right-8 bottom-8 md:right-16 md:bottom-16 w-32 h-32 md:w-44 md:h-44 opacity-10 pointer-events-none">
+          <Image src="/images/school-crest.jpeg" alt="MM School Crest" fill sizes="176px" className="object-contain" />
         </div>
       </div>
 
