@@ -43,13 +43,10 @@ const heroSlides = [
 
 type Category =
   | "All"
-  | "Annual Day"
-  | "Sports Day"
-  | "Cultural Events"
-  | "Science Exhibition"
-  | "Independence Day"
-  | "Classroom Activities"
-  | "Educational Tours";
+  | "KG Graduation"
+  | "NCC & Scouts"
+  | "Events & Celebrations"
+  | "Campus Life";
 
 interface GalleryItem {
   id: number;
