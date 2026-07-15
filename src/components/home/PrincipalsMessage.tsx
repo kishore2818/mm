@@ -92,8 +92,8 @@ export default function PrincipalsMessage() {
                     { label: "Mission", text: "To provide holistic education that empowers students academically and morally to excel in a dynamic world." },
                     { label: "Philosophy", text: "Every child is unique. We tailor our approach to celebrate individuality while nurturing a strong sense of community." },
                   ].map((item) => (
-                    <div key={item.label} className="flex gap-4">
-                      <span className="flex-shrink-0 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase h-fit mt-0.5"
+                    <div key={item.label} className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start sm:items-start">
+                      <span className="w-28 text-center flex-shrink-0 px-2 py-1.5 rounded-full text-[10px] font-bold tracking-widest uppercase h-fit sm:mt-0.5 shadow-sm"
                         style={{ background: "linear-gradient(135deg, #c9a227, #f0c040)", color: "#0d0d3b" }}>
                         {item.label}
                       </span>
@@ -120,20 +120,20 @@ export default function PrincipalsMessage() {
           <h3 className="font-playfair text-center text-3xl font-bold text-[#0d0d3b] mb-12">
             Our Core Values
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 gap-3 sm:gap-6 max-w-4xl mx-auto">
             {values.map(({ icon: Icon, title, desc }, i) => (
               <motion.div
                 key={title}
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group p-8 rounded-2xl bg-[#fdf8f0] border border-[#e8d9b5]/60 hover:border-[#c9a227]/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="group p-4 sm:p-6 rounded-2xl bg-[#fdf8f0] border border-[#e8d9b5]/60 hover:border-[#c9a227]/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center sm:items-start text-center sm:text-left"
               >
-                <div className="w-12 h-12 rounded-xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl mb-3 sm:mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
                   style={{ background: "linear-gradient(135deg, #c9a227, #f0c040)" }}>
-                  <Icon size={22} className="text-[#0d0d3b]" />
+                  <Icon className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-[#0d0d3b]" />
                 </div>
-                <h4 className="font-playfair font-bold text-[#0d0d3b] text-lg mb-3">{title}</h4>
-                <p className="text-[#666] text-sm leading-relaxed">{desc}</p>
+                <h4 className="font-playfair font-bold text-[#0d0d3b] text-sm sm:text-base mb-1.5 sm:mb-2">{title}</h4>
+                <p className="text-[#666] text-xs sm:text-sm leading-relaxed line-clamp-3 sm:line-clamp-none">{desc}</p>
               </motion.div>
             ))}
           </div>

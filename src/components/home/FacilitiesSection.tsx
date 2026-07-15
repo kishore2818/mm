@@ -105,7 +105,7 @@ export default function FacilitiesSection() {
         </div>
 
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 max-w-5xl mx-auto">
           {facilities.map((facility, i) => {
             const Icon = facility.icon;
             const isGold = facility.color === "#c9a227";
@@ -115,23 +115,23 @@ export default function FacilitiesSection() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className={`group p-6 rounded-2xl border transition-all duration-300 cursor-default
-                  hover:-translate-y-2 hover:shadow-xl ${i >= 4 ? "hidden sm:block" : ""}
+                className={`group p-4 sm:p-6 rounded-2xl border transition-all duration-300 cursor-default
+                  hover:-translate-y-2 hover:shadow-xl ${i >= 6 ? "hidden lg:block" : ""}
                   ${isGold
                     ? "bg-gradient-to-br from-[#c9a227]/10 to-[#f0c040]/5 border-[#c9a227]/20 hover:border-[#c9a227]/50 hover:shadow-[#c9a227]/10"
                     : "bg-gradient-to-br from-[#1a1a5e]/5 to-[#252580]/5 border-[#1a1a5e]/10 hover:border-[#1a1a5e]/30 hover:shadow-[#1a1a5e]/10"
                   }`}
               >
                 <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110"
+                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center mb-3 sm:mb-4 transition-transform duration-300 group-hover:scale-110"
                   style={{ background: isGold ? "rgba(201,162,39,0.15)" : "rgba(26,26,94,0.1)" }}
                 >
-                  <Icon size={22} style={{ color: facility.color }} />
+                  <Icon className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-current" style={{ color: facility.color }} />
                 </div>
-                <h3 className="font-playfair font-bold text-[#1a1a5e] text-base mb-2">
+                <h3 className="font-playfair font-bold text-[#1a1a5e] text-sm sm:text-base mb-1.5 sm:mb-2">
                   {facility.title}
                 </h3>
-                <p className="text-gray-500 text-xs leading-relaxed">{facility.description}</p>
+                <p className="text-gray-500 text-[10px] sm:text-xs leading-relaxed line-clamp-3 sm:line-clamp-none">{facility.description}</p>
               </motion.div>
             );
           })}

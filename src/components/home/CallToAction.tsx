@@ -19,18 +19,17 @@ export default function CallToAction() {
   return (
     <section
       ref={ref}
-      className="py-20 relative overflow-hidden"
-      style={{ background: "linear-gradient(135deg, #0d0d3b 0%, #1a1a5e 60%, #252580 100%)" }}
+      className="py-16 sm:py-20 relative overflow-hidden bg-gradient-to-br from-[#fcfbf9] to-[#f4ead2] border-t border-[#e8d9b5]/40"
     >
       {/* Decorative elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 right-0 w-80 h-80 rounded-full opacity-5"
-          style={{ background: "radial-gradient(circle, #f0c040, transparent)" }} />
-        <div className="absolute bottom-0 left-0 w-60 h-60 rounded-full opacity-5"
+        <div className="absolute top-0 right-0 w-80 h-80 rounded-full opacity-[0.15]"
           style={{ background: "radial-gradient(circle, #c9a227, transparent)" }} />
-        <div className="absolute inset-0 opacity-5"
+        <div className="absolute bottom-0 left-0 w-60 h-60 rounded-full opacity-[0.15]"
+          style={{ background: "radial-gradient(circle, #f0c040, transparent)" }} />
+        <div className="absolute inset-0 opacity-[0.03]"
           style={{
-            backgroundImage: "linear-gradient(#c9a227 1px, transparent 1px), linear-gradient(90deg, #c9a227 1px, transparent 1px)",
+            backgroundImage: "linear-gradient(#0d0d3b 1px, transparent 1px), linear-gradient(90deg, #0d0d3b 1px, transparent 1px)",
             backgroundSize: "50px 50px",
           }} />
       </div>
@@ -43,31 +42,26 @@ export default function CallToAction() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#c9a227]/40 bg-[#c9a227]/10 text-[#f0c040] text-xs tracking-widest uppercase mb-6">
-              <GraduationCap size={14} />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#0d0d3b]/10 bg-[#0d0d3b]/5 text-[#0d0d3b] text-xs font-semibold tracking-widest uppercase mb-6 shadow-sm">
+              <GraduationCap size={14} className="text-[#c9a227]" />
               Admissions Open 2026–27
             </div>
 
-            <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+            <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0d0d3b] leading-tight mb-4">
               Begin Your{" "}
-              <span style={{
-                background: "linear-gradient(90deg, #c9a227, #f0c040)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}>
+              <span className="bg-gradient-to-r from-[#1a1a5e] to-[#c9a227] bg-clip-text text-transparent">
                 Journey
               </span>{" "}
               With Us
             </h2>
 
-            <p className="text-white/60 leading-relaxed mb-8">
+            <p className="text-gray-600 leading-relaxed mb-8">
               Give your child the education they deserve at MM Matric Higher Secondary School. Secure their future with quality academics, strong values, and a nurturing environment.
             </p>
 
             <ul className="space-y-3 mb-10">
               {benefits.map((b) => (
-                <li key={b} className="flex items-center gap-3 text-white/70 text-sm">
+                <li key={b} className="flex items-center gap-3 text-gray-700 text-sm font-medium">
                   <CheckCircle size={16} className="text-[#c9a227] flex-shrink-0" />
                   {b}
                 </li>
@@ -78,8 +72,7 @@ export default function CallToAction() {
               <Link
                 href="/admissions"
                 id="cta-apply-btn"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-[#0d0d3b] text-sm transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#c9a227]/20 group"
-                style={{ background: "linear-gradient(135deg, #c9a227, #f0c040)" }}
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#1a1a5e]/20 group bg-gradient-to-r from-[#1a1a5e] to-[#0d0d3b]"
               >
                 Apply Now
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -87,7 +80,7 @@ export default function CallToAction() {
               <Link
                 href="/contact"
                 id="cta-contact-btn"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm border border-white/20 hover:border-[#c9a227]/60 hover:text-[#f0c040] transition-all duration-300"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-[#0d0d3b] text-sm border border-[#0d0d3b]/20 hover:border-[#c9a227] hover:bg-[#c9a227]/10 transition-all duration-300"
               >
                 Contact Us
               </Link>
@@ -100,8 +93,8 @@ export default function CallToAction() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-              <h3 className="font-playfair text-[#f0c040] font-bold text-xl mb-6">
+            <div className="bg-white border border-[#e8d9b5]/60 rounded-2xl p-6 sm:p-8 shadow-2xl">
+              <h3 className="font-playfair text-[#0d0d3b] font-bold text-xl mb-6">
                 Admission Details
               </h3>
 
@@ -112,15 +105,15 @@ export default function CallToAction() {
                 { label: "Application Mode", value: "Walk-in / Online" },
                 { label: "Academic Year", value: "June 2026 – March 2027" },
               ].map(({ label, value }) => (
-                <div key={label} className="flex justify-between items-center py-3 border-b border-white/10 last:border-0">
-                  <span className="text-white/50 text-sm">{label}</span>
-                  <span className="text-white font-medium text-sm">{value}</span>
+                <div key={label} className="flex justify-between items-center py-3 border-b border-gray-100 last:border-0">
+                  <span className="text-gray-500 text-sm">{label}</span>
+                  <span className="text-[#0d0d3b] font-semibold text-sm">{value}</span>
                 </div>
               ))}
 
-              <div className="mt-6 p-4 rounded-xl bg-[#c9a227]/10 border border-[#c9a227]/20">
-                <p className="text-[#f0c040] text-xs font-semibold mb-1">📅 Admission Deadline</p>
-                <p className="text-white/60 text-xs">Admissions close once seats are filled. Apply early to secure your spot.</p>
+              <div className="mt-6 p-4 rounded-xl bg-[#c9a227]/10 border border-[#c9a227]/25">
+                <p className="text-[#8a6800] text-xs font-bold mb-1">📅 Admission Deadline</p>
+                <p className="text-gray-600 text-xs font-medium">Admissions close once seats are filled. Apply early to secure your spot.</p>
               </div>
             </div>
           </motion.div>

@@ -142,26 +142,26 @@ export default function FacultyPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-24 bg-[#0d0d3b] text-center text-white overflow-hidden">
+      <section className="relative py-12 sm:py-24 bg-[#0d0d3b] text-center text-white overflow-hidden">
         <div className="absolute inset-0">
           <img src="/images/campus-building-2.jpeg" alt="MM School Campus" className="w-full h-full object-cover opacity-20" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d3b]/60 to-[#0d0d3b]" />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
-          <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-4">Our Mentors</p>
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+          <p className="text-[#c9a227] text-[10px] sm:text-xs font-semibold tracking-widest uppercase mb-2 sm:mb-4">Our Mentors</p>
+          <h1 className="text-3xl sm:text-5xl font-bold mb-3 sm:mb-6">
             Faculty &amp; Leadership
           </h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto">
+          <p className="text-white/60 text-sm sm:text-lg max-w-2xl mx-auto">
             Meet our team of dedicated educators who bring passion, experience, and innovation to every classroom.
           </p>
         </div>
       </section>
 
       {/* Stats */}
-      <section className="py-12 bg-[#c9a227]">
+      <section className="py-6 sm:py-12 bg-[#c9a227]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center text-[#0d0d3b]">
+          <div className="grid grid-cols-3 gap-2 sm:gap-8 text-center text-[#0d0d3b]">
             {[
               { icon: GraduationCap, stat: "50", label: "Dedicated Teachers" },
               { icon: BookOpen, stat: "28", label: "Support & Non-Teaching Staff" },
@@ -170,9 +170,9 @@ export default function FacultyPage() {
               const Icon = item.icon;
               return (
                 <div key={item.label} className="flex flex-col items-center">
-                  <Icon size={28} className="mb-3 opacity-80" />
-                  <p className="metric-number text-4xl text-[#0d0d3b] mb-1">{item.stat}</p>
-                  <p className="text-sm font-semibold uppercase tracking-wider">{item.label}</p>
+                  <Icon className="w-5 h-5 sm:w-7 sm:h-7 mb-1.5 sm:mb-3 opacity-80" />
+                  <p className="metric-number text-2xl sm:text-4xl text-[#0d0d3b] mb-0.5 sm:mb-1">{item.stat}</p>
+                  <p className="text-[9px] sm:text-sm font-semibold uppercase tracking-wider sm:tracking-wider leading-tight">{item.label}</p>
                 </div>
               );
             })}
@@ -181,10 +181,10 @@ export default function FacultyPage() {
       </section>
 
       {/* Real Staff Group Photo */}
-      <section className="py-14 bg-[#fdf8f0]">
+      <section className="py-8 sm:py-14 bg-[#fdf8f0]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-3">Our Team</p>
-          <h2 className="text-2xl font-bold text-[#1a1a5e] mb-8">The People Behind Our Success</h2>
+          <p className="text-[#c9a227] text-[10px] sm:text-xs font-semibold tracking-widest uppercase mb-2 sm:mb-3">Our Team</p>
+          <h2 className="text-xl sm:text-2xl font-bold text-[#1a1a5e] mb-4 sm:mb-8">The People Behind Our Success</h2>
           <div className="relative rounded-3xl overflow-hidden shadow-2xl">
             <img
               src="/images/staff-group.jpeg"
@@ -199,27 +199,27 @@ export default function FacultyPage() {
       </section>
 
       {/* Leadership */}
-      <section className="py-20 bg-white">
+      <section className="py-10 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#1a1a5e] mb-4">School Leadership</h2>
+          <div className="text-center mb-8 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1a1a5e] mb-2 sm:mb-4">School Leadership</h2>
             <div className="w-16 h-1 bg-[#c9a227] mx-auto rounded-full" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-8 max-w-6xl mx-auto">
             {[
               { name: "Mr. Suresh Kumar", role: "Secretary", image: "/images/secretary.png", desc: "Overseeing administration and ensuring our institution meets the highest educational standards." },
               { name: "Dr. Smita Sharma", role: "Principal", image: "/images/principal.png", desc: "Award-winning administrator focusing on holistic student development and academic excellence." },
               { name: "Mr. R.K. Sharma", role: "Vice Principal", image: "/images/vice_principal.png", desc: "Dedicated to student welfare, discipline, and fostering a positive learning environment." },
             ].map((leader, i) => (
               <motion.div key={leader.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                className="bg-[#fdf8f0] p-8 rounded-2xl border border-[#c9a227]/20 text-center hover:shadow-xl transition-all flex flex-col items-center">
-                <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg mb-6 ring-2 ring-[#c9a227]/30">
+                className={`bg-[#fdf8f0] p-4 sm:p-8 rounded-2xl border border-[#c9a227]/20 text-center hover:shadow-xl transition-all flex flex-col items-center ${i === 2 ? 'col-span-2 sm:col-span-1 max-w-[65%] sm:max-w-none mx-auto w-full' : ''}`}>
+                <div className="relative w-20 h-20 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 sm:border-4 border-white shadow-lg mb-3 sm:mb-6 ring-2 ring-[#c9a227]/30">
                   <img src={leader.image} alt={leader.name} className="w-full h-full object-cover" />
                 </div>
-                <h3 className="text-xl font-bold text-[#1a1a5e] mb-1">{leader.name}</h3>
-                <p className="text-[#c9a227] font-semibold text-sm mb-4 uppercase tracking-wider">{leader.role}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">{leader.desc}</p>
+                <h3 className="text-sm sm:text-xl font-bold text-[#1a1a5e] mb-1 leading-tight">{leader.name}</h3>
+                <p className="text-[#c9a227] font-semibold text-[9px] sm:text-sm mb-2 sm:mb-4 uppercase tracking-wider">{leader.role}</p>
+                <p className="text-gray-600 text-[9px] sm:text-sm leading-snug sm:leading-relaxed">{leader.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -227,11 +227,11 @@ export default function FacultyPage() {
       </section>
 
       {/* ─── Our Faculty Grid ─── */}
-      <section className="py-20 bg-[#fdf8f0]">
+      <section className="py-10 sm:py-20 bg-[#fdf8f0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-3">Meet The Team</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a5e] mb-4">
+          <div className="text-center mb-8 sm:mb-16">
+            <p className="text-[#c9a227] text-[10px] sm:text-xs font-semibold tracking-widest uppercase mb-2 sm:mb-3">Meet The Team</p>
+            <h2 className="text-2xl sm:text-4xl font-bold text-[#1a1a5e] mb-2 sm:mb-4">
               Our Faculty
             </h2>
             <div className="w-16 h-1 bg-[#c9a227] mx-auto rounded-full" />
@@ -240,12 +240,12 @@ export default function FacultyPage() {
           {classGroups.map((group) => {
             const members = facultyList.filter((f) => f.classRange === group.label);
             return (
-              <div key={group.label} className="mb-16">
+              <div key={group.label} className="mb-8 sm:mb-16">
                 {/* Section label */}
-                <div className="flex items-center gap-4 mb-10">
+                <div className="flex items-center gap-2 sm:gap-4 mb-5 sm:mb-10">
                   <div className="h-px flex-1 bg-gray-200" />
                   <span
-                    className="px-5 py-1.5 rounded-full text-sm font-semibold tracking-wider uppercase text-white shadow-md"
+                    className="px-3 sm:px-5 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-sm font-semibold tracking-wider uppercase text-white shadow-md"
                     style={{ backgroundColor: group.color }}
                   >
                     {group.label}
@@ -254,7 +254,7 @@ export default function FacultyPage() {
                 </div>
 
                 {/* 3-column grid */}
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4">
                   {members.map((faculty, i) => (
                     <motion.div
                       key={faculty.name}
