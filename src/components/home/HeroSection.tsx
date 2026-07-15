@@ -112,9 +112,9 @@ export default function HeroSection() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 1.25 }}
           className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl mx-auto">
           {[
-            { icon: Users, stat: "1200+", label: "Students" },
+            { icon: Users, stat: "1100+", label: "Students" },
             { icon: BookOpen, stat: "50", label: "Faculty" },
-            { icon: Trophy, stat: "State", label: "Toppers" },
+            { icon: Trophy, stat: "District", label: "Toppers" },
             { icon: Star, stat: "28", label: "Years" },
           ].map(({ icon: Icon, stat, label }) => (
             <div key={label} className="flex flex-col items-center gap-2 px-5 py-4 rounded-2xl bg-black/30 border border-white/15 backdrop-blur-md shadow-xl hover:border-[#c9a227]/50 transition-colors duration-300">

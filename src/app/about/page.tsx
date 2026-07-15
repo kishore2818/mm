@@ -93,7 +93,7 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div className="space-y-4">
-                  {["State rank holders every year", "100% board pass rate consistently", "Strong alumni network across India", "Holistic development programs"].map((item) => (
+                  {["District rank holders every year", "100% board pass rate consistently", "Strong alumni network across India", "Holistic development programs"].map((item) => (
                     <div key={item} className="flex items-center gap-3 text-white/70 text-sm">
                       <CheckCircle size={16} className="text-[#c9a227] flex-shrink-0" />
                       {item}
