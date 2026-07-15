@@ -83,7 +83,7 @@ export default function AdmissionsPage() {
                   <Phone size={18} className="text-[#c9a227] mt-0.5" />
                   <div>
                     <p className="text-sm font-medium text-[#1a1a5e]">Call Us</p>
-                    <p className="text-sm text-gray-500">+91 XXXXX XXXXX</p>
+                    <p className="text-sm text-gray-500">04630-255974 / +91 82205 24045</p>
                     <p className="text-xs text-gray-400 mt-1">Mon-Sat: 9:00 AM - 4:00 PM</p>
                   </div>
                 </div>

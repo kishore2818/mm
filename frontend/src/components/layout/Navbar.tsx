@@ -22,7 +22,6 @@ const navLinks = [
   },
   { label: "Admissions", href: "/admissions" },
   { label: "Faculty", href: "/faculty" },
-  { label: "Alumni", href: "/alumni" },
   { label: "Gallery", href: "/gallery" },
   { label: "Events", href: "/events" },
   { label: "Contact", href: "/contact" },
@@ -52,12 +51,12 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-1.5">
           <span>MM Matric Higher Secondary School, Patemanagaram</span>
           <div className="flex items-center gap-4">
-            <a href="tel:+91XXXXXXXXXX" className="flex items-center gap-1.5 hover:text-[#f0c040] transition-colors">
-              <Phone size={11} /> +91 XXXXX XXXXX
+            <a href="tel:04630255974" className="flex items-center gap-1.5 hover:text-[#f0c040] transition-colors">
+              <Phone size={11} /> 04630-255974
             </a>
             <span className="text-white/20">|</span>
-            <a href="mailto:info@mmmatric.edu.in" className="hover:text-[#f0c040] transition-colors">
-              info@mmmatric.edu.in
+            <a href="mailto:mmschoolpatema@gmail.com" className="hover:text-[#f0c040] transition-colors">
+              mmschoolpatema@gmail.com
             </a>
           </div>
         </div>

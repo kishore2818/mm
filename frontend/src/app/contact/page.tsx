@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
@@ -39,8 +39,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-[#1a1a5e] text-lg mb-1">Phone Numbers</h3>
-                  <p className="text-gray-500">Office: +91 XXXXX XXXXX</p>
-                  <p className="text-gray-500">Admissions: +91 XXXXX XXXXX</p>
+                  <p className="text-gray-500">Office: 04630-255974</p>
+                  <p className="text-gray-500">WhatsApp: +91 82205 24045</p>
                 </div>
               </div>
 
@@ -50,7 +50,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-[#1a1a5e] text-lg mb-1">Email Addresses</h3>
-                  <p className="text-gray-500">General Info: info@mmmatric.edu.in</p>
+                  <p className="text-gray-500">General Info: mmschoolpatema@gmail.com</p>
                   <p className="text-gray-500">Admissions: admissions@mmmatric.edu.in</p>
                 </div>
               </div>
