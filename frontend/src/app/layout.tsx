@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import SitePopup from "@/components/layout/SitePopup";
 
 export const metadata: Metadata = {
   title: "MM Matric Higher Secondary School, Patemanagaram",
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full scroll-smooth">
       <body className="min-h-full flex flex-col antialiased">
+        <SitePopup />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
