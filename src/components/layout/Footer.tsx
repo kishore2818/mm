@@ -28,7 +28,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0d0d3b] text-white/80">
       {/* Top Stats Banner */}
-      <div className="bg-gradient-to-r from-[#c9a227] via-[#f0c040] to-[#c9a227]">
+      <div className="hidden sm:block bg-gradient-to-r from-[#c9a227] via-[#f0c040] to-[#c9a227]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap justify-center gap-8 text-[#0d0d3b]">
           {[
             { icon: GraduationCap, label: "660+ HSC Graduates" },
@@ -43,7 +43,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4">
           {/* School Info */}
           <div className="lg:col-span-1">
@@ -113,7 +113,7 @@ export default function Footer() {
           </div>
 
           {/* Academics */}
-          <div>
+          <div className="hidden sm:block">
             <h4 className="text-[#f0c040] font-semibold text-sm uppercase tracking-widest mb-4">
               Academics
             </h4>
@@ -192,10 +192,10 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-xs text-white/40">
+          <p className="text-xs text-white/40 text-center sm:text-left">
             © {new Date().getFullYear()} MM Matric Higher Secondary School, Patemanagaram. All rights reserved.
           </p>
-          <p className="text-xs text-white/30">
+          <p className="hidden sm:block text-xs text-white/30">
             Crafted with ❤️ for education
           </p>
         </div>

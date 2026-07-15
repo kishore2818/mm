@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { BookOpen, Beaker, Calculator, Globe, Monitor, PenTool } from "lucide-react";
@@ -117,12 +117,12 @@ export default function AcademicsPage() {
               <ul className="space-y-3 text-white/70">
                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#c9a227]" /> Physics, Chemistry, Biology, Maths</li>
                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#c9a227]" /> Physics, Chemistry, Comp Sci, Maths</li>
+                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#c9a227]" /> Physics, Chemistry, Biology, Zoology</li>
               </ul>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm text-left">
               <h3 className="text-[#f0c040] text-xl font-bold mb-4">Commerce Stream</h3>
               <ul className="space-y-3 text-white/70">
-                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#c9a227]" /> Accountancy, Commerce, Economics, Bus. Maths</li>
                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#c9a227]" /> Accountancy, Commerce, Economics, Comp Sci</li>
               </ul>
             </div>

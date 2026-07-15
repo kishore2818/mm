@@ -55,25 +55,25 @@ export default function AboutPage() {
       {/* Mission & Vision */}
       <section className="py-20 bg-[#fdf8f0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8">
             {values.map((v, i) => {
               const Icon = v.icon;
               return (
                 <motion.div key={v.title}
                   initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="bg-white rounded-2xl p-8 shadow-sm border border-[#c9a227]/15 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1a1a5e] to-[#252580] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                    <Icon size={22} className="text-[#c9a227]" />
+                  className="bg-white rounded-2xl p-4 sm:p-8 shadow-sm border border-[#c9a227]/15 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center sm:items-start text-center sm:text-left">
+                  <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br from-[#1a1a5e] to-[#252580] flex items-center justify-center mb-3 sm:mb-5 group-hover:scale-110 transition-transform">
+                    <Icon size={20} className="text-[#c9a227]" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#1a1a5e] mb-3">{v.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
+                  <h3 className="text-sm sm:text-xl font-bold text-[#1a1a5e] mb-1 sm:mb-3">{v.title}</h3>
+                  <p className="text-gray-500 text-xs sm:text-sm leading-relaxed line-clamp-3 sm:line-clamp-none">{v.desc}</p>
                 </motion.div>
               );
             })}
-            {/* Principal Message card spans full row on lg */}
+            {/* Principal Message card spans full row */}
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}
-              className="lg:col-span-3 bg-gradient-to-br from-[#1a1a5e] to-[#0d0d3b] rounded-2xl p-10 text-white relative overflow-hidden">
+              className="col-span-2 lg:col-span-4 bg-gradient-to-br from-[#1a1a5e] to-[#0d0d3b] rounded-2xl p-6 sm:p-10 text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 rounded-bl-full opacity-10"
                 style={{ background: "radial-gradient(circle, #c9a227, transparent)" }} />
               <div className="grid lg:grid-cols-2 gap-10 items-center relative z-10">
@@ -147,9 +147,9 @@ export default function AboutPage() {
             <div className="w-16 h-1 bg-[#c9a227] mx-auto rounded-full mt-4" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-3 gap-4 sm:gap-8 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:pb-0 hide-scrollbar">
             {/* Medical Professionals */}
-            <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="min-w-[85vw] md:min-w-0 snap-center bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
               <div className="w-12 h-12 rounded-xl bg-[#1a1a5e]/5 flex items-center justify-center mb-6 text-[#1a1a5e]">
                 <GraduationCap size={24} />
               </div>
@@ -174,7 +174,7 @@ export default function AboutPage() {
             </div>
 
             {/* Defence Personnel */}
-            <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="min-w-[85vw] md:min-w-0 snap-center bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
               <div className="w-12 h-12 rounded-xl bg-[#c9a227]/10 flex items-center justify-center mb-6 text-[#c9a227]">
                 <Trophy size={24} />
               </div>
@@ -199,7 +199,7 @@ export default function AboutPage() {
             </div>
 
             {/* Global & Engineering Careers */}
-            <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="min-w-[85vw] md:min-w-0 snap-center bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
               <div className="w-12 h-12 rounded-xl bg-[#1a1a5e]/5 flex items-center justify-center mb-6 text-[#1a1a5e]">
                 <Medal size={24} />
               </div>
@@ -253,7 +253,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
             {[
               { year: "2008 & 2009", title: "Best Yoga Training Award", organization: "Swami Vivekananda Kendra" },
               { year: "2010", title: "Outstanding Nurturing in Essay Writing", organization: "LIC" },
@@ -271,7 +271,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="p-6 rounded-2xl bg-[#fdf8f0]/40 border border-[#c9a227]/10 flex flex-col justify-between group hover:border-[#c9a227]/40 hover:bg-[#fdf8f0] transition-all"
+                className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#fdf8f0]/40 border border-[#c9a227]/10 flex flex-col justify-between group hover:border-[#c9a227]/40 hover:bg-[#fdf8f0] transition-all"
               >
                 <div>
                   <span className="inline-block px-3 py-1 rounded-full bg-[#c9a227]/15 text-[#0d0d3b] text-xs font-bold mb-3">{award.year}</span>
@@ -296,12 +296,12 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-3 gap-4 sm:gap-8 pb-6 -mx-4 px-4 sm:mx-0 sm:px-0 sm:pb-0 hide-scrollbar">
             {/* M.M. Career Guidance Club */}
             <motion.div
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ delay: 0 }}
-              className="bg-white rounded-3xl overflow-hidden border border-[#c9a227]/20 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col"
+              className="min-w-[85vw] md:min-w-0 snap-center bg-white rounded-3xl overflow-hidden border border-[#c9a227]/20 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col"
             >
               <div className="flex items-center justify-center py-10 bg-gradient-to-br from-[#e8f8f0] to-[#d0f0e0] relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, #00b060 1px, transparent 1px)", backgroundSize: "20px 20px" }} />
@@ -331,7 +331,7 @@ export default function AboutPage() {
             <motion.div
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ delay: 0.1 }}
-              className="bg-white rounded-3xl overflow-hidden border border-[#c9a227]/20 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col"
+              className="min-w-[85vw] md:min-w-0 snap-center bg-white rounded-3xl overflow-hidden border border-[#c9a227]/20 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col"
             >
               <div className="flex items-center justify-center py-10 bg-gradient-to-br from-[#fff4e0] to-[#ffe5b0] relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, #c9a227 1px, transparent 1px)", backgroundSize: "20px 20px" }} />
@@ -361,7 +361,7 @@ export default function AboutPage() {
             <motion.div
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ delay: 0.2 }}
-              className="bg-white rounded-3xl overflow-hidden border border-[#c9a227]/20 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col"
+              className="min-w-[85vw] md:min-w-0 snap-center bg-white rounded-3xl overflow-hidden border border-[#c9a227]/20 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col"
             >
               <div className="flex items-center justify-center py-10 bg-gradient-to-br from-[#edffd0] to-[#d4f7a0] relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, #4caf50 1px, transparent 1px)", backgroundSize: "20px 20px" }} />

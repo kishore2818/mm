@@ -33,8 +33,8 @@ const facilities = [
   },
   {
     icon: BookOpen,
-    title: "AC Library",
-    description: "Fully operational air-conditioned library housing approximately 5,000 reference books.",
+    title: "Library",
+    description: "Fully operational library housing approximately 5,000 reference books.",
     color: "#1a1a5e",
   },
   {
@@ -83,7 +83,7 @@ export default function FacilitiesSection() {
         {/* Real facility photo showcase */}
         <div className="grid md:grid-cols-3 gap-4 mb-14">
           {[
-            { src: "/images/facility-library.jpeg", label: "AC Library", desc: "MM Modern Library — 5,000+ books" },
+            { src: "/images/facility-library.jpeg", label: "Library", desc: "MM Modern Library — 5,000+ books" },
             { src: "/images/facility-kg-classroom.jpeg", label: "KG Classrooms", desc: "Colourful, child-friendly learning spaces" },
             { src: "/images/facility-computer-lab.jpeg", label: "Computer Lab", desc: "Technology-enabled learning" },
           ].map((item, i) => (
