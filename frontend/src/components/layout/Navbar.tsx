@@ -24,6 +24,7 @@ const navLinks = [
   { label: "Faculty", href: "/faculty" },
   { label: "Gallery", href: "/gallery" },
   { label: "Events", href: "/events" },
+  { label: "Alumni", href: "/alumni" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -76,7 +77,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-[70px]">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
-              <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden ring-2 ring-[#c9a227]/40 group-hover:ring-[#f0c040] transition-all duration-300 bg-white flex items-center justify-center p-0.5 flex-shrink-0">
+              <div className="relative w-10 h-10 md:w-11 md:h-11 rounded-full overflow-hidden ring-2 ring-[#c9a227]/40 group-hover:ring-[#f0c040] transition-all duration-300 bg-white flex items-center justify-center p-0.5 flex-shrink-0">
                 <Image src="/images/logo.png" alt="MM Matric Logo" fill className="object-contain" priority unoptimized />
               </div>
               <div className="hidden md:flex flex-col justify-center">
