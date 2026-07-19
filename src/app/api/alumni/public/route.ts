@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { getAlumniSheet } from '@/lib/google-sheets';
 
+export const revalidate = 600; // Cache alumni directory for 10 minutes
+
 export async function GET() {
   try {
     const sheet = await getAlumniSheet();
@@ -17,7 +19,8 @@ export async function GET() {
         qualification: row.get('Qualification'),
         company: row.get('Company'),
         jobRole: row.get('Job Role'),
-        profilePhoto: row.get('Profile Photo URL')
+        profilePhoto: row.get('Profile Photo URL'),
+        college: row.get('College / University')
       }));
 
     return NextResponse.json({ alumni: publicAlumni });

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import {
   ChevronLeft,
   ChevronRight,
@@ -170,7 +171,7 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 }
 
 // ─── MAIN PAGE ────────────────────────────────────────────────────────────────
-export default function GalleryPage() {
+export default function GalleryClient() {
   const [activeCategory, setActiveCategory] = useState<Category>("All");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [heroIndex, setHeroIndex] = useState(0);
@@ -216,19 +217,22 @@ export default function GalleryPage() {
             transition={{ duration: 0.9 }}
             className="absolute inset-0"
           >
-            <img
+            <Image
               src={heroSlides[heroIndex].bg}
               alt={heroSlides[heroIndex].label}
-              className="w-full h-full object-cover"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
             />
           </motion.div>
         </AnimatePresence>
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d3b]/70 via-[#0d0d3b]/50 to-[#0d0d3b]/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d3b]/70 via-[#0d0d3b]/50 to-[#0d0d3b]/80 z-10" />
 
         {/* Hero content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-20">
           <motion.p
             key={`label-${heroIndex}`}
             initial={{ opacity: 0, y: -10 }}
@@ -239,7 +243,6 @@ export default function GalleryPage() {
           </motion.p>
           <h1
             className="text-4xl sm:text-6xl font-bold text-white mb-5"
-           
           >
             Campus Life Gallery
           </h1>
@@ -249,7 +252,7 @@ export default function GalleryPage() {
         </div>
 
         {/* Slide dots */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
           {heroSlides.map((_, i) => (
             <button
               key={i}
@@ -262,13 +265,13 @@ export default function GalleryPage() {
         {/* Arrow buttons */}
         <button
           onClick={() => setHeroIndex((i) => (i - 1 + heroSlides.length) % heroSlides.length)}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 hover:bg-[#c9a227] text-white flex items-center justify-center transition-all duration-200"
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 hover:bg-[#c9a227] text-white flex items-center justify-center transition-all duration-200 z-20"
         >
           <ChevronLeft size={20} />
         </button>
         <button
           onClick={() => setHeroIndex((i) => (i + 1) % heroSlides.length)}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 hover:bg-[#c9a227] text-white flex items-center justify-center transition-all duration-200"
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 hover:bg-[#c9a227] text-white flex items-center justify-center transition-all duration-200 z-20"
         >
           <ChevronRight size={20} />
         </button>
@@ -322,14 +325,15 @@ export default function GalleryPage() {
                   className={`break-inside-avoid mb-4 group relative rounded-2xl overflow-hidden shadow-md cursor-pointer ${heightMap[img.height]}`}
                   onClick={() => setLightboxIndex(i)}
                 >
-                  <img
+                  <Image
                     src={img.src}
                     alt={img.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    loading="lazy"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d3b]/90 via-[#0d0d3b]/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d3b]/90 via-[#0d0d3b]/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-4 z-10">
                     <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                       <div className="flex items-center gap-2 mb-2">
                         <ZoomIn size={14} className="text-[#c9a227]" />
@@ -370,12 +374,14 @@ export default function GalleryPage() {
                 className="group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-white border border-gray-100"
               >
                 <div className="relative h-56 overflow-hidden">
-                  <img
+                  <Image
                     src={ev.image}
                     alt={ev.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute top-3 right-3 bg-[#c9a227] text-[#0d0d3b] text-xs font-bold px-3 py-1 rounded-full">
+                  <div className="absolute top-3 right-3 bg-[#c9a227] text-[#0d0d3b] text-xs font-bold px-3 py-1 rounded-full z-10">
                     {ev.count}
                   </div>
                 </div>
@@ -422,20 +428,22 @@ export default function GalleryPage() {
                 className="group relative rounded-2xl overflow-hidden shadow-xl cursor-pointer"
               >
                 <div className="relative h-52 overflow-hidden">
-                  <img
+                  <Image
                     src={vid.thumb}
                     alt={vid.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-[#0d0d3b]/60 group-hover:bg-[#0d0d3b]/40 transition-all duration-300" />
+                  <div className="absolute inset-0 bg-[#0d0d3b]/60 group-hover:bg-[#0d0d3b]/40 transition-all duration-300 z-10" />
                   {/* Play button */}
-                  <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="absolute inset-0 flex items-center justify-center z-20">
                     <div className="w-16 h-16 rounded-full bg-[#c9a227] flex items-center justify-center shadow-[0_0_30px_rgba(201,162,39,0.5)] group-hover:scale-110 transition-transform duration-300">
                       <Play size={24} className="text-[#0d0d3b] ml-1" />
                     </div>
                   </div>
                   {/* Duration badge */}
-                  <span className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-0.5 rounded font-mono">
+                  <span className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-0.5 rounded font-mono z-20">
                     {vid.duration}
                   </span>
                 </div>
@@ -492,19 +500,21 @@ export default function GalleryPage() {
               className="relative max-w-5xl w-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
+              <Image
                 src={filtered[lightboxIndex].src}
                 alt={filtered[lightboxIndex].title}
+                width={1200}
+                height={800}
                 className="w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl"
               />
               {/* Caption */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent rounded-b-2xl px-6 py-5">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent rounded-b-2xl px-6 py-5 z-10">
                 <p className="text-[#c9a227] text-xs uppercase tracking-widest mb-1">{filtered[lightboxIndex].category}</p>
                 <p className="text-white font-bold text-lg">{filtered[lightboxIndex].title}</p>
                 <p className="text-white/50 text-sm">{filtered[lightboxIndex].date}</p>
               </div>
               {/* Counter badge */}
-              <div className="absolute top-4 left-4 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
+              <div className="absolute top-4 left-4 bg-black/60 text-white text-xs px-3 py-1 rounded-full z-10">
                 {lightboxIndex + 1} / {filtered.length}
               </div>
             </motion.div>

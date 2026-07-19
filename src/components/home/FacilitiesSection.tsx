@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 import {
   BookOpen, FlaskConical, Laptop, Bus, Music, HeartPulse, Building2, Droplets
 } from "lucide-react";
@@ -94,9 +95,9 @@ export default function FacilitiesSection() {
               transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
               className="relative rounded-2xl overflow-hidden h-52 group shadow-md"
             >
-              <img src={item.src} alt={item.label} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d3b]/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-4">
+              <Image src={item.src} alt={item.label} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d3b]/80 via-transparent to-transparent z-10" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
                 <p className="text-[#f0c040] font-bold text-sm">{item.label}</p>
                 <p className="text-white/70 text-xs">{item.desc}</p>
               </div>

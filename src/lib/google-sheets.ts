@@ -63,3 +63,26 @@ export async function getAlumniSheet() {
   }
   return sheet;
 }
+
+// Helper to get or create the main Contact Messages sheet
+export async function getContactSheet() {
+  const doc = await getGoogleSheet();
+  const sheetTitle = 'Contact_Messages';
+  
+  let sheet = doc.sheetsByTitle[sheetTitle];
+  if (!sheet) {
+    sheet = await doc.addSheet({
+      title: sheetTitle,
+      headerValues: [
+        'First Name',
+        'Last Name',
+        'Email',
+        'Subject',
+        'Message',
+        'Created At'
+      ]
+    });
+  }
+  return sheet;
+}
+
