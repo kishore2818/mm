@@ -108,30 +108,51 @@ export default function AboutClient() {
       </section>
 
       {/* Timeline */}
-      <section ref={ref} className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-14">
+      <section ref={ref} className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
             <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-3">Milestones</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a5e]">Our Journey</h2>
+            <div className="w-14 h-1 bg-[#c9a227] mx-auto rounded-full mt-4" />
           </div>
+
+          {/* ── Mobile: single-column stack ── Desktop: alternating left/right ── */}
           <div className="relative">
-            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#c9a227] via-[#f0c040] to-transparent" />
-            <div className="space-y-10">
+            {/* Vertical line — hidden on mobile, shown on sm+ */}
+            <div className="hidden sm:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#c9a227] via-[#f0c040] to-transparent" />
+
+            <div className="flex flex-col gap-5 sm:gap-8">
               {timeline.map((item, i) => (
-                <motion.div key={item.year}
-                  initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ delay: i * 0.12 }}
-                  className={`relative flex items-center gap-8 ${i % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}>
-                  <div className={`flex-1 ${i % 2 === 0 ? "text-right" : "text-left"}`}>
-                    <div className="bg-[#fdf8f0] rounded-2xl p-5 border border-[#c9a227]/15 inline-block max-w-xs">
-                      <p className="text-[#c9a227] font-bold text-sm mb-1">{item.year}</p>
-                      <h3 className="text-[#1a1a5e] font-bold mb-2">{item.title}</h3>
-                      <p className="text-gray-500 text-sm">{item.desc}</p>
+                <motion.div
+                  key={item.year}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ delay: i * 0.1 }}
+                  className={`relative flex items-center
+                    sm:gap-8
+                    ${i % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"}
+                  `}
+                >
+                  {/* Card — full width on mobile, half on desktop */}
+                  <div className={`
+                    w-full
+                    sm:flex-1
+                    ${i % 2 === 0 ? "sm:text-right" : "sm:text-left"}
+                  `}>
+                    <div className="bg-[#fdf8f0] rounded-2xl p-4 sm:p-5 border border-[#c9a227]/20 w-full sm:inline-block sm:max-w-[280px]">
+                      <span className="inline-block px-2.5 py-0.5 rounded-full bg-[#c9a227]/15 text-[#0d0d3b] text-xs font-bold mb-2">
+                        {item.year}
+                      </span>
+                      <h3 className="text-[#1a1a5e] font-bold text-sm mb-1">{item.title}</h3>
+                      <p className="text-gray-500 text-xs leading-relaxed line-clamp-3">{item.desc}</p>
                     </div>
                   </div>
-                  <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#c9a227] border-4 border-white shadow-lg" />
-                  <div className="flex-1" />
+
+                  {/* Center dot — hidden on mobile */}
+                  <div className="hidden sm:block absolute left-1/2 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-[#c9a227] border-4 border-white shadow-md z-10 flex-shrink-0" />
+
+                  {/* Empty half on desktop */}
+                  <div className="hidden sm:block sm:flex-1" />
                 </motion.div>
               ))}
             </div>
