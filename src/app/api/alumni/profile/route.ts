@@ -27,20 +27,36 @@ export async function GET() {
       return NextResponse.json({ error: 'Profile not found' }, { status: 404 });
     }
 
-    // Return current profile data
     const profile = {
-      alumniId: row.get('Alumni ID'),
-      fullName: row.get('Full Name'),
-      passoutYear: row.get('Passout Year'),
-      email: row.get('Email'),
-      mobile: row.get('Mobile'),
-      currentCity: row.get('Current City'),
-      qualification: row.get('Qualification'),
-      college: row.get('College / University'),
-      company: row.get('Company'),
-      jobRole: row.get('Job Role'),
-      profilePhoto: row.get('Profile Photo URL'),
-      status: row.get('Status')
+      alumniId:             row.get('Alumni ID'),
+      fullName:             row.get('Full Name'),
+      dob:                  row.get('DOB'),
+      maritalStatus:        row.get('Marital Status'),
+      gender:               row.get('Gender'),
+      passoutYear:          row.get('Passout Year'),
+      admissionNumber:      row.get('Admission Number'),
+      email:                row.get('Email'),
+      mobile:               row.get('Mobile'),
+      whatsapp:             row.get('WhatsApp'),
+      country:              row.get('Country'),
+      postalAddress:        row.get('Postal Address'),
+      standardLastAttended: row.get('Standard Last Attended'),
+      standardsAttended:    row.get('Standards Attended'),
+      educationLevel:       row.get('Education Level'),
+      schoolCollegeName:    row.get('School / College Name'),
+      currentCity:          row.get('Current City'),
+      qualification:        row.get('Qualification'),
+      college:              row.get('College / University'),
+      company:              row.get('Company'),
+      jobRole:              row.get('Job Role'),
+      sector:               row.get('Sector'),
+      facebook:             row.get('Facebook'),
+      instagram:            row.get('Instagram'),
+      areaOfInterest:       row.get('Area of Interest'),
+      fondestMemory:        row.get('Fondest Memory'),
+      shareContact:         row.get('Share Contact'),
+      profilePhoto:         row.get('Profile Photo URL'),
+      status:               row.get('Status'),
     };
 
     return NextResponse.json({ profile });
@@ -66,39 +82,46 @@ export async function PUT(request: Request) {
       return NextResponse.json({ error: 'Profile not found' }, { status: 404 });
     }
 
-    // Update allowed fields
-    const allowedFields = [
-      'Email', 'Mobile', 'Current City', 
-      'Qualification', 'College / University', 
-      'Company', 'Job Role', 'Profile Photo URL'
-    ];
+    const country        = data.country === 'Other'        ? (data.countryOther || 'Other')        : (data.country || '');
+    const educationLevel = data.educationLevel === 'Other' ? (data.educationLevelOther || 'Other') : (data.educationLevel || '');
+    const jobRole        = data.jobRole === 'Other'        ? (data.jobRoleOther || 'Other')        : (data.jobRole || '');
+    const sector         = data.sector === 'Other'         ? (data.sectorOther || 'Other')         : (data.sector || '');
 
-    const mappedData: any = {
-      'Email': data.email,
-      'Mobile': data.mobile,
-      'Current City': data.currentCity,
-      'Qualification': data.qualification,
-      'College / University': data.college,
-      'Company': data.company,
-      'Job Role': data.jobRole,
-      'Profile Photo URL': data.profilePhoto
+    const updates: Record<string, string> = {
+      'Email':                  data.email                || '',
+      'Mobile':                 data.mobile               || '',
+      'WhatsApp':               data.whatsapp             || '',
+      'Country':                country,
+      'Postal Address':         data.postalAddress        || '',
+      'Standard Last Attended': data.standardLastAttended || '',
+      'Standards Attended':     typeof data.standardsAttended === 'string'
+                                  ? data.standardsAttended
+                                  : (Array.isArray(data.standardsAttended) ? data.standardsAttended.join(', ') : ''),
+      'Education Level':        educationLevel,
+      'School / College Name':  data.schoolCollegeName    || '',
+      'Current City':           country,
+      'Qualification':          educationLevel,
+      'College / University':   data.schoolCollegeName || data.college || '',
+      'Company':                data.company      || '',
+      'Job Role':               jobRole,
+      'Sector':                 sector,
+      'Facebook':               data.facebook     || '',
+      'Instagram':              data.instagram    || '',
+      'Area of Interest':       data.areaOfInterest || '',
+      'Fondest Memory':         data.fondestMemory  || '',
+      'Share Contact':          data.shareContact   || '',
+      'Marital Status':         data.maritalStatus  || '',
+      'Profile Photo URL':      data.profilePhoto   || '',
     };
 
-    allowedFields.forEach(field => {
-      if (mappedData[field] !== undefined) {
-        row.set(field, mappedData[field]);
-      }
-    });
-
-    // We set status to Pending again after an update to trigger manual admin review
+    Object.entries(updates).forEach(([field, value]) => row.set(field, value));
     row.set('Status', 'Pending');
     row.set('Updated At', format(new Date(), 'yyyy-MM-dd HH:mm:ss'));
-    
     await row.save();
 
-    return NextResponse.json({ 
-      success: true, 
-      message: 'Your profile update has been submitted successfully. The changes will be visible after approval by the school administration.' 
+    return NextResponse.json({
+      success: true,
+      message: 'Your profile update has been submitted successfully. Changes will be visible after approval by the school administration.',
     });
 
   } catch (error) {
