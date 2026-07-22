@@ -10,7 +10,7 @@ export default function FacultyClient() {
       {/* Hero */}
       <section className="relative py-12 sm:py-24 bg-[#0d0d3b] text-center text-white overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/campus-building-2.jpeg" alt="MM School Campus" fill priority sizes="100vw" className="object-cover opacity-20" />
+          <Image src="/images/campus-building-2.jpeg" alt="M.M.MATRICULATION HR.SEC SCHOOL Campus" fill priority sizes="100vw" className="object-cover opacity-20" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0d0d3b]/60 to-[#0d0d3b]" />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
@@ -54,14 +54,14 @@ export default function FacultyClient() {
           <div className="relative rounded-3xl overflow-hidden shadow-2xl">
             <Image
               src="/images/staff-group.jpeg"
-              alt="MM Matric School Staff Group Photo"
+              alt="M.M.MATRICULATION HR.SEC SCHOOL Staff Group Photo"
               width={1200}
               height={800}
               className="w-full h-auto object-cover"
               sizes="100vw"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0d0d3b]/80 to-transparent p-6 z-10">
-              <p className="text-white font-semibold text-sm">Our dedicated faculty &amp; staff — the backbone of MM Matric Higher Secondary School, Patemanagaram</p>
+              <p className="text-white font-semibold text-sm">Our dedicated faculty &amp; staff — the backbone of M.M.MATRICULATION HR.SEC SCHOOL, Patemanagaram</p>
             </div>
           </div>
         </div>

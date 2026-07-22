@@ -71,7 +71,7 @@ export async function POST(request: Request) {
                 </tr>
               </table>
               <div style="margin-top: 30px; font-size: 11px; color: #999999; border-top: 1px solid #eeeeee; padding-top: 10px; text-align: center;">
-                Sent from MM Matric Hr. Sec. School contact page.
+                Sent from M.M.MATRICULATION HR.SEC SCHOOL contact page.
               </div>
             </div>
           `,

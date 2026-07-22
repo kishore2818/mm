@@ -51,7 +51,7 @@ export default function Footer() {
               <div className="relative w-14 h-14">
                 <Image
                   src="/images/logo.png"
-                  alt="MM Matric School Logo"
+                  alt="M.M.MATRICULATION HR.SEC SCHOOL Logo"
                   fill
                   className="object-contain"
                   sizes="56px"
@@ -61,7 +61,7 @@ export default function Footer() {
               <div>
                 <p className="text-[#f0c040] font-bold text-sm leading-snug"
                   >
-                  MM Matric Higher Secondary School
+                  M.M.MATRICULATION HR.SEC SCHOOL
                 </p>
                 <p className="text-[#c9a227]/60 text-xs">Patemanagaram</p>
               </div>
@@ -140,7 +140,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <MapPin size={16} className="text-[#c9a227] mt-0.5 flex-shrink-0" />
-                <span>MM Matric Higher Secondary School, Patemanagaram, Tamil Nadu</span>
+                <span>M.M.MATRICULATION HR.SEC SCHOOL, Patemanagaram, Tamil Nadu</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60">
                 <Phone size={16} className="text-[#c9a227] flex-shrink-0" />
@@ -193,7 +193,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-white/40 text-center sm:text-left">
-            © {new Date().getFullYear()} MM Matric Higher Secondary School, Patemanagaram. All rights reserved.
+            © {new Date().getFullYear()} M.M.MATRICULATION HR.SEC SCHOOL, Patemanagaram. All rights reserved.
           </p>
           <p className="hidden sm:block text-xs text-white/30">
             Crafted with ❤️ for education

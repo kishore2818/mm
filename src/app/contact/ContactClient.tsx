@@ -78,7 +78,7 @@ export default function ContactClient() {
                 </div>
                 <div>
                   <h3 className="font-bold text-[#1a1a5e] text-lg mb-1">Campus Address</h3>
-                  <p className="text-gray-500 leading-relaxed">MM Matric Higher Secondary School,<br/>Patemanagaram,<br/>Thoothukudi District,<br/>Tamil Nadu, India - 628620</p>
+                  <p className="text-gray-500 leading-relaxed">M.M.MATRICULATION HR.SEC SCHOOL,<br/>Patemanagaram,<br/>Thoothukudi District,<br/>Tamil Nadu, India - 628620</p>
                 </div>
               </div>
 

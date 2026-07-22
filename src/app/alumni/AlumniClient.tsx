@@ -94,7 +94,7 @@ export default function AlumniClient() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#c9a227]/15 border border-[#c9a227]/30 text-[#f0c040] text-xs font-semibold uppercase tracking-wider mb-6">
-              <Users size={12} /> MM Matric Alumni Network
+              <Users size={12} /> M.M.MATRICULATION HR.SEC SCHOOL Alumni Network
             </span>
           </motion.div>
 
@@ -114,7 +114,7 @@ export default function AlumniClient() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed mb-10"
           >
-            Once a student of MM Matric, always a valued part of our legacy. Reconnect with peers, share your global milestones, and guide current students.
+            Once a student of M.M.MATRICULATION HR.SEC SCHOOL, always a valued part of our legacy. Reconnect with peers, share your global milestones, and guide current students.
           </motion.p>
         </div>
       </section>
@@ -135,7 +135,7 @@ export default function AlumniClient() {
               </div>
               <h2 className="text-2xl font-bold text-[#0d0d3b] mb-3">Join the Directory</h2>
               <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                Register your profile to stand proud in our directory. Share your current college, company, or qualification and stay connected with MM Matric school events.
+                Register your profile to stand proud in our directory. Share your current college, company, or qualification and stay connected with M.M.MATRICULATION HR.SEC SCHOOL events.
               </p>
             </div>
             <Link 
@@ -200,7 +200,7 @@ export default function AlumniClient() {
       <section className="py-10 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-3">Directory</p>
-          <h2 className="text-3xl font-bold text-[#0d0d3b]">MM Matric Alumni Directory</h2>
+          <h2 className="text-3xl font-bold text-[#0d0d3b]">M.M.MATRICULATION HR.SEC SCHOOL Alumni Directory</h2>
           <div className="w-16 h-1 bg-[#c9a227] mx-auto rounded-full mt-4" />
         </div>
 

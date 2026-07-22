@@ -375,7 +375,7 @@ export default function RegisterAlumniPage() {
 
           {/* SECTION 3: Academic History at MM */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg border border-gray-100">
-            <SectionHeader icon={BookOpen} title="Academic History at MM School" subtitle="Your time at MM Mat Hr Sec School" />
+            <SectionHeader icon={BookOpen} title="Academic History at M.M.MATRICULATION HR.SEC SCHOOL" subtitle="Your time at M.M.MATRICULATION HR.SEC SCHOOL" />
             <div className="space-y-5">
               <FormInput label="Standard Last Attended" required>
                 <StyledSelect name="standardLastAttended" value={formData.standardLastAttended} onChange={handleChange} required>
@@ -389,7 +389,7 @@ export default function RegisterAlumniPage() {
                   placeholder="ex: 2001-2002" className={inputClass} />
               </FormInput>
 
-              <FormInput label="Check All Standards Attended at MM School" required>
+              <FormInput label="Check All Standards Attended at M.M.MATRICULATION HR.SEC SCHOOL" required>
                 <CheckboxGrid options={STANDARDS} selected={formData.standardsAttended}
                   onChange={(val) => setFormData(prev => ({ ...prev, standardsAttended: val }))} />
               </FormInput>
@@ -398,9 +398,9 @@ export default function RegisterAlumniPage() {
 
           {/* SECTION 4: Education After MM */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg border border-gray-100">
-            <SectionHeader icon={GraduationCap} title="Education After MM School" subtitle="Your academic journey after leaving MM" />
+            <SectionHeader icon={GraduationCap} title="Education After M.M.MATRICULATION HR.SEC SCHOOL" subtitle="Your academic journey after leaving MM" />
             <div className="space-y-5">
-              <FormInput label="Highest Level of Education After Leaving MM School" required>
+              <FormInput label="Highest Level of Education After Leaving M.M.MATRICULATION HR.SEC SCHOOL" required>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {EDUCATION_LEVELS.map((level) => (
                     <label key={level} className={`flex items-center gap-2 px-4 py-3 rounded-xl border text-sm font-medium cursor-pointer transition-all duration-200 ${
@@ -511,7 +511,7 @@ export default function RegisterAlumniPage() {
                   placeholder="e.g. Technology, Arts, Sports, Music..." className={inputClass} />
               </FormInput>
 
-              <FormInput label="Fondest Memories of Life at MM Mat Hr Sec School" required>
+              <FormInput label="Fondest Memories of Life at M.M.MATRICULATION HR.SEC SCHOOL" required>
                 <textarea name="fondestMemory" required value={formData.fondestMemory} onChange={handleChange}
                   rows={4} placeholder="Share your best memories from school..." className={`${inputClass} resize-none`} />
               </FormInput>

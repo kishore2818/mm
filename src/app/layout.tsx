@@ -5,12 +5,12 @@ import Footer from "@/components/layout/Footer";
 import SitePopup from "@/components/layout/SitePopup";
 
 export const metadata: Metadata = {
-  title: "MM Matric Higher Secondary School, Patemanagaram",
+  title: "M.M.MATRICULATION HR.SEC SCHOOL, Patemanagaram",
   description:
-    "Official website of MM Matric Higher Secondary School, Patemanagaram. Empowering students to Learn, Lead and Serve since decades.",
-  keywords: "MM Matric, Higher Secondary School, Patemanagaram, CBSE, Admissions",
+    "Official website of M.M.MATRICULATION HR.SEC SCHOOL, Patemanagaram. Empowering students to Learn, Lead and Serve since decades.",
+  keywords: "M.M.MATRICULATION HR.SEC SCHOOL, Higher Secondary School, Patemanagaram, CBSE, Admissions",
   openGraph: {
-    title: "MM Matric Higher Secondary School",
+    title: "M.M.MATRICULATION HR.SEC SCHOOL",
     description: "Learn · Lead · Serve — Official School Website",
     type: "website",
   },

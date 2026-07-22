@@ -56,7 +56,7 @@ export default function CallToAction() {
             </h2>
 
             <p className="text-gray-600 leading-relaxed mb-8">
-              Give your child the education they deserve at MM Matric Higher Secondary School. Secure their future with quality academics, strong values, and a nurturing environment.
+              Give your child the education they deserve at M.M.MATRICULATION HR.SEC SCHOOL. Secure their future with quality academics, strong values, and a nurturing environment.
             </p>
 
             <ul className="space-y-3 mb-10">

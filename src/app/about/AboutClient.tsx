@@ -8,7 +8,7 @@ import Image from "next/image";
 import { Target, Eye, Heart, Award, ArrowRight, Quote, CheckCircle, GraduationCap, Trophy, Medal } from "lucide-react";
 
 const timeline = [
-  { year: "1998", title: "Foundation", desc: "MM Matric Higher Secondary School established on June 1, 1998, with approximately 38 KG students." },
+  { year: "1998", title: "Foundation", desc: "M.M.MATRICULATION HR.SEC SCHOOL established on June 1, 1998, with approximately 38 KG students." },
   { year: "2008", title: "High School Upgradation", desc: "Recognition obtained from Government of Tamil Nadu for Class 10, upgrading to High School." },
   { year: "2010", title: "Higher Secondary Upgradation", desc: "Recognition obtained from Government of Tamil Nadu for Class 12, upgrading to Higher Secondary School." },
   { year: "2017", title: "International Skating Glory", desc: "Student Suman won first prize and secured a gold medal in the International Skating Championship in Bhutan." },
@@ -34,7 +34,7 @@ export default function AboutClient() {
       {/* Hero */}
       <section className="relative py-28 overflow-hidden" style={{ background: "linear-gradient(135deg, #060622, #0d0d3b, #1a1a5e)" }}>
         <div className="absolute inset-0">
-          <Image src="/images/campus-building-1.jpeg" alt="MM School Building" fill priority sizes="100vw" className="object-cover opacity-30" />
+          <Image src="/images/campus-building-1.jpeg" alt="M.M.MATRICULATION HR.SEC SCHOOL Building" fill priority sizes="100vw" className="object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#060622]/80 to-[#1a1a5e]/90" />
         </div>
         <div className="absolute inset-0 opacity-[0.04] pointer-events-none"
@@ -81,7 +81,7 @@ export default function AboutClient() {
                 <div>
                   <Quote size={40} className="text-[#c9a227] mb-5 opacity-70" />
                   <p className="text-white/80 text-lg leading-relaxed italic mb-6">
-                    &quot;Education at MM Matric is not confined to textbooks. We build young men and women who are curious, compassionate, and courageous — ready to make a difference in the world.&quot;
+                    &quot;Education at M.M.MATRICULATION HR.SEC SCHOOL is not confined to textbooks. We build young men and women who are curious, compassionate, and courageous — ready to make a difference in the world.&quot;
                   </p>
                   <div className="flex items-center gap-4">
                     <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#c9a227] to-[#f0c040] flex items-center justify-center text-[#0d0d3b] font-bold text-xl">
@@ -89,7 +89,7 @@ export default function AboutClient() {
                     </div>
                     <div>
                       <p className="text-[#f0c040] font-bold">The Principal</p>
-                      <p className="text-white/50 text-sm">MM Matric Higher Secondary School</p>
+                      <p className="text-white/50 text-sm">M.M.MATRICULATION HR.SEC SCHOOL</p>
                     </div>
                   </div>
                 </div>
@@ -164,7 +164,7 @@ export default function AboutClient() {
       <section className="py-20 bg-[#fdf8f0] border-t border-[#c9a227]/15">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-3">Pride of MM School</p>
+            <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-3">Pride of M.M.MATRICULATION HR.SEC SCHOOL</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a5e]">Notable Alumni & Achievers</h2>
             <div className="w-16 h-1 bg-[#c9a227] mx-auto rounded-full mt-4" />
           </div>
@@ -323,7 +323,7 @@ export default function AboutClient() {
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a5e]">Clubs &amp; Societies</h2>
             <div className="w-16 h-1 bg-[#c9a227] mx-auto rounded-full mt-4" />
             <p className="text-gray-500 text-base max-w-2xl mx-auto mt-5 leading-relaxed">
-              Beyond academics, MM Matric fosters holistic growth through active student clubs. Each club nurtures a unique set of skills — from language and culture to career readiness — right here on our campus in Patemanagaram.
+              Beyond academics, M.M.MATRICULATION HR.SEC SCHOOL fosters holistic growth through active student clubs. Each club nurtures a unique set of skills — from language and culture to career readiness — right here on our campus in Patemanagaram.
             </p>
           </div>
 

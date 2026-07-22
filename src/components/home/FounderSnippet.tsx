@@ -60,7 +60,7 @@ export default function FounderSnippet() {
             
             <div className="prose prose-lg text-gray-600 mb-10 leading-relaxed">
               <p className="mb-6">
-                Established on June 1, 1998, with approximately 38 KG students, MM Matric Higher Secondary School in Patemanagaram is the realization of our founder's vision to bring high-quality education to his home soil.
+                Established on June 1, 1998, with approximately 38 KG students, M.M.MATRICULATION HR.SEC SCHOOL in Patemanagaram is the realization of our founder's vision to bring high-quality education to his home soil.
               </p>
               <p>
                 The school was founded by Haji K. Mohamed Meeran, Former Managing Director of Rorito Pens International Pvt Ltd, Chennai, and a native of Patemanagaram, with the future well-being and welfare of the children of Patemanagaram and its surrounding areas in mind. Having started with just four teachers and a principal, the school now runs successfully with 50 dedicated teachers and 28 non-teaching staff members, shaping thousands of successful lives over nearly three decades.

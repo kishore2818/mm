@@ -349,7 +349,7 @@ export default function UpdateAlumniProfilePage() {
 
           {/* SECTION 2: Academic at MM */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg border border-gray-100">
-            <SectionHeader icon={BookOpen} title="Academic History at MM School" />
+            <SectionHeader icon={BookOpen} title="Academic History at M.M.MATRICULATION HR.SEC SCHOOL" />
             <div className="space-y-5">
               <FormInput label="Standard Last Attended">
                 <StyledSelect name="standardLastAttended" value={formData.standardLastAttended} onChange={handleChange}>
@@ -357,7 +357,7 @@ export default function UpdateAlumniProfilePage() {
                   {STANDARDS_LAST.map(s => <option key={s} value={s}>{s}</option>)}
                 </StyledSelect>
               </FormInput>
-              <FormInput label="All Standards Attended at MM School">
+              <FormInput label="All Standards Attended at M.M.MATRICULATION HR.SEC SCHOOL">
                 <CheckboxGrid options={STANDARDS} selected={formData.standardsAttended}
                   onChange={(val) => setFormData(prev => ({ ...prev, standardsAttended: val }))} />
               </FormInput>
@@ -366,9 +366,9 @@ export default function UpdateAlumniProfilePage() {
 
           {/* SECTION 3: Education After MM */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg border border-gray-100">
-            <SectionHeader icon={GraduationCap} title="Education After MM School" />
+            <SectionHeader icon={GraduationCap} title="Education After M.M.MATRICULATION HR.SEC SCHOOL" />
             <div className="space-y-5">
-              <FormInput label="Highest Level of Education After Leaving MM School">
+              <FormInput label="Highest Level of Education After Leaving M.M.MATRICULATION HR.SEC SCHOOL">
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {EDUCATION_LEVELS.map((level) => (
                     <label key={level} className={`flex items-center gap-2 px-4 py-3 rounded-xl border text-sm font-medium cursor-pointer transition-all duration-200 ${
@@ -469,7 +469,7 @@ export default function UpdateAlumniProfilePage() {
                 <input type="text" name="areaOfInterest" value={formData.areaOfInterest} onChange={handleChange}
                   placeholder="e.g. Technology, Arts, Sports, Music..." className={inputClass} />
               </FormInput>
-              <FormInput label="Fondest Memories of Life at MM School">
+              <FormInput label="Fondest Memories of Life at M.M.MATRICULATION HR.SEC SCHOOL">
                 <textarea name="fondestMemory" value={formData.fondestMemory} onChange={handleChange}
                   rows={4} placeholder="Share your best memories from school..." className={`${inputClass} resize-none`} />
               </FormInput>

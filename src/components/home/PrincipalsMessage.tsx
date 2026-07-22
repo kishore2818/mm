@@ -47,10 +47,10 @@ export default function PrincipalsMessage() {
           >
             <Quote size={64} className="text-[#c9a227]/20 mb-4 -ml-2" />
             <blockquote className="font-playfair text-2xl sm:text-3xl font-medium text-[#0d0d3b] leading-relaxed mb-8">
-              Education is not merely the filling of a pail, but the lighting of a fire. At MM Matric, we ignite that spark in every child who walks through our doors.
+              Education is not merely the filling of a pail, but the lighting of a fire. At M.M.MATRICULATION HR.SEC SCHOOL, we ignite that spark in every child who walks through our doors.
             </blockquote>
             <p className="text-[#555] text-base leading-loose mb-8">
-              For nearly three decades, MM Matriculation Higher Secondary School has stood as a beacon of quality education in Patemanagaram. Our journey has been one of unwavering commitment — to our students, our community, and to the timeless values that define genuine education.
+              For nearly three decades, M.M.MATRICULATION HR.SEC SCHOOL has stood as a beacon of quality education in Patemanagaram. Our journey has been one of unwavering commitment — to our students, our community, and to the timeless values that define genuine education.
             </p>
             <p className="text-[#555] text-base leading-loose mb-10">
               We believe that every student carries within them an extraordinary potential. Our dedicated faculty, world-class facilities, and nurturing environment are designed to bring out the very best in each child — academically, morally, and creatively.
@@ -64,7 +64,7 @@ export default function PrincipalsMessage() {
               </div>
               <div>
                 <p className="font-bold text-[#0d0d3b] text-lg">The Principal</p>
-                <p className="text-[#c9a227] text-sm font-medium tracking-wide">MM Matric Higher Secondary School</p>
+                <p className="text-[#c9a227] text-sm font-medium tracking-wide">M.M.MATRICULATION HR.SEC SCHOOL</p>
               </div>
             </div>
           </motion.div>

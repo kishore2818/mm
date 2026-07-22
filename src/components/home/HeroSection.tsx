@@ -14,7 +14,7 @@ export default function HeroSection() {
         {/* Real campus assembly photo as base */}
         <Image
           src="/images/campus-assembly.jpeg"
-          alt="MM Matric School Campus"
+          alt="M.M.MATRICULATION HR.SEC SCHOOL Campus"
           fill
           priority
           sizes="100vw"
@@ -40,7 +40,7 @@ export default function HeroSection() {
         </div>
         {/* School crest watermark */}
         <div className="absolute right-8 bottom-8 md:right-16 md:bottom-16 w-32 h-32 md:w-44 md:h-44 opacity-10 pointer-events-none">
-          <Image src="/images/school-crest.jpeg" alt="MM School Crest" fill sizes="176px" className="object-contain" />
+          <Image src="/images/school-crest.jpeg" alt="M.M.MATRICULATION HR.SEC SCHOOL Crest" fill sizes="176px" className="object-contain" />
         </div>
       </div>
 
@@ -58,7 +58,7 @@ export default function HeroSection() {
         {/* Main heading */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
           <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.1] mb-6">
-            MM Matric
+            M.M.MATRICULATION HR.SEC SCHOOL
             <span className="block mt-2" style={{
               background: "linear-gradient(135deg, #c9a227 0%, #f0c040 40%, #ffd700 60%, #c9a227 100%)",
               backgroundSize: "200% auto",

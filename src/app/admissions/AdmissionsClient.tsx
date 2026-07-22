@@ -91,7 +91,7 @@ export default function AdmissionsClient() {
                   <MapPin size={18} className="text-[#c9a227] mt-0.5" />
                   <div>
                     <p className="text-sm font-medium text-[#1a1a5e]">Visit Office</p>
-                    <p className="text-sm text-gray-500 leading-relaxed">MM Matric Hr. Sec. School,<br/>Patemanagaram</p>
+                    <p className="text-sm text-gray-500 leading-relaxed">M.M.MATRICULATION HR.SEC SCHOOL,<br/>Patemanagaram</p>
                   </div>
                 </div>
               </div>

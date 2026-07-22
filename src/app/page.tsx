@@ -10,9 +10,9 @@ import PrincipalsMessage from "@/components/home/PrincipalsMessage";
 import FounderSnippet from "@/components/home/FounderSnippet";
 
 export const metadata: Metadata = {
-  title: "MM Matric Higher Secondary School | Patemanagaram",
-  description: "Welcome to MM Matric Higher Secondary School, Patemanagaram. We foster academic excellence, character building, and modern learning standard templates.",
-  keywords: "MM Matric School, Patemanagaram, school in Thoothukudi, matriculation higher secondary school, school admissions, curriculum",
+  title: "M.M.MATRICULATION HR.SEC SCHOOL | Patemanagaram",
+  description: "Welcome to M.M.MATRICULATION HR.SEC SCHOOL, Patemanagaram. We foster academic excellence, character building, and modern learning standard templates.",
+  keywords: "M.M.MATRICULATION HR.SEC SCHOOL, Patemanagaram, school in Thoothukudi, matriculation higher secondary school, school admissions, curriculum",
 };
 
 export default function HomePage() {

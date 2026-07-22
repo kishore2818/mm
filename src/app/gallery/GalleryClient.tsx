@@ -247,7 +247,7 @@ export default function GalleryClient() {
             Campus Life Gallery
           </h1>
           <p className="text-white/70 text-base sm:text-lg max-w-2xl">
-            Capturing memories, achievements and moments at MM Matric Higher Secondary School
+            Capturing memories, achievements and moments at M.M.MATRICULATION HR.SEC SCHOOL
           </p>
         </div>
 

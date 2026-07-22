@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import AdmissionsClient from './AdmissionsClient';
 
 export const metadata: Metadata = {
-  title: "Admissions 2026–27 | MM Matric Higher Secondary School",
-  description: "Learn about the MM Matric Higher Secondary School admission process, eligibility guidelines, required certificates/documents, and contact info.",
+  title: "Admissions 2026–27 | M.M.MATRICULATION HR.SEC SCHOOL",
+  description: "Learn about the M.M.MATRICULATION HR.SEC SCHOOL admission process, eligibility guidelines, required certificates/documents, and contact info.",
   keywords: "school admission process, admissions 2026, required certificates, apply to school, Patemanagaram school admissions",
 };
 

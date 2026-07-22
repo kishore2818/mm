@@ -50,7 +50,7 @@ export default function Navbar() {
       {/* Top Info Bar */}
       <div className="hidden md:block bg-[#0d0d3b] border-b border-white/5 text-white/50 text-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-1.5">
-          <span>MM Matric Higher Secondary School, Patemanagaram</span>
+          <span>M.M.MATRICULATION HR.SEC SCHOOL, Patemanagaram</span>
           <div className="flex items-center gap-4">
             <a href="tel:04630255974" className="flex items-center gap-1.5 hover:text-[#f0c040] transition-colors">
               <Phone size={11} /> 04630-255974
@@ -78,11 +78,11 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
               <div className="relative w-10 h-10 md:w-11 md:h-11 rounded-full overflow-hidden ring-2 ring-[#c9a227]/40 group-hover:ring-[#f0c040] transition-all duration-300 bg-white flex items-center justify-center p-0.5 flex-shrink-0">
-                <Image src="/images/logo.png" alt="MM Matric Logo" fill className="object-contain" priority unoptimized />
+                <Image src="/images/logo.png" alt="M.M.MATRICULATION HR.SEC SCHOOL Logo" fill className="object-contain" priority unoptimized />
               </div>
               <div className="hidden md:flex flex-col justify-center">
                 <p className="text-[#f0c040] font-bold text-[13px] lg:text-sm leading-tight tracking-wide whitespace-nowrap">
-                  MM Matric Higher Secondary School
+                  M.M.MATRICULATION HR.SEC SCHOOL
                 </p>
                 <p className="text-[#c9a227]/60 text-[9px] lg:text-[10px] tracking-[0.2em] lg:tracking-[0.25em] uppercase mt-0.5 whitespace-nowrap">
                   Patemanagaram · Est. 1998
@@ -90,7 +90,7 @@ export default function Navbar() {
               </div>
               <div className="md:hidden flex flex-col justify-center">
                 <p className="text-[#f0c040] font-bold text-base leading-none tracking-wider">
-                  MM SCHOOL
+                  M.M.MATRICULATION HR.SEC SCHOOL
                 </p>
               </div>
             </Link>

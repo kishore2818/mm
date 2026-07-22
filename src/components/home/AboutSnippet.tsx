@@ -28,7 +28,7 @@ export default function AboutSnippet() {
               and Character
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              MM Matric Higher Secondary School, Patemanagaram has stood as a beacon of quality education for nearly three decades. We blend traditional values with modern pedagogy to create well-rounded individuals.
+              M.M.MATRICULATION HR.SEC SCHOOL, Patemanagaram has stood as a beacon of quality education for nearly three decades. We blend traditional values with modern pedagogy to create well-rounded individuals.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
               Our curriculum is designed to challenge students intellectually while nurturing creativity, leadership, and civic responsibility — true to our motto:{" "}
@@ -73,7 +73,7 @@ export default function AboutSnippet() {
               <Quote size={32} className="text-[#c9a227] mb-4 opacity-80" />
 
               <p className="text-white/80 leading-relaxed text-sm italic mb-6">
-                &quot;Education is not just about filling a bucket, but lighting a fire. At MM Matric, we inspire our students to dream big, work hard, and serve society with integrity and compassion. Every child who walks through our doors is our responsibility and our pride.&quot;
+                &quot;Education is not just about filling a bucket, but lighting a fire. At M.M.MATRICULATION HR.SEC SCHOOL, we inspire our students to dream big, work hard, and serve society with integrity and compassion. Every child who walks through our doors is our responsibility and our pride.&quot;
               </p>
 
               {/* Principal */}
@@ -83,7 +83,7 @@ export default function AboutSnippet() {
                 </div>
                 <div>
                   <p className="font-semibold text-[#f0c040]">The Principal</p>
-                  <p className="text-white/50 text-xs">MM Matric Higher Secondary School</p>
+                  <p className="text-white/50 text-xs">M.M.MATRICULATION HR.SEC SCHOOL</p>
                   <p className="text-white/40 text-xs">Patemanagaram</p>
                 </div>
               </div>
