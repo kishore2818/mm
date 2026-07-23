@@ -70,7 +70,7 @@ export default function AlumniClient() {
     <div className="min-h-screen bg-gray-50/50">
       
       {/* ── 1. DYNAMIC HERO SECTION ── */}
-      <section className="relative py-28 overflow-hidden bg-[#0d0d3b] text-white">
+      <section className="relative py-12 sm:py-20 overflow-hidden bg-[#0d0d3b] text-white">
         <div className="absolute inset-0">
           <Image 
             src="/images/campus-building-2.jpeg" 
@@ -93,7 +93,7 @@ export default function AlumniClient() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#c9a227]/15 border border-[#c9a227]/30 text-[#f0c040] text-xs font-semibold uppercase tracking-wider mb-6">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#c9a227]/15 border border-[#c9a227]/30 text-[#f0c040] text-[11px] sm:text-xs font-semibold uppercase tracking-wider mb-3">
               <Users size={12} /> M.M.MATRICULATION HR.SEC SCHOOL Alumni Network
             </span>
           </motion.div>
@@ -102,7 +102,7 @@ export default function AlumniClient() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-playfair text-4xl sm:text-6xl font-bold leading-tight mb-6"
+            className="font-playfair text-3xl sm:text-5xl font-bold leading-tight mb-3 sm:mb-4"
           >
             Reconnect. Empower. <br/>
             <span className="gold-shimmer font-playfair">Inspire the Future.</span>
@@ -112,7 +112,7 @@ export default function AlumniClient() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed mb-10"
+            className="text-white/70 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed mb-6 sm:mb-10"
           >
             Once a student of M.M.MATRICULATION HR.SEC SCHOOL, always a valued part of our legacy. Reconnect with peers, share your global milestones, and guide current students.
           </motion.p>
@@ -120,53 +120,53 @@ export default function AlumniClient() {
       </section>
 
       {/* ── 2. QUICK ACTIONS SECTION ── */}
-      <section className="relative z-20 -mt-16 max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="grid md:grid-cols-2 gap-6">
+      <section className="relative z-20 -mt-8 sm:-mt-12 max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-2 gap-3 sm:gap-6">
           {/* Action 1: Register */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="group bg-white rounded-3xl p-8 border border-gray-100 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:border-[#c9a227]/30 transition-all duration-300 flex flex-col justify-between"
+            className="group bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-gray-100 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:border-[#c9a227]/30 transition-all duration-300 flex flex-col justify-between"
           >
             <div>
-              <div className="w-14 h-14 rounded-2xl bg-[#c9a227]/10 flex items-center justify-center text-[#c9a227] mb-6 group-hover:scale-110 transition-transform">
-                <UserPlus size={28} />
+              <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-[#c9a227]/10 flex items-center justify-center text-[#c9a227] mb-3 sm:mb-6 group-hover:scale-110 transition-transform">
+                <UserPlus className="w-5 h-5 sm:w-7 sm:h-7" />
               </div>
-              <h2 className="text-2xl font-bold text-[#0d0d3b] mb-3">Join the Directory</h2>
-              <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                Register your profile to stand proud in our directory. Share your current college, company, or qualification and stay connected with M.M.MATRICULATION HR.SEC SCHOOL events.
+              <h2 className="text-sm sm:text-2xl font-bold text-[#0d0d3b] mb-1 sm:mb-3">Join Directory</h2>
+              <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-6 line-clamp-2 sm:line-clamp-none">
+                Register your profile to stand proud in our directory and stay connected.
               </p>
             </div>
             <Link 
               href="/alumni/register" 
-              className="inline-flex items-center gap-2 font-bold text-sm text-[#0d0d3b] hover:text-[#c9a227] transition-colors"
+              className="inline-flex items-center gap-1.5 font-bold text-xs sm:text-sm text-[#0d0d3b] hover:text-[#c9a227] transition-colors mt-auto"
             >
-              Sign Up Now <ArrowRight size={16} className="group-hover:translate-x-1.5 transition-transform" />
+              Sign Up <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
             </Link>
           </motion.div>
 
           {/* Action 2: Update Profile */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="group bg-white rounded-3xl p-8 border border-gray-100 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:border-[#c9a227]/30 transition-all duration-300 flex flex-col justify-between"
+            className="group bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-gray-100 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:border-[#c9a227]/30 transition-all duration-300 flex flex-col justify-between"
           >
             <div>
-              <div className="w-14 h-14 rounded-2xl bg-[#1a1a5e]/5 flex items-center justify-center text-[#1a1a5e] mb-6 group-hover:scale-110 transition-transform">
-                <UserCheck size={28} />
+              <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-[#1a1a5e]/5 flex items-center justify-center text-[#1a1a5e] mb-3 sm:mb-6 group-hover:scale-110 transition-transform">
+                <UserCheck className="w-5 h-5 sm:w-7 sm:h-7" />
               </div>
-              <h2 className="text-2xl font-bold text-[#0d0d3b] mb-3">Update My Profile</h2>
-              <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                Already registered? Update your current job, location, and achievements. Keep your network updated with your career trajectory.
+              <h2 className="text-sm sm:text-2xl font-bold text-[#0d0d3b] mb-1 sm:mb-3">Update Profile</h2>
+              <p className="text-gray-500 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-6 line-clamp-2 sm:line-clamp-none">
+                Already registered? Update your current job, location, and achievements.
               </p>
             </div>
             <Link 
               href="/alumni/verify" 
-              className="inline-flex items-center gap-2 font-bold text-sm text-[#0d0d3b] hover:text-[#c9a227] transition-colors"
+              className="inline-flex items-center gap-1.5 font-bold text-xs sm:text-sm text-[#0d0d3b] hover:text-[#c9a227] transition-colors mt-auto"
             >
-              Edit Details <ArrowRight size={16} className="group-hover:translate-x-1.5 transition-transform" />
+              Edit Details <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
             </Link>
           </motion.div>
         </div>

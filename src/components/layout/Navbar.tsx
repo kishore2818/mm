@@ -76,21 +76,24 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-[70px]">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
-              <div className="relative w-10 h-10 md:w-11 md:h-11 rounded-full overflow-hidden ring-2 ring-[#c9a227]/40 group-hover:ring-[#f0c040] transition-all duration-300 bg-white flex items-center justify-center p-0.5 flex-shrink-0">
-                <Image src="/images/logo.png" alt="M.M.MATRICULATION HR.SEC SCHOOL Logo" fill className="object-contain" priority unoptimized />
+            <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0 min-w-0 max-w-[calc(100%-60px)] lg:max-w-none">
+              <div className="relative w-9 h-9 md:w-11 md:h-11 rounded-full overflow-hidden ring-2 ring-[#c9a227]/40 group-hover:ring-[#f0c040] transition-all duration-300 bg-white flex items-center justify-center p-0.5 flex-shrink-0">
+                <Image src="/images/logo.png" alt="M.M. MATRICULATION SCHOOL Logo" fill className="object-contain" priority unoptimized />
               </div>
               <div className="hidden md:flex flex-col justify-center">
                 <p className="text-[#f0c040] font-bold text-[13px] lg:text-sm leading-tight tracking-wide whitespace-nowrap">
-                  M.M.MATRICULATION HR.SEC SCHOOL
+                  M.M. MATRICULATION SCHOOL
                 </p>
                 <p className="text-[#c9a227]/60 text-[9px] lg:text-[10px] tracking-[0.2em] lg:tracking-[0.25em] uppercase mt-0.5 whitespace-nowrap">
                   Patemanagaram · Est. 1998
                 </p>
               </div>
-              <div className="md:hidden flex flex-col justify-center">
-                <p className="text-[#f0c040] font-bold text-base leading-none tracking-wider">
-                  M.M.MATRICULATION HR.SEC SCHOOL
+              <div className="md:hidden flex flex-col justify-center min-w-0 flex-1 overflow-hidden">
+                <p className="text-[#f0c040] font-bold text-[11px] sm:text-xs leading-tight tracking-tight truncate">
+                  M.M. MATRICULATION SCHOOL
+                </p>
+                <p className="text-[#c9a227]/70 text-[9px] tracking-wider uppercase truncate">
+                  Patemanagaram
                 </p>
               </div>
             </Link>

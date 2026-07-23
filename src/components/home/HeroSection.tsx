@@ -44,46 +44,49 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-6 pt-16 sm:pt-20 pb-16 w-full">
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 pt-10 sm:pt-20 pb-10 sm:pb-16 w-full">
         {/* Live badge */}
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full border border-[#c9a227]/40 bg-[#c9a227]/15 backdrop-blur-md text-[#f0c040] text-sm font-medium tracking-widest uppercase mb-6 sm:mb-8">
-          <span className="flex h-2.5 w-2.5 relative">
+          className="inline-flex items-center gap-2 px-4 py-1.5 sm:px-6 sm:py-2.5 rounded-full border border-[#c9a227]/40 bg-[#c9a227]/15 backdrop-blur-md text-[#f0c040] text-xs sm:text-sm font-medium tracking-widest uppercase mb-4 sm:mb-8">
+          <span className="flex h-2 w-2 sm:h-2.5 sm:w-2.5 relative">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#f0c040] opacity-75" />
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#f0c040]" />
+            <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-[#f0c040]" />
           </span>
           Admissions Open 2026–27
         </motion.div>
 
         {/* Main heading */}
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-          <h1 className="font-playfair text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.1] mb-6">
-            M.M.MATRICULATION HR.SEC SCHOOL
-            <span className="block mt-2" style={{
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="max-w-full overflow-hidden">
+          <h1 className="font-playfair text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] mb-4 sm:mb-6 tracking-tight max-w-full">
+            <span className="block text-white sm:whitespace-nowrap">M.M.MATRICULATION</span>
+            <span className="block mt-1 sm:mt-2 sm:whitespace-nowrap" style={{
               background: "linear-gradient(135deg, #c9a227 0%, #f0c040 40%, #ffd700 60%, #c9a227 100%)",
               backgroundSize: "200% auto",
-              WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
-              backgroundClip: "text", animation: "shimmer 3s linear infinite",
-            }}>Higher Secondary</span>
-            <span className="block text-white/95 mt-2">School</span>
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              animation: "shimmer 3s linear infinite",
+            }}>
+              HR.SEC SCHOOL
+            </span>
           </h1>
         </motion.div>
 
         {/* Location tag */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
-          className="flex items-center justify-center gap-4 mb-8">
-          <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#c9a227]/80" />
-          <span className="text-[#c9a227]/90 text-sm tracking-[0.35em] uppercase font-medium">Patemanagaram, Tamil Nadu</span>
-          <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#c9a227]/80" />
+          className="flex items-center justify-center gap-2 sm:gap-4 mb-8 max-w-full overflow-hidden">
+          <div className="h-px w-8 sm:w-16 bg-gradient-to-r from-transparent to-[#c9a227]/80 flex-shrink-0" />
+          <span className="text-[#c9a227]/90 text-xs sm:text-sm tracking-[0.25em] sm:tracking-[0.35em] uppercase font-medium truncate">Patemanagaram, Tamil Nadu</span>
+          <div className="h-px w-8 sm:w-16 bg-gradient-to-l from-transparent to-[#c9a227]/80 flex-shrink-0" />
         </motion.div>
 
         {/* Motto */}
         <motion.div initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.65 }}
-          className="flex items-center justify-center gap-6 mb-8">
+          className="flex flex-wrap items-center justify-center gap-2 sm:gap-6 mb-8 max-w-full px-2">
           {["LEARN", "LEAD", "SERVE"].map((word, i) => (
-            <div key={word} className="flex items-center gap-6">
-              <span className="font-playfair text-2xl sm:text-3xl lg:text-4xl font-bold text-[#f0c040] tracking-widest drop-shadow-lg">{word}</span>
-              {i < 2 && <span className="text-[#c9a227]/50 text-3xl">·</span>}
+            <div key={word} className="flex items-center gap-2 sm:gap-6">
+              <span className="font-playfair text-lg sm:text-2xl lg:text-3xl font-bold text-[#f0c040] tracking-widest drop-shadow-lg">{word}</span>
+              {i < 2 && <span className="text-[#c9a227]/50 text-xl sm:text-2xl">·</span>}
             </div>
           ))}
         </motion.div>

@@ -39,7 +39,7 @@ export default function AboutClient() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-28 overflow-hidden" style={{ background: "linear-gradient(135deg, #060622, #0d0d3b, #1a1a5e)" }}>
+      <section className="relative py-12 sm:py-28 overflow-hidden" style={{ background: "linear-gradient(135deg, #060622, #0d0d3b, #1a1a5e)" }}>
         <div className="absolute inset-0">
           <Image src="/images/campus-building-1.jpeg" alt="M.M.MATRICULATION HR.SEC SCHOOL Building" fill priority sizes="100vw" className="object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#060622]/80 to-[#1a1a5e]/90" />
@@ -48,20 +48,20 @@ export default function AboutClient() {
           style={{ backgroundImage: "linear-gradient(#c9a227 1px, transparent 1px), linear-gradient(90deg, #c9a227 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <motion.p initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}
-            className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-4 shadow-black drop-shadow-md">Our Story</motion.p>
+            className="text-[#c9a227] text-[11px] sm:text-xs font-semibold tracking-widest uppercase mb-2 sm:mb-4 shadow-black drop-shadow-md">Our Story</motion.p>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
-            className="text-4xl sm:text-6xl font-bold text-white mb-6 drop-shadow-xl">
+            className="text-3xl sm:text-6xl font-bold text-white mb-3 sm:mb-6 drop-shadow-xl">
             About Our <span style={{ background: "linear-gradient(135deg, #c9a227, #f0c040)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>School</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}
-            className="text-white/80 text-lg max-w-2xl mx-auto drop-shadow-md">
+            className="text-white/80 text-sm sm:text-lg max-w-2xl mx-auto drop-shadow-md leading-relaxed">
             Three decades of shaping young minds, building character, and creating leaders who Learn, Lead, and Serve.
           </motion.p>
         </div>
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-[#fdf8f0]">
+      <section className="py-10 sm:py-20 bg-[#fdf8f0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8">
             {values.map((v, i) => {
@@ -70,7 +70,7 @@ export default function AboutClient() {
                 <motion.div key={v.title}
                   initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="bg-white rounded-2xl p-4 sm:p-8 shadow-sm border border-[#c9a227]/15 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center sm:items-start text-center sm:text-left">
+                  className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-8 shadow-sm border border-[#c9a227]/15 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center sm:items-start text-center sm:text-left">
                   <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br from-[#1a1a5e] to-[#252580] flex items-center justify-center mb-3 sm:mb-5 group-hover:scale-110 transition-transform">
                     <Icon size={20} className="text-[#c9a227]" />
                   </div>
@@ -81,29 +81,29 @@ export default function AboutClient() {
             })}
             {/* Principal Message card spans full row */}
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}
-              className="col-span-2 lg:col-span-4 bg-gradient-to-br from-[#1a1a5e] to-[#0d0d3b] rounded-2xl p-6 sm:p-10 text-white relative overflow-hidden">
+              className="col-span-2 lg:col-span-4 bg-gradient-to-br from-[#1a1a5e] to-[#0d0d3b] rounded-2xl p-4 sm:p-10 text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 rounded-bl-full opacity-10"
                 style={{ background: "radial-gradient(circle, #c9a227, transparent)" }} />
-              <div className="grid lg:grid-cols-2 gap-10 items-center relative z-10">
+              <div className="grid lg:grid-cols-2 gap-6 sm:gap-10 items-center relative z-10">
                 <div>
-                  <Quote size={40} className="text-[#c9a227] mb-5 opacity-70" />
-                  <p className="text-white/80 text-lg leading-relaxed italic mb-6">
+                  <Quote size={28} className="text-[#c9a227] mb-3 sm:mb-5 opacity-70 sm:w-10 sm:h-10" />
+                  <p className="text-white/80 text-sm sm:text-lg leading-relaxed italic mb-4 sm:mb-6">
                     &quot;Education at M.M.MATRICULATION HR.SEC SCHOOL is not confined to textbooks. We build young men and women who are curious, compassionate, and courageous — ready to make a difference in the world.&quot;
                   </p>
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#c9a227] to-[#f0c040] flex items-center justify-center text-[#0d0d3b] font-bold text-xl">
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-[#c9a227] to-[#f0c040] flex items-center justify-center text-[#0d0d3b] font-bold text-base sm:text-xl">
                       P
                     </div>
                     <div>
-                      <p className="text-[#f0c040] font-bold">The Principal</p>
-                      <p className="text-white/50 text-sm">M.M.MATRICULATION HR.SEC SCHOOL</p>
+                      <p className="text-[#f0c040] font-bold text-xs sm:text-base">The Principal</p>
+                      <p className="text-white/50 text-[11px] sm:text-sm">M.M.MATRICULATION HR.SEC SCHOOL</p>
                     </div>
                   </div>
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-2 sm:space-y-4">
                   {["District rank holders every year", "100% board pass rate consistently", "Strong alumni network across India", "Holistic development programs"].map((item) => (
-                    <div key={item} className="flex items-center gap-3 text-white/70 text-sm">
-                      <CheckCircle size={16} className="text-[#c9a227] flex-shrink-0" />
+                    <div key={item} className="flex items-center gap-2.5 sm:gap-3 text-white/70 text-xs sm:text-sm">
+                      <CheckCircle size={14} className="text-[#c9a227] flex-shrink-0 sm:w-4 sm:h-4" />
                       {item}
                     </div>
                   ))}
@@ -115,22 +115,22 @@ export default function AboutClient() {
       </section>
 
       {/* M.M. Public Charitable Trust & Board of Trustees */}
-      <section className="py-16 sm:py-20 bg-white border-t border-[#c9a227]/15">
+      <section className="py-10 sm:py-20 bg-white border-t border-[#c9a227]/15">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-[#1a1a5e]/5 text-[#1a1a5e] text-xs font-bold tracking-widest uppercase mb-4 border border-[#1a1a5e]/10">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
+            <span className="inline-block px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-[#1a1a5e]/5 text-[#1a1a5e] text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-2 sm:mb-4 border border-[#1a1a5e]/10">
               Management &amp; Governance
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a5e] mb-4">
+            <h2 className="text-2xl sm:text-4xl font-bold text-[#1a1a5e] mb-2 sm:mb-4">
               M.M. Public Charitable Trust
             </h2>
-            <div className="w-16 h-1 bg-[#c9a227] mx-auto rounded-full mb-6" />
-            <p className="text-gray-600 text-base sm:text-lg leading-relaxed font-medium">
+            <div className="w-16 h-1 bg-[#c9a227] mx-auto rounded-full mb-4 sm:mb-6" />
+            <p className="text-gray-600 text-xs sm:text-lg leading-relaxed font-medium">
               M.M. Matriculation Higher Secondary School was established and is run by the M.M. Public Charitable Trust. It functions with the noble vision of guiding rural male and female students toward educational growth, as well as significant progress in both society and their personal lives.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 max-w-6xl mx-auto">
             {trustees.map((t, i) => (
               <motion.div
                 key={t.name}
@@ -138,17 +138,17 @@ export default function AboutClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-[#fdf8f0] p-6 rounded-2xl border border-[#c9a227]/25 text-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-between"
+                className="bg-[#fdf8f0] p-3.5 sm:p-6 rounded-xl sm:rounded-2xl border border-[#c9a227]/25 text-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-between"
               >
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#1a1a5e] to-[#252580] flex items-center justify-center text-[#c9a227] font-bold text-xl mb-4 shadow-md ring-2 ring-[#c9a227]/30">
+                <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-[#1a1a5e] to-[#252580] flex items-center justify-center text-[#c9a227] font-bold text-sm sm:text-xl mb-2 sm:mb-4 shadow-md ring-2 ring-[#c9a227]/30">
                   {t.name.replace(/^(MR\.|HAJI\.)\s*/i, '').charAt(0)}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-[#1a1a5e] mb-1 leading-snug">{t.name}</h3>
-                  <p className="text-[#c9a227] font-bold text-xs uppercase tracking-wider">{t.role}</p>
+                  <h3 className="text-xs sm:text-lg font-bold text-[#1a1a5e] mb-0.5 sm:mb-1 leading-snug">{t.name}</h3>
+                  <p className="text-[#c9a227] font-bold text-[10px] sm:text-xs uppercase tracking-wider">{t.role}</p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-[#c9a227]/15 w-full text-center">
-                  <span className="text-[11px] text-gray-500 font-medium">M.M. Public Charitable Trust</span>
+                <div className="mt-3 sm:mt-4 pt-2 sm:pt-3 border-t border-[#c9a227]/15 w-full text-center">
+                  <span className="text-[9px] sm:text-[11px] text-gray-500 font-medium">M.M. Public Charitable Trust</span>
                 </div>
               </motion.div>
             ))}

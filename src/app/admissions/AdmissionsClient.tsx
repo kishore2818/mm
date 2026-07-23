@@ -14,14 +14,14 @@ export default function AdmissionsClient() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-24 bg-[#0d0d3b] text-center text-white overflow-hidden">
+      <section className="relative py-8 sm:py-24 bg-[#0d0d3b] text-center text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ background: "radial-gradient(circle, #c9a227, transparent 70%)" }} />
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6">
-          <p className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-4">Admissions 2026–27</p>
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+          <p className="text-[#c9a227] text-[11px] sm:text-xs font-semibold tracking-widest uppercase mb-2 sm:mb-4">Admissions 2026–27</p>
+          <h1 className="text-2xl sm:text-5xl font-bold mb-2 sm:mb-6">
             Begin Your Journey
           </h1>
-          <p className="text-white/60 text-lg">We welcome students from all backgrounds who show a desire to learn, lead, and serve.</p>
+          <p className="text-white/60 text-xs sm:text-lg max-w-xl mx-auto">We welcome students from all backgrounds who show a desire to learn, lead, and serve.</p>
         </div>
       </section>
 

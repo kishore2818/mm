@@ -209,7 +209,7 @@ export default function GalleryClient() {
     <div className="min-h-screen bg-white">
 
       {/* ── 1. HERO SLIDER ── */}
-      <section className="relative h-[260px] sm:h-[380px] lg:h-[500px] overflow-hidden">
+      <section className="relative h-[180px] sm:h-[380px] lg:h-[500px] overflow-hidden">
         <AnimatePresence mode="sync">
           <motion.div
             key={heroIndex}
@@ -239,16 +239,16 @@ export default function GalleryClient() {
             key={`label-${heroIndex}`}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-[#c9a227] text-xs font-semibold tracking-widest uppercase mb-4"
+            className="text-[#c9a227] text-[10px] sm:text-xs font-semibold tracking-widest uppercase mb-1 sm:mb-4"
           >
             {heroSlides[heroIndex].label}
           </motion.p>
           <h1
-            className="text-4xl sm:text-6xl font-bold text-white mb-5"
+            className="text-xl sm:text-6xl font-bold text-white mb-1 sm:mb-5"
           >
             Campus Life Gallery
           </h1>
-          <p className="text-white/70 text-base sm:text-lg max-w-2xl">
+          <p className="text-white/70 text-xs sm:text-lg max-w-2xl">
             Capturing memories, achievements and moments at M.M.MATRICULATION HR.SEC SCHOOL
           </p>
         </div>
