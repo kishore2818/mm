@@ -29,7 +29,7 @@ const facilities = [
   {
     icon: FlaskConical,
     title: "Science Labs",
-    description: "Well-equipped and structured laboratories for Physics, Chemistry, and Biology.",
+    description: "Well-equipped and structured laboratories for Physics, Chemistry, Botany, and Zoology.",
     color: "#c9a227",
   },
   {

@@ -28,7 +28,7 @@ export default function AboutSnippet() {
               and Character
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              M.M.MATRICULATION HR.SEC SCHOOL, Patemanagaram has stood as a beacon of quality education for nearly three decades. We blend traditional values with modern pedagogy to create well-rounded individuals.
+              M.M. Matriculation Higher Secondary School was established and is run by the M.M. Public Charitable Trust. It functions with the noble vision of guiding rural male and female students toward educational growth, as well as significant progress in both society and their personal lives.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
               Our curriculum is designed to challenge students intellectually while nurturing creativity, leadership, and civic responsibility — true to our motto:{" "}

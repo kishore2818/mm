@@ -18,9 +18,16 @@ const timeline = [
   { year: "2026", title: "New District First Rank (Class 10)", desc: "Student Raveen scored 497/500, securing first rank at the Thoothukudi district level." },
 ];
 
+const trustees = [
+  { name: "MR. M. MOHAMED ALI", role: "Trustee" },
+  { name: "HAJI. S. ABDUL KHADER", role: "Trustee" },
+  { name: "HAJI. S. M. B. SHAHUL HAMEED", role: "Trustee" },
+  { name: "MR. INDRAKUMAR", role: "Trustee" },
+];
+
 const values = [
   { icon: Target, title: "Excellence", desc: "We pursue the highest standards in academics, sports, arts, and character." },
-  { icon: Eye, title: "Vision", desc: "Preparing students not just for exams, but for life's challenges and opportunities." },
+  { icon: Eye, title: "Vision", desc: "Guiding rural male and female students toward educational growth, as well as significant progress in both society and their personal lives." },
   { icon: Heart, title: "Values", desc: "Rooted in integrity, compassion, and respect for every individual." },
   { icon: Award, title: "Achievement", desc: "Celebrating every student's unique talents and celebrating collective success." },
 ];
@@ -103,6 +110,48 @@ export default function AboutClient() {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* M.M. Public Charitable Trust & Board of Trustees */}
+      <section className="py-16 sm:py-20 bg-white border-t border-[#c9a227]/15">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-[#1a1a5e]/5 text-[#1a1a5e] text-xs font-bold tracking-widest uppercase mb-4 border border-[#1a1a5e]/10">
+              Management &amp; Governance
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a5e] mb-4">
+              M.M. Public Charitable Trust
+            </h2>
+            <div className="w-16 h-1 bg-[#c9a227] mx-auto rounded-full mb-6" />
+            <p className="text-gray-600 text-base sm:text-lg leading-relaxed font-medium">
+              M.M. Matriculation Higher Secondary School was established and is run by the M.M. Public Charitable Trust. It functions with the noble vision of guiding rural male and female students toward educational growth, as well as significant progress in both society and their personal lives.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {trustees.map((t, i) => (
+              <motion.div
+                key={t.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-[#fdf8f0] p-6 rounded-2xl border border-[#c9a227]/25 text-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-between"
+              >
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#1a1a5e] to-[#252580] flex items-center justify-center text-[#c9a227] font-bold text-xl mb-4 shadow-md ring-2 ring-[#c9a227]/30">
+                  {t.name.replace(/^(MR\.|HAJI\.)\s*/i, '').charAt(0)}
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-[#1a1a5e] mb-1 leading-snug">{t.name}</h3>
+                  <p className="text-[#c9a227] font-bold text-xs uppercase tracking-wider">{t.role}</p>
+                </div>
+                <div className="mt-4 pt-3 border-t border-[#c9a227]/15 w-full text-center">
+                  <span className="text-[11px] text-gray-500 font-medium">M.M. Public Charitable Trust</span>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

@@ -16,7 +16,7 @@ export default function FacultyClient() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
           <p className="text-[#c9a227] text-[10px] sm:text-xs font-semibold tracking-widest uppercase mb-2 sm:mb-4">Our Mentors</p>
           <h1 className="text-3xl sm:text-5xl font-bold mb-3 sm:mb-6">
-            Faculty &amp; Leadership
+            Faculty &amp; Board of Trustees
           </h1>
           <p className="text-white/60 text-sm sm:text-lg max-w-2xl mx-auto">
             Meet our team of dedicated educators who bring passion, experience, and innovation to every classroom.
@@ -67,28 +67,47 @@ export default function FacultyClient() {
         </div>
       </section>
 
-      {/* Leadership */}
-      <section className="py-10 sm:py-20 bg-white">
+      {/* M.M. Public Charitable Trust & Board of Trustees */}
+      <section className="py-12 sm:py-20 bg-[#fdf8f0] border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#1a1a5e] mb-2 sm:mb-4">School Leadership</h2>
-            <div className="w-16 h-1 bg-[#c9a227] mx-auto rounded-full" />
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-[#1a1a5e]/5 text-[#1a1a5e] text-xs font-bold tracking-widest uppercase mb-3 border border-[#1a1a5e]/10">
+              Management &amp; Governance
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-bold text-[#1a1a5e] mb-3">
+              Board of Trustees
+            </h2>
+            <div className="w-16 h-1 bg-[#c9a227] mx-auto rounded-full mb-5" />
+            <p className="text-gray-600 text-xs sm:text-base leading-relaxed">
+              M.M. Matriculation Higher Secondary School was established and is run by the M.M. Public Charitable Trust. It functions with the noble vision of guiding rural male and female students toward educational growth, as well as significant progress in both society and their personal lives.
+            </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 max-w-6xl mx-auto">
             {[
-              { name: "Mr. Suresh Kumar", role: "Secretary", image: "/images/secretary.png", desc: "Overseeing administration and ensuring our institution meets the highest educational standards." },
-              { name: "Dr. Smita Sharma", role: "Principal", image: "/images/principal.png", desc: "Award-winning administrator focusing on holistic student development and academic excellence." },
-              { name: "Mr. R.K. Sharma", role: "Vice Principal", image: "/images/vice_principal.png", desc: "Dedicated to student welfare, discipline, and fostering a positive learning environment." },
-            ].map((leader, i) => (
-              <motion.div key={leader.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                className={`bg-[#fdf8f0] p-4 sm:p-8 rounded-2xl border border-[#c9a227]/20 text-center hover:shadow-xl transition-all flex flex-col items-center ${i === 2 ? 'col-span-2 sm:col-span-1 max-w-[65%] sm:max-w-none mx-auto w-full' : ''}`}>
-                <div className="relative w-20 h-20 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 sm:border-4 border-white shadow-lg mb-3 sm:mb-6 ring-2 ring-[#c9a227]/30">
-                  <Image src={leader.image} alt={leader.name} fill sizes="(max-width: 768px) 80px, 128px" className="object-cover" />
+              { name: "MR. M. MOHAMED ALI", role: "Trustee" },
+              { name: "HAJI. S. ABDUL KHADER", role: "Trustee" },
+              { name: "HAJI. S. M. B. SHAHUL HAMEED", role: "Trustee" },
+              { name: "MR. INDRAKUMAR", role: "Trustee" },
+            ].map((trustee, i) => (
+              <motion.div
+                key={trustee.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-white p-4 sm:p-8 rounded-2xl border border-[#c9a227]/25 text-center hover:shadow-xl transition-all flex flex-col items-center justify-between"
+              >
+                <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-[#1a1a5e] to-[#252580] flex items-center justify-center text-[#c9a227] font-bold text-lg sm:text-2xl mb-3 sm:mb-5 ring-2 sm:ring-4 ring-[#c9a227]/30 shadow-md">
+                  {trustee.name.replace(/^(MR\.|HAJI\.)\s*/i, '').charAt(0)}
                 </div>
-                <h3 className="text-sm sm:text-xl font-bold text-[#1a1a5e] mb-1 leading-tight">{leader.name}</h3>
-                <p className="text-[#c9a227] font-semibold text-[9px] sm:text-sm mb-2 sm:mb-4 uppercase tracking-wider">{leader.role}</p>
-                <p className="text-gray-600 text-[9px] sm:text-sm leading-snug sm:leading-relaxed">{leader.desc}</p>
+                <div>
+                  <h3 className="text-xs sm:text-lg font-bold text-[#1a1a5e] mb-1 leading-tight sm:leading-snug">{trustee.name}</h3>
+                  <p className="text-[#c9a227] font-bold text-[10px] sm:text-xs uppercase tracking-wider">{trustee.role}</p>
+                </div>
+                <div className="mt-3 sm:mt-4 pt-2 sm:pt-3 border-t border-[#c9a227]/15 w-full text-center">
+                  <span className="text-[9px] sm:text-xs text-gray-500 font-medium">M.M. Public Charitable Trust</span>
+                </div>
               </motion.div>
             ))}
           </div>

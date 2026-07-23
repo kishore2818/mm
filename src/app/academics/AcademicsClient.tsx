@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { BookOpen, Beaker, Calculator, Globe, Monitor, PenTool } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const stages = [
   {
@@ -33,7 +34,7 @@ const stages = [
 
 const departments = [
   { icon: Calculator, name: "Mathematics", desc: "Building strong analytical and problem-solving skills." },
-  { icon: Beaker, name: "Science", desc: "Physics, Chemistry, and Biology with fully equipped labs." },
+  { icon: Beaker, name: "Science", desc: "Physics, Chemistry, Botany, and Zoology with fully equipped labs." },
   { icon: Globe, name: "Languages", desc: "Tamil, English, and Hindi focusing on communication." },
   { icon: Monitor, name: "Computer Science", desc: "Programming, digital literacy, and modern tech skills." },
   { icon: BookOpen, name: "Social Sciences", desc: "History, Geography, and Civics for global awareness." },
@@ -107,6 +108,79 @@ export default function AcademicsClient() {
         </div>
       </section>
 
+      {/* Special Collaborations & Enrichment */}
+      <section className="py-20 bg-white border-t border-gray-100" id="collaborations">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-[#1a1a5e]/5 text-[#1a1a5e] text-xs font-bold tracking-widest uppercase mb-3 border border-[#1a1a5e]/10">
+              Value Addition Programs
+            </span>
+            <h2 className="text-3xl font-bold text-[#1a1a5e] mb-4">Academic Collaborations &amp; Special Programs</h2>
+            <div className="w-16 h-1 bg-[#c9a227] mx-auto rounded-full mb-4" />
+            <p className="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base">
+              Empowering our students through certified university associations and specialized skill development curricula.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Bharathidasan University */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-[#fdf8f0] p-6 sm:p-8 rounded-3xl border border-[#c9a227]/25 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:shadow-xl transition-all"
+            >
+              <div className="w-36 h-28 relative flex-shrink-0 bg-white p-3 rounded-2xl border border-gray-100 shadow-sm flex items-center justify-center">
+                <Image
+                  src="/images/iecd-bharathidasan-logo.png"
+                  alt="IECD Bharathidasan University Logo"
+                  fill
+                  className="object-contain p-2"
+                />
+              </div>
+              <div>
+                <span className="inline-block px-3 py-1 rounded-full bg-[#1a1a5e]/10 text-[#1a1a5e] text-[10px] font-bold uppercase tracking-wider mb-2">Std 1 to Std 9</span>
+                <h3 className="text-xl font-bold text-[#1a1a5e] mb-2">Computer Education (IECD)</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">
+                  We are having computer education associated with <strong>IECD – Bharathidasan University, Trichy</strong> for students from Class 1 to Class 9 (Std 1 to Std 9).
+                </p>
+                <div className="text-xs text-[#c9a227] font-semibold flex items-center gap-1">
+                  ✓ Certified Skill Curriculum · Practical Computer Labs
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Writewiz Handwriting */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-[#fdf8f0] p-6 sm:p-8 rounded-3xl border border-[#c9a227]/25 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:shadow-xl transition-all"
+            >
+              <div className="w-36 h-28 relative flex-shrink-0 bg-white p-3 rounded-2xl border border-gray-100 shadow-sm flex items-center justify-center">
+                <Image
+                  src="/images/writewiz-logo.png"
+                  alt="Writewiz Handwriting Logo"
+                  fill
+                  className="object-contain p-2"
+                />
+              </div>
+              <div>
+                <span className="inline-block px-3 py-1 rounded-full bg-[#c9a227]/15 text-[#0d0d3b] text-[10px] font-bold uppercase tracking-wider mb-2">Std LKG to Std 9</span>
+                <h3 className="text-xl font-bold text-[#1a1a5e] mb-2">Writewiz Handwriting Program</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-3">
+                  We are following <strong>Writewiz Handwriting</strong> from Class LKG to Class 9 (Std LKG to Std 9) to transform and refine handwriting stroke precision and speed.
+                </p>
+                <div className="text-xs text-[#c9a227] font-semibold flex items-center gap-1">
+                  ✓ Guided Practice · Penmanship Excellence
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Streams for XI & XII */}
       <section className="py-20 bg-[#0d0d3b] text-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
@@ -115,9 +189,9 @@ export default function AcademicsClient() {
             <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm text-left">
               <h3 className="text-[#f0c040] text-xl font-bold mb-4">Science Stream</h3>
               <ul className="space-y-3 text-white/70">
-                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#c9a227]" /> Physics, Chemistry, Biology, Maths</li>
+                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#c9a227]" /> Physics, Chemistry, Botany, Maths</li>
                 <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#c9a227]" /> Physics, Chemistry, Comp Sci, Maths</li>
-                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#c9a227]" /> Physics, Chemistry, Biology, Zoology</li>
+                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#c9a227]" /> Physics, Chemistry, Botany, Zoology</li>
               </ul>
             </div>
             <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm text-left">

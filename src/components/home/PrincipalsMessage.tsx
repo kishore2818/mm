@@ -50,7 +50,7 @@ export default function PrincipalsMessage() {
               Education is not merely the filling of a pail, but the lighting of a fire. At M.M.MATRICULATION HR.SEC SCHOOL, we ignite that spark in every child who walks through our doors.
             </blockquote>
             <p className="text-[#555] text-base leading-loose mb-8">
-              For nearly three decades, M.M.MATRICULATION HR.SEC SCHOOL has stood as a beacon of quality education in Patemanagaram. Our journey has been one of unwavering commitment — to our students, our community, and to the timeless values that define genuine education.
+              M.M. Matriculation Higher Secondary School was established and is run by the M.M. Public Charitable Trust. It functions with the noble vision of guiding rural male and female students toward educational growth, as well as significant progress in both society and their personal lives.
             </p>
             <p className="text-[#555] text-base leading-loose mb-10">
               We believe that every student carries within them an extraordinary potential. Our dedicated faculty, world-class facilities, and nurturing environment are designed to bring out the very best in each child — academically, morally, and creatively.
@@ -88,7 +88,7 @@ export default function PrincipalsMessage() {
                 <div className="w-12 h-0.5 mb-8" style={{ background: "linear-gradient(90deg, #c9a227, transparent)" }} />
                 <div className="space-y-6">
                   {[
-                    { label: "Vision", text: "To be the leading institution in Tamil Nadu that shapes future leaders with knowledge, values, and compassion." },
+                    { label: "Vision", text: "Guiding rural male and female students toward educational growth, as well as significant progress in both society and their personal lives." },
                     { label: "Mission", text: "To provide holistic education that empowers students academically and morally to excel in a dynamic world." },
                     { label: "Philosophy", text: "Every child is unique. We tailor our approach to celebrate individuality while nurturing a strong sense of community." },
                   ].map((item) => (
