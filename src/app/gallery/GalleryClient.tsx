@@ -79,6 +79,8 @@ const galleryItems: GalleryItem[] = [
   { id: 13, src: "/images/facility-library.jpeg", title: "MM Modern Library", date: "2026", category: "Campus Life", height: "medium" },
   // Achievements
   { id: 14, src: "/images/award-kamaraj-ceremony.jpg", title: "Kamaraj College Award Ceremony", date: "2026", category: "Achievements", height: "medium" },
+  { id: 15, src: "/images/award-kamaraj-college.jpeg", title: "State Level Speech & Drawing Competition - Kamaraj College", date: "2026", category: "Achievements", height: "tall" },
+  { id: 16, src: "/images/award-silambam.jpeg", title: "State Level Silambam Championship - 1st Place (Under 14 Staff Fencing)", date: "2026", category: "Achievements", height: "medium" },
 ];
 
 const categories: Category[] = [

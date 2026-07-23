@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   description:
     "Official website of M.M.MATRICULATION HR.SEC SCHOOL, Patemanagaram. Empowering students to Learn, Lead and Serve since decades.",
   keywords: "M.M.MATRICULATION HR.SEC SCHOOL, Higher Secondary School, Patemanagaram, CBSE, Admissions",
+  icons: {
+    icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
   openGraph: {
     title: "M.M.MATRICULATION HR.SEC SCHOOL",
     description: "Learn · Lead · Serve — Official School Website",
