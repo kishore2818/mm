@@ -205,26 +205,26 @@ export default function AlumniClient() {
         </div>
 
         {/* Filter Bar */}
-        <div className="bg-white p-5 rounded-3xl border border-gray-100 shadow-md flex flex-col sm:flex-row gap-4 items-center justify-between mb-10 max-w-4xl mx-auto">
+        <div className="bg-white p-3 sm:p-5 rounded-2xl sm:rounded-3xl border border-gray-100 shadow-md flex flex-row gap-2 sm:gap-4 items-center justify-between mb-8 sm:mb-10 max-w-4xl mx-auto">
           {/* Search box */}
-          <div className="relative w-full sm:flex-1">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+          <div className="relative flex-1 min-w-0">
+            <Search className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4 sm:w-4 sm:h-4" />
             <input 
               type="text" 
-              placeholder="Search by name, company, job role, or city..."
+              placeholder="Search by name, role, city..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-11 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#c9a227]/50 focus:border-[#c9a227] transition-all text-sm text-gray-700"
+              className="w-full pl-9 sm:pl-11 pr-3 sm:pr-4 py-2.5 sm:py-3 bg-gray-50 border border-gray-200 rounded-xl sm:rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#c9a227]/50 focus:border-[#c9a227] transition-all text-xs sm:text-sm text-gray-700 truncate"
             />
           </div>
           
           {/* Year select filter */}
-          <div className="relative w-full sm:w-52">
-            <Filter className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
+          <div className="relative w-36 sm:w-52 flex-shrink-0">
+            <Filter className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 text-gray-400 w-3.5 h-3.5 sm:w-4 sm:h-4" />
             <select
               value={selectedYear}
               onChange={(e) => setSelectedYear(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#c9a227]/50 focus:border-[#c9a227] transition-all text-sm text-gray-600 appearance-none cursor-pointer font-medium"
+              className="w-full pl-8 sm:pl-10 pr-2 sm:pr-4 py-2.5 sm:py-3 bg-gray-50 border border-gray-200 rounded-xl sm:rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#c9a227]/50 focus:border-[#c9a227] transition-all text-xs sm:text-sm text-gray-600 appearance-none cursor-pointer font-medium truncate"
             >
               <option value="All">All Batches</option>
               {uniqueYears.map((year) => (
