@@ -111,24 +111,6 @@ export default function FacultyClient() {
               </motion.div>
             ))}
           </div>
-
-          {/* Founder Quote Poster */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mt-8 sm:mt-12 max-w-xs sm:max-w-md lg:max-w-md mx-auto rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border-2 border-[#c9a227]/30 bg-[#fdf8f0] p-2 sm:p-4"
-          >
-            <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[440px]">
-              <Image
-                src="/images/founder-quote-nanae-poruppu.jpg"
-                alt="நானே பொறுப்பு - M.M. Public Charitable Trust"
-                fill
-                sizes="(max-width: 768px) 100vw, 440px"
-                className="object-contain rounded-xl sm:rounded-2xl"
-              />
-            </div>
-          </motion.div>
         </div>
       </section>
     </div>
