@@ -1,11 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { BookOpen, Trophy, Users, Star } from "lucide-react";
 
 export default function HeroSection() {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
   return (
     <section id="hero" className="relative min-h-screen flex flex-col items-center overflow-hidden bg-[#060622]">
 
@@ -25,7 +28,10 @@ export default function HeroSection() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          onPlay={() => setVideoLoaded(true)}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+            videoLoaded ? "opacity-100" : "opacity-0"
+          }`}
         >
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
@@ -44,7 +50,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 pt-10 sm:pt-20 pb-10 sm:pb-16 w-full">
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 pt-28 sm:pt-40 pb-10 sm:pb-16 w-full">
         {/* Live badge */}
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
           className="inline-flex items-center gap-2 px-4 py-1.5 sm:px-6 sm:py-2.5 rounded-full border border-[#c9a227]/40 bg-[#c9a227]/15 backdrop-blur-md text-[#f0c040] text-xs sm:text-sm font-medium tracking-widest uppercase mb-4 sm:mb-8">

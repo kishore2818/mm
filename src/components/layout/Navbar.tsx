@@ -45,11 +45,23 @@ export default function Navbar() {
     setActiveDropdown(null);
   }, [pathname]);
 
+  const isHome = pathname === "/";
+
   return (
-    <>
+    <div
+      className={`z-50 transition-all duration-500 ${
+        isHome
+          ? "fixed top-0 left-0 right-0"
+          : "sticky top-0 left-0 right-0"
+      }`}
+    >
       {/* Top Info Bar */}
-      <div className="hidden md:block bg-[#0d0d3b] border-b border-white/5 text-white/50 text-xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-1.5">
+      <div
+        className={`hidden md:block border-b border-white/5 text-white/50 text-xs transition-all duration-500 ${
+          isHome && !scrolled ? "bg-transparent" : "bg-[#0d0d3b]"
+        }`}
+      >
+        <div className="w-full px-4 sm:px-6 lg:px-8 flex justify-between items-center py-1.5">
           <span>M.M.MATRICULATION HR.SEC SCHOOL, Patemanagaram</span>
           <div className="flex items-center gap-4">
             <a href="tel:04630255974" className="flex items-center gap-1.5 hover:text-[#f0c040] transition-colors">
@@ -64,16 +76,16 @@ export default function Navbar() {
       </div>
 
       <header
-        className={`sticky top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? "bg-[#0d0d3b]/96 backdrop-blur-xl shadow-2xl shadow-black/30"
-            : "bg-[#0d0d3b]"
+        className={`transition-all duration-500 ${
+          isHome && !scrolled
+            ? "bg-transparent"
+            : "bg-[#0d0d3b]/96 backdrop-blur-xl shadow-2xl shadow-black/30"
         }`}
       >
         {/* Gold accent line */}
         <div className="h-[2px] bg-gradient-to-r from-transparent via-[#c9a227] to-transparent" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-[70px]">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0 min-w-0 max-w-[calc(100%-60px)] lg:max-w-none">
@@ -98,70 +110,73 @@ export default function Navbar() {
               </div>
             </Link>
 
-            {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-2 xl:gap-4">
-              {navLinks.map((link) => (
-                <div
-                  key={link.label}
-                  className="relative"
-                  onMouseEnter={() => link.children && setActiveDropdown(link.label)}
-                  onMouseLeave={() => setActiveDropdown(null)}
-                >
-                  <Link
-                    href={link.href}
-                    className={`flex items-center gap-1 px-2 py-2 rounded-md text-[13px] font-medium transition-all duration-200 whitespace-nowrap ${
-                      pathname === link.href
-                        ? "text-[#f0c040]"
-                        : "text-white/70 hover:text-white"
-                    }`}
+            {/* Right side navigation & CTA */}
+            <div className="hidden lg:flex items-center gap-6 xl:gap-8 ml-auto">
+              {/* Desktop Nav */}
+              <nav className="flex items-center gap-2 xl:gap-4">
+                {navLinks.map((link) => (
+                  <div
+                    key={link.label}
+                    className="relative"
+                    onMouseEnter={() => link.children && setActiveDropdown(link.label)}
+                    onMouseLeave={() => setActiveDropdown(null)}
                   >
-                    {link.label}
-                    {link.children && (
-                      <ChevronDown size={12} className={`transition-transform duration-200 ${activeDropdown === link.label ? "rotate-180" : ""}`} />
+                    <Link
+                      href={link.href}
+                      className={`flex items-center gap-1 px-2 py-2 rounded-md text-[13px] font-medium transition-all duration-200 whitespace-nowrap ${
+                        pathname === link.href
+                          ? "text-[#f0c040]"
+                          : "text-white/70 hover:text-white"
+                      }`}
+                    >
+                      {link.label}
+                      {link.children && (
+                        <ChevronDown size={12} className={`transition-transform duration-200 ${activeDropdown === link.label ? "rotate-180" : ""}`} />
+                      )}
+                    </Link>
+
+                    {/* Active indicator */}
+                    {pathname === link.href && (
+                      <motion.div layoutId="nav-indicator" className="absolute bottom-0 left-2 right-2 h-0.5 bg-[#c9a227] rounded-full" />
                     )}
-                  </Link>
 
-                  {/* Active indicator */}
-                  {pathname === link.href && (
-                    <motion.div layoutId="nav-indicator" className="absolute bottom-0 left-2 right-2 h-0.5 bg-[#c9a227] rounded-full" />
-                  )}
+                    {/* Dropdown */}
+                    <AnimatePresence>
+                      {link.children && activeDropdown === link.label && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 6, scale: 0.97 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 6, scale: 0.97 }}
+                          transition={{ duration: 0.15 }}
+                          className="absolute top-full left-0 mt-2 w-52 bg-[#1a1a5e]/95 backdrop-blur-xl border border-[#c9a227]/20 rounded-xl shadow-2xl overflow-hidden"
+                        >
+                          {link.children.map((child) => (
+                            <Link
+                              key={child.label}
+                              href={child.href}
+                              className="flex items-center gap-2 px-4 py-2.5 text-[13px] text-white/70 hover:text-[#f0c040] hover:bg-[#c9a227]/10 transition-all"
+                            >
+                              <span className="text-[#c9a227] text-xs">›</span>
+                              {child.label}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+              </nav>
 
-                  {/* Dropdown */}
-                  <AnimatePresence>
-                    {link.children && activeDropdown === link.label && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 6, scale: 0.97 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 6, scale: 0.97 }}
-                        transition={{ duration: 0.15 }}
-                        className="absolute top-full left-0 mt-2 w-52 bg-[#1a1a5e]/95 backdrop-blur-xl border border-[#c9a227]/20 rounded-xl shadow-2xl overflow-hidden"
-                      >
-                        {link.children.map((child) => (
-                          <Link
-                            key={child.label}
-                            href={child.href}
-                            className="flex items-center gap-2 px-4 py-2.5 text-[13px] text-white/70 hover:text-[#f0c040] hover:bg-[#c9a227]/10 transition-all"
-                          >
-                            <span className="text-[#c9a227] text-xs">›</span>
-                            {child.label}
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
-            </nav>
-
-            {/* Apply CTA */}
-            <div className="hidden lg:flex items-center gap-3">
-              <Link
-                href="/admissions"
-                className="px-4 xl:px-5 py-2 text-[12px] xl:text-[13px] font-semibold rounded-full text-[#0d0d3b] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#c9a227]/30 whitespace-nowrap"
-                style={{ background: "linear-gradient(135deg, #c9a227, #f0c040)" }}
-              >
-                Apply Now
-              </Link>
+              {/* Apply CTA */}
+              <div className="flex items-center gap-3">
+                <Link
+                  href="/admissions"
+                  className="px-4 xl:px-5 py-2 text-[12px] xl:text-[13px] font-semibold rounded-full text-[#0d0d3b] transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#c9a227]/30 whitespace-nowrap"
+                  style={{ background: "linear-gradient(135deg, #c9a227, #f0c040)" }}
+                >
+                  Apply Now
+                </Link>
+              </div>
             </div>
 
             {/* Mobile Hamburger */}
@@ -237,6 +252,6 @@ export default function Navbar() {
           )}
         </AnimatePresence>
       </header>
-    </>
+    </div>
   );
 }
