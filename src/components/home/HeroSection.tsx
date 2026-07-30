@@ -28,11 +28,13 @@ export default function HeroSection() {
           loop
           muted
           playsInline
+          preload="auto"
           onPlay={() => setVideoLoaded(true)}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
             videoLoaded ? "opacity-100" : "opacity-0"
           }`}
         >
+          <source src="/videos/hero.webm" type="video/webm" />
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
         {/* Dark overlay */}
